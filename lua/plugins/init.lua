@@ -6,24 +6,36 @@ end
 
 return require('packer').startup(function(use)
   --MY PLUGINS HERE!
-
-  use {'kyazdani42/nvim-tree.lua', requires = { 'kyazdani42/nvim-web-devicons',}, config = function() require'nvim-tree'.setup {} end}
-  use {'nvim-treesitter/nvim-treesitter', run = ":TSUpdate"}
-  -- use {'tribela/vim-transparent'}
+  use("wbthomason/packer.nvim")
+  -- temas
   use {'tanvirtin/monokai.nvim'}
-  use {'rebelot/kanagawa.nvim'}
   use {'folke/tokyonight.nvim'}
+  use {'rebelot/kanagawa.nvim'}
   use {'ellisonleao/gruvbox.nvim' }
   use {'navarasu/onedark.nvim'}
+  -- nvim-tree
+  use({"kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons", config = "require('configs.nvimTree')",})
+  -- dashboard
+  use {'glepnir/dashboard-nvim',
+  config = "require('configs.dashboard')"}
+  -- resaltado de sintaxis
+  use {'nvim-treesitter/nvim-treesitter', run = ":TSUpdate"}
   use {'p00f/nvim-ts-rainbow'}
   use {'windwp/nvim-autopairs'}
-  use {'nvim-lualine/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true}}
-  use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
-  use {'terrortylor/nvim-comment'}
-  use {'lukas-reineke/indent-blankline.nvim'}
-  use {'phaazon/hop.nvim', as = 'hop', config = function() require('hop') end}
-  use {'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} }}
-  use {'neovim/nvim-lspconfig', 'williamboman/nvim-lsp-installer',}
+  -- barra de estado
+  use{	"hoob3rt/lualine.nvim",	requires = {"kyazdani42/nvim-web-devicons", opt = true,},event = "BufWinEnter",config = "require('configs.luaLine')"}
+  -- pestañas
+  use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons', event = "BufWinEnter", config = require('configs.bufferLine')}
+  -- comentarios
+  use {'terrortylor/nvim-comment', config = "require('configs.nvimComments')"}
+  -- identación
+  use {'lukas-reineke/indent-blankline.nvim', config = require('configs.blankLine.init'), event = "BufRead"}
+  -- easy motion
+  use {'phaazon/hop.nvim', as = 'hop', config = "require('configs.hopNvim')"}
+  -- telescope
+  use {'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} }, config = "require('configs.telescope')"}
+  -- autocompletado (IDE)
+  use {'neovim/nvim-lspconfig', 'williamboman/nvim-lsp-installer'}
   use {'hrsh7th/nvim-cmp'}
   use {'hrsh7th/cmp-nvim-lsp'}
   use {'hrsh7th/cmp-buffer'}
@@ -31,25 +43,35 @@ return require('packer').startup(function(use)
   use {'hrsh7th/cmp-path'}
   use {'hrsh7th/cmp-cmdline'}
   use {'hrsh7th/cmp-nvim-lua'}
-  -- use {'rafamadriz/friendly-snippets'}
+  -- snippets
   use({"hrsh7th/cmp-vsnip"})
-	use({"hrsh7th/vim-vsnip"})
+  use({"hrsh7th/vim-vsnip"})
+  -- presencia en discord
   use {'andweeb/presence.nvim'}
-  use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}}
+  -- GIT señales
+  use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}, config = "require('configs.gitSigns')"}
+  -- ver marcas
   use {'kshenoy/vim-signature'}
+  -- multicursor
   use {'mg979/vim-visual-multi'}
+  -- sorround
   use {'tpope/vim-surround'}
-  use {'glepnir/dashboard-nvim'}
+  -- colorear cierre de etiquetas
   use {'andymass/vim-matchup'}
+  -- resaltado de colores
   use {'norcalli/nvim-colorizer.lua'}
+  -- toggleterm
   use {'akinsho/toggleterm.nvim'}
+  -- pretty-fold
   use {'anuvyklack/pretty-fold.nvim'}
+  -- mantener posicion de cursor y folds
   use {'vim-scripts/restore_view.vim'}
+  -- notificaciones de nvim
   use("rcarriga/nvim-notify")
+  -- others
+  -- use {'tribela/vim-transparent'}
+  -- use {'rafamadriz/friendly-snippets'}
 
-
-  --automatic configure after clone packer.nvim
-  --put this at the end after all plugins
   if PACKER_BOOTSTRAP then
     require('packer').sync()
   end

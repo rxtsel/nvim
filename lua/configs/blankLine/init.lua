@@ -1,5 +1,13 @@
-require("indent_blankline").setup {
-    show_current_context = true,
-    show_current_context_start = true,
-    filetype_exclude = {"Nvimtree", "javascript", "dashboard"}
-}
+-- Configuración indent blankline
+local status_ok, indent = pcall(require, "indent_blankline")
+if not status_ok then
+	return
+end
+
+indent.setup({
+	buftype_exclude = { "terminal", "nofile" },
+	filetype_exclude = { "dashboard" },
+	show_end_of_line = true,
+})
+
+vim.opt.list = true

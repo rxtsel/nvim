@@ -72,6 +72,9 @@ cmd(
 -- Cancelar los saltos con el cmp
 cmd([[g:vsnip_deactivate_on = g:vsnip#DeactivateOn.OutsideOfCurrentTabstop]])
 
+-- Omitir guardar la posición en nvimTree
+g.skipview_files = { "NvimTree" }
+
 --FOLDS
 cmd [[:set foldmethod=manual 
 :delm! | delm A-Z0-9]]

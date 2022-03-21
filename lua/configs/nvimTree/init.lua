@@ -4,11 +4,14 @@ if not status_ok then
 	return
 end
 
-require("variables")
+-- Variables
+require "variables"
 
+-- Configuración de nvimTree
 g.nvim_tree_indent_markers = 1
 
 nvimTree.setup({
+	-- Permitir actualizar el path de los espacios de trabajo
 	update_cwd = true,
 	view = {
 		width = 30,
@@ -18,14 +21,14 @@ nvimTree.setup({
 		auto_resize = true,
 		mappings = {
 			custom_only = false,
-			list = {},
+			list = {{ key = "s", action = "vsplit" }},
 		},
 		number = true,
 		relativenumber = true,
 	},
 	filters = {
 		dotfiles = false,
-		custom = {'__pycache__', 'node_modules', '.git'}
+		-- custom = {'__pycache__', 'node_modules'}
 	},
 	actions = {
 		open_file = {

@@ -1,4 +1,5 @@
 require "variables"
+
 --DEFINE THEME
 cmd [[colorscheme tokyonight]]
 g.tokyonight_style = "night"
