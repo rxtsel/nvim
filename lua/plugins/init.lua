@@ -31,8 +31,9 @@ return require('packer').startup(function(use)
   use {'hrsh7th/cmp-path'}
   use {'hrsh7th/cmp-cmdline'}
   use {'hrsh7th/cmp-nvim-lua'}
-  use {'L3MON4D3/LuaSnip'}
-  use {'rafamadriz/friendly-snippets'}
+  -- use {'rafamadriz/friendly-snippets'}
+  use({"hrsh7th/cmp-vsnip"})
+	use({"hrsh7th/vim-vsnip"})
   use {'andweeb/presence.nvim'}
   use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'}}
   use {'kshenoy/vim-signature'}
@@ -44,6 +45,8 @@ return require('packer').startup(function(use)
   use {'akinsho/toggleterm.nvim'}
   use {'anuvyklack/pretty-fold.nvim'}
   use {'vim-scripts/restore_view.vim'}
+  use("rcarriga/nvim-notify")
+
 
   --automatic configure after clone packer.nvim
   --put this at the end after all plugins

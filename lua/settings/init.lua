@@ -64,12 +64,20 @@ autocmd FileChangedShellPost *
 \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
 ]]
 
---HIDDE STATUS LINE IN LUALINE
-cmd [[au BufEnter,BufWinEnter,WinEnter,CmdwinEnter * if bufname('%') == "NvimTree" | set laststatus=0 | else | set laststatus=2 | endif]]
+-- Ocultar la linea de estado en el nvim tree
+cmd(
+	[[au BufEnter,BufWinEnter,WinEnter,CmdwinEnter * if bufname('%') == "NvimTree" | set laststatus=0 | else | set laststatus=2 | endif]]
+)
+
+-- Cancelar los saltos con el cmp
+cmd([[g:vsnip_deactivate_on = g:vsnip#DeactivateOn.OutsideOfCurrentTabstop]])
 
 --FOLDS
 cmd [[:set foldmethod=manual 
 :delm! | delm A-Z0-9]]
+
+-- Definir las notificaciones en vim
+vim.notify = require("notify")
 
 --COLORIZER
 require("colorizer").setup()
@@ -78,6 +86,7 @@ require("colorizer").setup()
 cmd([[
 autocmd FileType lua setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType json setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
-autocmd Filetype html setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+autocmd Filetype html setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+autocmd Filetype css setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 autocmd Filetype javascript setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 ]])
