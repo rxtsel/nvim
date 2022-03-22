@@ -25,7 +25,7 @@ return require('packer').startup(function(use)
   -- barra de estado
   use{	"hoob3rt/lualine.nvim",	requires = {"kyazdani42/nvim-web-devicons", opt = true,},event = "BufWinEnter",config = "require('configs.luaLine')"}
   -- pestañas
-  use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons', event = "BufWinEnter", config = require('configs.bufferLine')}
+  use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
   -- comentarios
   use {'terrortylor/nvim-comment', config = "require('configs.nvimComments')"}
   -- identación
@@ -68,6 +68,8 @@ return require('packer').startup(function(use)
   use {'vim-scripts/restore_view.vim'}
   -- notificaciones de nvim
   use("rcarriga/nvim-notify")
+  -- plugins
+ 	use("jose-elias-alvarez/null-ls.nvim")
   -- others
   -- use {'tribela/vim-transparent'}
   -- use {'rafamadriz/friendly-snippets'}

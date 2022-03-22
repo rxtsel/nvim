@@ -5,3 +5,4 @@ end
 
 require("configs.lspConfig.lspInstaller")
 require("configs.lspConfig.handlers").setup()
+require("configs.lspConfig.null-ls")

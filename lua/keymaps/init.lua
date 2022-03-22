@@ -1,4 +1,4 @@
-require "variables"
+require("variables")
 
 g.mapleader = " "
 cmd("imap jj <Esc>")
@@ -9,6 +9,9 @@ map("n", "<Leader>q", ":q<CR>")
 map("n", "<Leader>w", ":w<CR>")
 map("n", "<Leader>Q", ":q!<CR>")
 
+-- FORMAT
+map("n", "<A-i>", ":lua vim.lsp.buf.formatting_sync()<CR>")
+
 --NVIM-TREE
 map("n", "<Leader>n", ":NvimTreeToggle<CR>")
 
@@ -18,7 +21,7 @@ map("x", "<Leader>cc", ":'<,'>CommentToggle<CR>")
 map("n", "<Leader>;", "$a;<Esc>")
 
 --SELECT All
-map("n", "<C-a>", 'ggVG')
+map("n", "<C-a>", "ggVG")
 
 --DELETE DOESN'T COPY PORTAPAPELES
 map("v", "<BS>", '"_d')
@@ -61,11 +64,8 @@ map("n", "<C-h>", "20h")
 --TERM
 map("t", "jj", "<C-\\><C-n>")
 
---IDENT
-map("n", "<A-i>", "gg=G")   --ident all document
-
 --MOVE BETWEEN TABS
-map("n", "<Tab>", ":bn<CR>")
+map("n", "<A-Tab>", ":bn<CR>")
 map("n", "<A-q>", ":bd!<CR>") --cerrar pestaña
 
 --FOLDS

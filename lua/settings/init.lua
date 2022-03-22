@@ -53,8 +53,24 @@ for k, v in pairs(options) do
   opt[k] = v
 end
 
+--COLORIZER
+require("colorizer").setup()
+
+-- Definir las notificaciones en vim
+vim.notify = require("notify")
+
+-- Omitir guardar la posición en nvimTree
+g.skipview_files = { "NvimTree" }
+
+-- Directorio de los snippets
+g.vsnip_snippet_dir = "~/.config/nvim/snippets"
+
 --DISABLE AUTOCOMMENTS
 cmd [[autocmd BufWinEnter * :set formatoptions-=c formatoptions-=r formatoptions-=o]]
+
+-- Cancelar los saltos con el cmp
+cmd([[g:vsnip_deactivate_on = g:vsnip#DeactivateOn.OutsideOfCurrentTabstop]])
+
 
 --AUTO RELOAD BUFFERS
 cmd [[
@@ -64,26 +80,14 @@ autocmd FileChangedShellPost *
 \ echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None
 ]]
 
--- Ocultar la linea de estado en el nvim tree
-cmd(
-	[[au BufEnter,BufWinEnter,WinEnter,CmdwinEnter * if bufname('%') == "NvimTree" | set laststatus=0 | else | set laststatus=2 | endif]]
-)
-
--- Cancelar los saltos con el cmp
-cmd([[g:vsnip_deactivate_on = g:vsnip#DeactivateOn.OutsideOfCurrentTabstop]])
-
--- Omitir guardar la posición en nvimTree
-g.skipview_files = { "NvimTree" }
-
 --FOLDS
 cmd [[:set foldmethod=manual 
 :delm! | delm A-Z0-9]]
 
--- Definir las notificaciones en vim
-vim.notify = require("notify")
-
---COLORIZER
-require("colorizer").setup()
+-- Ocultar la linea de estado en el nvim tree
+cmd(
+	[[au BufEnter,BufWinEnter,WinEnter,CmdwinEnter * if bufname('%') == "NvimTree" | set laststatus=0 | else | set laststatus=2 | endif]]
+)
 
 --DEFINIR TABS SEGUN EL ARCHIVO
 cmd([[
