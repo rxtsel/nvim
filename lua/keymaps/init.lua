@@ -10,7 +10,8 @@ map("n", "<Leader>w", ":w<CR>")
 map("n", "<Leader>Q", ":q!<CR>")
 
 -- FORMAT
-map("n", "<A-i>", ":lua vim.lsp.buf.formatting_sync()<CR>")
+map("n", "<Leader>pp", ":lua vim.lsp.buf.formatting_sync()<CR>")
+map("n", "<A-i>", "gg=G") --ident all document
 
 --NVIM-TREE
 map("n", "<Leader>n", ":NvimTreeToggle<CR>")
