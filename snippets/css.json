@@ -1,4 +1,9 @@
 {
+  "comentario": {
+    "prefix": "coment",
+    "body": "/* =========== ${1} ========== */",
+    "description": "añade un comentario"
+  },
 	"align-items": {
 		"prefix": "ai",
 		"body": "align-items: ${1|flex-start,flex-end,center,baseline,stretch,start,end,self-start,self-end|};",

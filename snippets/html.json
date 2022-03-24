@@ -389,18 +389,19 @@
         "scope": "text.html"
     },
     "html5": {
-        "prefix": "html5",
+        "prefix": "!",
         "body": [
             "<!DOCTYPE html>",
-            "<html lang=\"$1en\">",
+            "<html lang=\"es\">",
             "\t<head>",
-            "\t\t<title>$2</title>",
             "\t\t<meta charset=\"UTF-8\">",
+            "\t\t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">",
             "\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
-            "\t\t<link href=\"$3css/style.css\" rel=\"stylesheet\">",
+            "\t\t<title>${1}</title>",
+            "\t\t<link href=\"${2}css/style.css\" rel=\"stylesheet\">",
             "\t</head>",
             "\t<body>",
-            "\t$4",
+            "\t${3}",
             "\t</body>",
             "</html>"
         ],
