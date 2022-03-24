@@ -18,6 +18,7 @@ map("n", "<Leader>n", ":NvimTreeToggle<CR>")
 
 --NVIM-COMMENTS
 map("n", "<Leader>cc", ":CommentToggle<CR>")
+map("i", "<A-}>", "<Esc>:CommentToggle<CR>")
 map("x", "<Leader>cc", ":'<,'>CommentToggle<CR>")
 map("n", "<Leader>;", "$a;<Esc>")
 
