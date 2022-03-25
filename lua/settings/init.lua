@@ -71,6 +71,9 @@ cmd([[autocmd BufWinEnter * :set formatoptions-=c formatoptions-=r formatoptions
 -- Cancelar los saltos con el cmp
 cmd([[g:vsnip_deactivate_on = g:vsnip#DeactivateOn.OutsideOfCurrentTabstop]])
 
+-- copilot
+g.copilot_no_tab_map = true
+
 --AUTO RELOAD BUFFERS
 cmd([[
 set autoread
