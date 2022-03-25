@@ -36,6 +36,7 @@ map("n", "<Leader>ff", ":lua require('telescope.builtin').find_files()<CR>")
 map("n", "<Leader>fb", ":lua require('telescope.builtin').buffers()<CR>")
 map("n", "<Leader>fg", ":lua require('telescope.builtin').live_grep()<CR>")
 map("n", "<Leader>fo", ":lua require('telescope.builtin').oldfiles()<CR>")
+map("n", "<leader>fm", ":Telescope media_files<CR>")
 
 --WINDOW NAVIGATION
 map("n", "<Leader><C-h>", "<C-w>h")

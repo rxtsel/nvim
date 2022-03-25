@@ -33,7 +33,10 @@ return require('packer').startup(function(use)
   -- easy motion
   use {'phaazon/hop.nvim', as = 'hop', config = "require('configs.hopNvim')"}
   -- telescope
-  use {'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} }, config = "require('configs.telescope')"}
+  -- use {'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} }, config = "require('configs.telescope')"}
+  use({"nvim-telescope/telescope.nvim",requires = { { "nvim-lua/plenary.nvim" } },})
+	use({ "nvim-lua/popup.nvim" })
+	use({ "nvim-telescope/telescope-media-files.nvim" })
   -- autocompletado (IDE)
   use {'neovim/nvim-lspconfig', 'williamboman/nvim-lsp-installer'}
   use {'hrsh7th/nvim-cmp'}

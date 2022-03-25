@@ -33,4 +33,12 @@ telescope.setup({
 			theme = "dropdown",
 		},
 	},
+  extensions = {
+		media_files = {
+			filetypes = { "png", "webp", "jpg", "jpeg", "mp4", "pdf" },
+			find_cmd = "rg",
+		},
+	},
 })
+
+require('telescope').load_extension('media_files')
