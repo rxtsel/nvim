@@ -73,6 +73,8 @@ return require('packer').startup(function(use)
   use("rcarriga/nvim-notify")
   -- plugins
  	use("jose-elias-alvarez/null-ls.nvim")
+  -- github Copilot
+  use{'github/copilot.vim'}
   -- others
   -- use {'tribela/vim-transparent'}
   -- use {'rafamadriz/friendly-snippets'}
