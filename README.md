@@ -27,17 +27,18 @@ choco install mingw
 
 Others:
 ```
-sudo pacman -S ripgrep xsel
+sudo yay -S ripgrep xsel ueberzug pdftoppm ffmpegthumbnailer
 ```
 
 Live server:
 ```
-sudo npm i -g live-server
+sudo npm i -g prettier live-server
 ```
 
 eslint:
 ```bash
 sudo npm i -g eslint
+yay -S stylua-bin
 ```
 
 
