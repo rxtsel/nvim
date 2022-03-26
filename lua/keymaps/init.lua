@@ -69,8 +69,8 @@ map("t", "jj", "<C-\\><C-n>")
 
 -- COPILOT
 map("i", "<leader><TAB>", 'copilot#Accept("<CR>")', { expr = true })
-map("i", "<leader>}", "<Cmd>call copilot#Next()<CR>")
-map("i", "<leader>{", "<Cmd>call copilot#Previous()<CR>")
+map("i", "<leader>.", "<Cmd>call copilot#Next()<CR>")
+map("i", "<leader>,", "<Cmd>call copilot#Previous()<CR>")
 map("i", "qq", "<Cmd>call copilot#Dismiss()<CR>")
 
 --MOVE BETWEEN TABS
