@@ -5,7 +5,7 @@ if not status_ok then
 end
 
 indent.setup({
-	buftype_exclude = { "terminal", "nofile" },
+	buftype_exclude = { "terminal", "nofile",  "toggleterm"},
 	filetype_exclude = { "dashboard" },
 	show_end_of_line = true,
 })
