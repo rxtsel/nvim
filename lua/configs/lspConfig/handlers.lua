@@ -81,7 +81,7 @@ local servers = {
 	"cssls",
 	"emmet_ls",
 	"sumneko_lua",
-	"tsserver",
+	-- "tsserver",
   "eslint",
 	"jsonls",
 	"html",
