@@ -66,6 +66,7 @@ map("n", "<C-h>", "20h")
 
 --TERM
 map("t", "jj", "<C-\\><C-n>")
+map("n", "<A-l>", "<Esc><Cmd>term live-server<CR>")
 
 -- COPILOT
 map("i", "<leader><TAB>", 'copilot#Accept("<CR>")', { expr = true })
