@@ -20,14 +20,6 @@ local Darksel = {
         return opts
       end
     },
-    --  jsonls = {
-    --   config = function(opts)
-    --     opts = vim.tbl_deep_extend("force", {
-    --       settings = { json = { schemas = Darksel.utils.plugins.require('schemastore').json.schemas() } }
-    --     }, opts)
-    --     return opts
-    --   end
-    -- }
     },
     plugins = {
       lsp = {
