@@ -20,7 +20,7 @@ end
 indent_blankline.setup {
   filetype_exclude = {"dashboard", "packer", "NvimTree", "lsp-installer"},
   buftype_exclude = {"terminal"},
-  show_current_context =  indent_blankline.enable_rainbow_colors,
+  show_current_context = not indent_blankline.enable_rainbow_colors,
   char_highlight_list = get_char_highlights(),
   context_patterns = {
     "class", "return", "function", "method", "^if", "^while", "jsx_element", "^for", "^object", "^table", "block", "arguments", "if_statement",
