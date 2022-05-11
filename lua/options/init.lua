@@ -18,29 +18,29 @@ vim.o.clipboard = "unnamedplus"               -- permite que Neovim acceda al po
 vim.o.hlsearch = true                         -- resalta todas las coincidencias en el patrón de búsqueda anterior
 vim.o.ignorecase = true                       -- ignore case in search patterns
 vim.o.scrolloff = 3                           -- deja un paddinf arriba y abajo de 8 lineas al hacer scroll
-vim.o.sidescrolloff = 5                      -- deja un padding en los lados de 8 lineas al hacer scroll
+vim.o.sidescrolloff = 5                       -- deja un padding en los lados de 8 lineas al hacer scroll
 vim.o.mouse = "a"                             -- permite usar el mouse en neovim
 
 
 vim.wo.wrap = false                            -- muestra las líneas como una sola línea larga
 vim.wo.number = true                           -- establecer líneas numeradas
-vim.wo.relativenumber = false                   -- establecer líneas numeradas relativas
+vim.wo.relativenumber = false                  -- establecer líneas numeradas relativas
 vim.wo.cursorline = true                       -- resaltar la línea actual
--- vim.wo.signcolumn = "yes"
+vim.wo.signcolumn = "yes"
 
-vim.o.tabstop = 2                           -- inserta 2 espacios para una pestaña
+vim.o.tabstop = 2                              -- inserta 2 espacios para una pestaña
 vim.bo.tabstop = 2                             -- inserta 2 espacios para una pestaña
 vim.o.softtabstop = 4 
 vim.bo.softtabstop = 4
-vim.o.shiftwidth =  2                         -- el número de espacios insertados para cada sangría
-vim.bo.shiftwidth =  2                          -- el número de espacios insertados para cada sangría
+vim.o.shiftwidth =  2                          -- el número de espacios insertados para cada sangría
+vim.bo.shiftwidth =  2                         -- el número de espacios insertados para cada sangría
 vim.o.autoindent = true
 vim.bo.autoindent = true
-vim.o.expandtab =  true                       -- convertir tabulaciones en espacios
-vim.bo.expandtab = true                       -- convertir tabulaciones en espacios
+vim.o.expandtab =  true                        -- convertir tabulaciones en espacios
+vim.bo.expandtab = true                        -- convertir tabulaciones en espacios
 
-vim.opt.swapfile = false                        -- crea un archivo de intercambio
-vim.opt.undofile = true                         -- habilitar deshacer persistente
+vim.opt.swapfile = false                       -- crea un archivo de intercambio
+vim.opt.undofile = true                        -- habilitar deshacer persistente
 
 -- Disable various builtin plugins in Vim that bog down speed
 vim.g.loaded_matchparen = 1
