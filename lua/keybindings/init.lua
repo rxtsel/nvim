@@ -51,7 +51,7 @@ map("n", "<C-h>", "20h")
 
 -- TERM
 map("t", "jj", "<C-\\><C-n>")
-map("n", "<C-ñ>", ":split term://zsh<CR>")
+map("n", "<Leader>ñ", ":split term://zsh<CR>")
 
 -- MOVE BETWEEN TABS
 map("n", "gt", ":bn<CR>")

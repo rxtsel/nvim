@@ -1,4 +1,5 @@
 vim.cmd('filetype plugin indent on')
+vim.o.completeopt = "menu,menuone,noselect"
 vim.o.shortmess = vim.o.shortmess .. 'c'
 vim.o.hidden = true -- requerido para mantener múltiples búferes y abrir múltiples búferes
 vim.o.whichwrap = 'b,s,<,>,[,],h,l'

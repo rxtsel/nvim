@@ -1,5 +1,3 @@
-vim.o.completeopt = "menu,menuone,noselect"
-
 local has_words_before = function()
   local line, col = unpack(vim.api.nvim_win_get_cursor(0))
   return col ~= 0
@@ -37,7 +35,7 @@ cmp.setup({
     format = lspkind.cmp_format({
       with_text = true,
       maxwidth = 50,
-      menu = { buffer = "[Buf]", nvim_lsp = "[LSP]", vsnip = "[Vsnip]" }
+      menu = { buffer = "[Buf]", nvim_lsp = "[LSP]", vsnip = "[Vsnip]", nvim_lua = "[NVIM_LUA]", path = "[Path]" }
     })
   },
   mapping = {
@@ -70,4 +68,4 @@ cmp.setup({
 })
 
 vim.cmd(
-"autocmd FileType TelescopePrompt lua Darksel.utils.plugins.require('cmp').setup.buffer { enabled = false }")
+"autocmd FileType TelescopePrompt lua require('cmp').setup.buffer { enabled = false }")
