@@ -9,6 +9,7 @@ vim.cmd('imap jj <Esc>')
 -- SAVE AND EXIT
 map("n", "<Leader>q", ":q<CR>")
 map("n", "<Leader>w", ":w<CR>")
+map("n", "<A-q>", ":bd!<CR>")
 
 -- NVIM-TREE
 map("n", "<Leader>e", ":NvimTreeToggle<CR>")
@@ -53,6 +54,7 @@ map("n", "<C-h>", "20h")
 
 -- TERM
 map("t", "jj", "<C-\\><C-n>")
+map("n", "<C-t>", ":split term://zsh<CR>")
 
 -- MOVE BETWEEN TABS
 map("n", "gt", ":bn<CR>")
@@ -66,6 +68,3 @@ map("n", "<A-Down>", ":exe 'resize ' . (winheight(0) * 3/2)<CR>")
 map("n", "<A-Up>", ":exe 'resize ' . (winheight(0) * 2/3)<CR>")
 map("n", "<A-Left>", ":vertical resize -2<CR>")
 map("n", "<A-Right>", ":vertical resize +2<CR>")
-
--- TERM
-map("n", "<C-t>", ":split term://zsh<CR>")
