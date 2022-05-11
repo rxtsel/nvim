@@ -1,5 +1,5 @@
 local map = function(mode, key, result)
-    vim.api.nvim_set_keymap(mode, key, result, {noremap = true, silent = true})
+  vim.api.nvim_set_keymap(mode, key, result, { noremap = true, silent = true })
 end
 
 -- RESET ESC TO JJ
@@ -29,9 +29,6 @@ map("x", "<Leader>cc", ":'<,'>CommentToggle<CR>")
 map("n", "<Leader>;", "$a;<Esc>")
 map("n", "<Leader>,", "$a,<Esc>")
 
--- FORMAT
-map("n", "<A-i>", ":lua vim.lsp.buf.formatting_sync()<CR>")
-
 -- SELECT All
 map("n", "<C-a>", "ggVG")
 
@@ -54,7 +51,7 @@ map("n", "<C-h>", "20h")
 
 -- TERM
 map("t", "jj", "<C-\\><C-n>")
-map("n", "<C-t>", ":split term://zsh<CR>")
+map("n", "<C-ñ>", ":split term://zsh<CR>")
 
 -- MOVE BETWEEN TABS
 map("n", "gt", ":bn<CR>")

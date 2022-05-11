@@ -1,27 +1,19 @@
-require'nvim-treesitter.configs'.setup {
-  highlight = {
-    enable = true,
-    disable = {},
-  },
-  indent = {
-    enable = true,
-    disable = {},
-  },
-  ensure_installed = {
-    "tsx",
-    "toml",
-    "fish",
-    "php",
-    "json",
-    "yaml",
-    "swift",
-    "html",
-    "scss"
-  },
-  autotag = {
-    enable = true,
-  }
-}
+require'nvim-treesitter.install'.compilers = {"gcc"}
 
-local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
-parser_config.tsx.filetype_to_parsername = { "javascript", "typescript.tsx" }
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = {"javascript", "typescript"}, -- "all" instala todos los lenguajes
+  ignore_install = {},
+  indent = { enable = false },
+  highlight = { enable = true },
+  autotag = { enable = true },
+  endwise = { enable = true },
+  rainbow = { enable = true, extended_mode = false, disable = { "html" } },
+  textsubjects = {
+        enable = true,
+        prev_selection = ',', -- (Optional) keymap to select the previous selection
+        keymaps = {
+          ['.'] = 'textsubjects-smart',
+          [';'] = 'textsubjects-container-outer',
+          ['i;'] = 'textsubjects-container-inner'
+        }
+}}
