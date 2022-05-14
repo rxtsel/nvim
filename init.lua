@@ -1,0 +1,5 @@
+require("plugins")
+require("configs")
+require("keybindings")
+require("options")
+require("colorscheme")
