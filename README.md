@@ -1,9 +1,12 @@
 # Neovim Customization :skull:
 
-![image](https://user-images.githubusercontent.com/85462420/168401029-61fcefa1-329c-47cc-84eb-9ae64486908f.png)
+![nvim](https://socialify.git.ci/rxtsel/nvim/image?language=1&name=1&owner=1&pattern=Solid&stargazers=1&theme=Dark)
+
 <details>
 <summary>Galley</summary>
-  
+
+![image](https://user-images.githubusercontent.com/85462420/168401029-61fcefa1-329c-47cc-84eb-9ae64486908f.png)
+
 ![image](https://user-images.githubusercontent.com/85462420/168401015-ea480f24-a3c6-4aab-8c50-2a4ec43dc607.png)
   
  ![image](https://user-images.githubusercontent.com/85462420/168401685-d617161b-ddef-415d-b302-f9c544d77a53.png)
