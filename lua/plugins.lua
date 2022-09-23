@@ -39,6 +39,8 @@ packer.startup(function(use)
   use 'windwp/nvim-ts-autotag'
 
   use 'nvim-lua/plenary.nvim' -- Common utilities
+  use 'nvim-lua/popup.nvim'
+  use 'nvim-telescope/telescope-media-files.nvim'
   use 'nvim-telescope/telescope.nvim'
 
   use 'akinsho/nvim-bufferline.lua'

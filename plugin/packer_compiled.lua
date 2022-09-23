@@ -124,6 +124,11 @@ _G.packer_plugins = {
     path = "/home/rxtsel/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
+  ["hop.nvim"] = {
+    loaded = true,
+    path = "/home/rxtsel/.local/share/nvim/site/pack/packer/start/hop.nvim",
+    url = "https://github.com/phaazon/hop.nvim"
+  },
   ["lspkind-nvim"] = {
     loaded = true,
     path = "/home/rxtsel/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
@@ -219,6 +224,11 @@ _G.packer_plugins = {
     path = "/home/rxtsel/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["popup.nvim"] = {
+    loaded = true,
+    path = "/home/rxtsel/.local/share/nvim/site/pack/packer/start/popup.nvim",
+    url = "https://github.com/nvim-lua/popup.nvim"
+  },
   ["presence.nvim"] = {
     loaded = true,
     path = "/home/rxtsel/.local/share/nvim/site/pack/packer/start/presence.nvim",
@@ -229,25 +239,20 @@ _G.packer_plugins = {
     path = "/home/rxtsel/.local/share/nvim/site/pack/packer/start/prettier.nvim",
     url = "https://github.com/MunifTanjim/prettier.nvim"
   },
+  ["telescope-media-files.nvim"] = {
+    loaded = true,
+    path = "/home/rxtsel/.local/share/nvim/site/pack/packer/start/telescope-media-files.nvim",
+    url = "https://github.com/nvim-telescope/telescope-media-files.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/rxtsel/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
-  ["vim-astro"] = {
-    loaded = true,
-    path = "/home/rxtsel/.local/share/nvim/site/pack/packer/start/vim-astro",
-    url = "https://github.com/wuelnerdotexe/vim-astro"
-  },
   ["vim-matchup"] = {
     loaded = true,
     path = "/home/rxtsel/.local/share/nvim/site/pack/packer/start/vim-matchup",
     url = "https://github.com/andymass/vim-matchup"
-  },
-  ["vim-stylus"] = {
-    loaded = true,
-    path = "/home/rxtsel/.local/share/nvim/site/pack/packer/start/vim-stylus",
-    url = "https://github.com/wavded/vim-stylus"
   },
   ["vim-surround"] = {
     loaded = true,

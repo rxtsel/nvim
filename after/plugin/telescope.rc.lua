@@ -14,8 +14,16 @@ telescope.setup {
         ["q"] = actions.close
       },
     },
+  },
+  extensions = {
+    media_files = {
+      filetypes = { "png", "webp", "jpg", "jpeg", "mp4", "pdf", "svg" },
+      find_cmd = "rg",
+    },
   }
 }
+
+telescope.load_extension('media_files')
 
 local opts = { noremap = true, silent = true }
 
@@ -26,3 +34,4 @@ vim.keymap.set('n', ',o', '<cmd>lua require("telescope.builtin").buffers()<cr>',
 vim.keymap.set('n', ',t', '<cmd>lua require("telescope.builtin").help_tags()<cr>', opts)
 vim.keymap.set('n', ',,', '<cmd>lua require("telescope.builtin").resume()<cr>', opts)
 vim.keymap.set('n', ',e', '<cmd>lua require("telescope.builtin").diagnostics()<cr>', opts)
+vim.keymap.set("n", ",m", ":Telescope media_files<CR>")
