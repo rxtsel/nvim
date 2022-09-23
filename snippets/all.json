@@ -1,0 +1,9 @@
+{
+  "Console.log": {
+  "prefix": "clg",
+  "body": [
+    "console.log($0)"
+  ],
+  "description": "Console.log"
+  }
+}

@@ -2,6 +2,12 @@
 	"name": "snippets",
 	"contributes": {
 		"snippets": [
+      {
+        "language": [
+          "all"
+        ],
+        "path": "./all.json"
+      },
 			{
 				"language": [
 					"html"
@@ -13,6 +19,12 @@
           "css"
         ],
         "path": "./css.json"
+      },
+      {
+        "language": [
+          "javascriptreact"
+        ],
+        "path": "./javascriptreact.json"
       }
 		]
 	}
