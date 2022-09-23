@@ -63,7 +63,7 @@ sudo pacman -S lua-language-server
 
 (Linux):
 ```shell
-sudo npm i -g ripgrep gcc tree-sitter typescript typescript-language-server @fsouza/prettierd @tailwindcss/language-server eslint_d ueberzug fd ffmpegthumbnailer poppler
+sudo npm i -g ripgrep gcc xsel tree-sitter typescript typescript-language-server @fsouza/prettierd @tailwindcss/language-server eslint_d ueberzug fd ffmpegthumbnailer poppler
 
 sudo pip3 install Pillow
 
