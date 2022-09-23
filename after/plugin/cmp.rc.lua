@@ -48,10 +48,10 @@ cmp.setup({
     end, { "i", "s" })
   }),
   sources = cmp.config.sources({
+    { name = 'path' },
+    { name = 'luasnip' },
     { name = 'nvim_lsp' },
     { name = 'buffer' },
-    { name = 'luasnip' },
-    { name = 'path' },
     { name = 'cmp_tabnine' }
   }),
   formatting = {
