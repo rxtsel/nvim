@@ -63,4 +63,7 @@ packer.startup(function(use)
   use 'andymass/vim-matchup'
   use 'phaazon/hop.nvim'
 
+  use 'wuelnerdotexe/vim-astro'
+  use 'wavded/vim-stylus'
+
 end)
