@@ -17,7 +17,6 @@ nvimTree.setup {
   update_cwd = true,
   view = {
     width = 30,
-    height = 30,
     side = "right",
     preserve_window_proportions = false,
     number = true,
