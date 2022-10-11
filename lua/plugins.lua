@@ -34,6 +34,8 @@ packer.startup(function(use)
   use 'MunifTanjim/prettier.nvim' -- Prettier plugin for Neovim's built-in LSP client
   use { "kyazdani42/nvim-tree.lua", requires = { "kyazdani42/nvim-web-devicons", tag = "nightly" } }
 
+  use 'numToStr/Comment.nvim'
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
 
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
