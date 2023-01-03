@@ -119,6 +119,20 @@ nvim_lsp.astro.setup {
   capabilities = capabilities
 }
 
+-- LSP
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+local schemas = require 'schemastore'.json.schemas()
+nvim_lsp.jsonls.setup {
+  -- on_attach = on_attach,
+  capabilities = capabilities,
+  settings = {
+    json = {
+      schemas = schemas,
+      validate = { enable = true }
+    }
+  }
+}
+
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
   underline = true,
