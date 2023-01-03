@@ -1,6 +1,10 @@
+vim.cmd('autocmd!')
+
+vim.scriptencoding = 'utf-8'
+vim.opt.encoding = 'utf-8'
+vim.opt.fileencoding = 'utf-8'
+
 vim.wo.number = true
-vim.opt.autoindent = true
-vim.opt.hlsearch = true
 
 vim.opt.title = true
 vim.opt.autoindent = true
@@ -20,15 +24,12 @@ vim.opt.smarttab = true
 vim.opt.breakindent = true
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
-vim.opt.expandtab = true
-vim.opt.ai = true --auto indent
-vim.opt.si = true --smart indent
 vim.opt.wrap = false -- No Wrap lines
 vim.opt.backspace = { 'start', 'eol', 'indent' }
+vim.opt.expandtab = true
 vim.opt.path:append { '**' } -- Finding files - Search down into subfolders
 vim.opt.wildignore:append { '*/node_modules/*' }
 vim.opt.mouse = "nvc"
-vim.opt.clipboard = "unnamedplus"
 
 -- Undercurl
 vim.cmd([[let &t_Cs = "\e[4:3m"]])
@@ -45,7 +46,3 @@ vim.opt.formatoptions:append { 'r' }
 
 -- Disable autocomments
 vim.cmd [[autocmd BufWinEnter * :set formatoptions-=c formatoptions-=r formatoptions-=o]]
-
--- Support to Astro
-vim.g.astro_typescript = 'enable'
-vim.g.astro_stylus = 'enable'

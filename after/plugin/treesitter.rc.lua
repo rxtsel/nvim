@@ -12,24 +12,16 @@ ts.setup {
   },
   ensure_installed = {
     "tsx",
-    "lua",
     "json",
-    "javascript",
+    "yaml",
     "css",
     "html",
-    "astro"
+    "lua"
   },
   autotag = {
     enable = true,
   },
-  matchup = {
-    enable = true,
-  },
-  context_commentstring = {
-    enable = true,
-    enable_autocmd = true
-  }
 }
 
---local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
---parser_config.tsx.filetype_to_parsername = { "javascript", "typescript.tsx" }
+local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
+parser_config.tsx.filetype_to_parsername = { "javascript", "typescript.tsx" }

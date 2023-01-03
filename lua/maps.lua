@@ -1,4 +1,5 @@
 require "term"
+
 local keymap = vim.keymap
 vim.cmd("imap jj <Esc>", { silent = true })
 
@@ -45,9 +46,6 @@ keymap.set('n', 'dw', 'vb"_d')
 -- Select all
 keymap.set('n', '<C-a>', 'gg<S-v>G')
 
--- Save with root permission (not working for now)
---vim.api.nvim_create_user_command('W', 'w !sudo tee > /dev/null %', {})
-
 -- New tab
 keymap.set('n', 'te', ':tabedit<Return>', { silent = true })
 -- Split window
@@ -68,3 +66,10 @@ keymap.set('n', '<C-w><down>', '<C-w>-')
 
 -- hop
 keymap.set('n', '<Space>s', ':HopChar2<CR>')
+
+-- search and replace
+keymap.set('n', '<Space>r', ':%s//g<Left><Left>', { silent = true })
+keymap.set("n", "<F2>", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+-- greatest remap ever
+keymap.set('x', '<Space>p', "\"_dP")
