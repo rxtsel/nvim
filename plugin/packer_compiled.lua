@@ -250,6 +250,11 @@ _G.packer_plugins = {
     path = "/home/rxtsel/.local/share/nvim/site/pack/packer/start/prettier.nvim",
     url = "https://github.com/MunifTanjim/prettier.nvim"
   },
+  ["schemastore.nvim"] = {
+    loaded = true,
+    path = "/home/rxtsel/.local/share/nvim/site/pack/packer/start/schemastore.nvim",
+    url = "https://github.com/b0o/schemastore.nvim"
+  },
   ["telescope-media-files.nvim"] = {
     loaded = true,
     path = "/home/rxtsel/.local/share/nvim/site/pack/packer/start/telescope-media-files.nvim",

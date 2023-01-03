@@ -12,12 +12,13 @@ ts.setup {
   },
   ensure_installed = {
     "tsx",
+    "typescript",
+    "javascript",
     "json",
     "yaml",
     "css",
     "html",
-    "lua",
-    "astro"
+    "lua"
   },
   autotag = {
     enable = true,
