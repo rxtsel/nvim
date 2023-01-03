@@ -59,7 +59,12 @@ packer.startup(function(use)
     run = function() vim.fn["mkdp#util#install"]() end,
   })
 
-  use 'lewis6991/gitsigns.nvim'
+  use {
+    'lewis6991/gitsigns.nvim',
+    config = function()
+      require('gitsigns').setup()
+    end
+  }
   use 'dinhhuy258/git.nvim' -- For git blame & browse
 
   use 'tpope/vim-surround'
