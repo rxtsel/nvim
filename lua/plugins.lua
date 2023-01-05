@@ -70,7 +70,6 @@ packer.startup(function(use)
 
   use 'tpope/vim-surround'
   use 'andweeb/presence.nvim'
-  use 'andymass/vim-matchup'
   use 'phaazon/hop.nvim'
 
   use 'github/copilot.vim'

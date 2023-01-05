@@ -68,7 +68,7 @@ nvimTree.setup {
   },
   filters = {
     dotfiles = false,
-    custom = { '__pycache__', 'node_modules' },
+    custom = { '__pycache__' },
     exclude = {},
   },
   git = {
