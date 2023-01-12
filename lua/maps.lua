@@ -24,12 +24,6 @@ keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv")
 -- nvim-tree
 keymap.set("n", "<Space>e", ":NvimTreeToggle<CR>")
 
--- fast scrolling
-keymap.set("n", "<C-j>", "10<C-e>")
-keymap.set("n", "<C-k>", "10<C-y>")
-keymap.set("n", "<C-l>", "20l")
-keymap.set("n", "<C-h>", "20h")
-
 -- open term
 keymap.set('t', 'jj', '<C-\\><C-n>', { silent = true })
 keymap.set('t', '<Esc>', '<C-\\><C-n>', { silent = true })
