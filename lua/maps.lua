@@ -58,9 +58,5 @@ keymap.set('n', '<C-w><down>', '<C-w>-')
 -- hop
 keymap.set('n', '<Space>s', ':HopChar2<CR>')
 
--- search and replace
-keymap.set('n', '<Space>r', ':%s//g<Left><Left>', { silent = true })
-keymap.set("n", "<F2>", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
-
 -- greatest remap ever
 keymap.set('x', '<Space>p', "\"_dP")
