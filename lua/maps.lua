@@ -1,7 +1,6 @@
 require "term"
 
 local keymap = vim.keymap
-vim.cmd("imap jj <Esc>", { silent = true })
 
 keymap.set('n', 'x', '"_x')
 
