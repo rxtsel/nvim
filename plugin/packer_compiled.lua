@@ -135,6 +135,11 @@ _G.packer_plugins = {
     path = "/home/rxtsel/.local/share/nvim/site/pack/packer/start/hop.nvim",
     url = "https://github.com/phaazon/hop.nvim"
   },
+  ["lsp-colors.nvim"] = {
+    loaded = true,
+    path = "/home/rxtsel/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim",
+    url = "https://github.com/folke/lsp-colors.nvim"
+  },
   ["lspkind-nvim"] = {
     loaded = true,
     path = "/home/rxtsel/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
@@ -239,11 +244,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/rxtsel/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
-  },
-  ["presence.nvim"] = {
-    loaded = true,
-    path = "/home/rxtsel/.local/share/nvim/site/pack/packer/start/presence.nvim",
-    url = "https://github.com/andweeb/presence.nvim"
   },
   ["prettier.nvim"] = {
     loaded = true,

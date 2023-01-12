@@ -16,6 +16,7 @@ packer.startup(function(use)
   use 'glepnir/lspsaga.nvim' -- LSP UIs
   use 'nvim-lualine/lualine.nvim' -- Statusline
   use 'onsails/lspkind-nvim' -- vscode-like pictograms
+  use 'folke/lsp-colors.nvim' -- LSP diagnostics colors
   use 'L3MON4D3/LuaSnip' --Snippet
   use 'saadparwaiz1/cmp_luasnip'
   use "rafamadriz/friendly-snippets"
@@ -69,7 +70,7 @@ packer.startup(function(use)
   use 'dinhhuy258/git.nvim' -- For git blame & browse
 
   use 'tpope/vim-surround'
-  use 'andweeb/presence.nvim'
+  -- use 'andweeb/presence.nvim'
   use 'phaazon/hop.nvim'
 
   use 'github/copilot.vim'
