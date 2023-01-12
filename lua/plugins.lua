@@ -69,7 +69,6 @@ packer.startup(function(use)
   }
   use 'dinhhuy258/git.nvim' -- For git blame & browse
 
-  use 'tpope/vim-surround'
   -- use 'andweeb/presence.nvim'
   use 'phaazon/hop.nvim'
 
