@@ -109,9 +109,11 @@ nvim_lsp.tailwindcss.setup {
   capabilities = capabilities
 }
 
+-- enable css cmp
+local cmp_capabilities = vim.lsp.protocol.make_client_capabilities()
+cmp_capabilities = require("cmp_nvim_lsp").default_capabilities(cmp_capabilities)
 nvim_lsp.cssls.setup {
-  on_attach = on_attach,
-  capabilities = capabilities
+  capabilities = cmp_capabilities
 }
 
 nvim_lsp.astro.setup {
