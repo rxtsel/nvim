@@ -99,11 +99,6 @@ _G.packer_plugins = {
     path = "/home/rxtsel/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
-  cmp_luasnip = {
-    loaded = true,
-    path = "/home/rxtsel/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
-    url = "https://github.com/saadparwaiz1/cmp_luasnip"
-  },
   ["colorbuddy.nvim"] = {
     loaded = true,
     path = "/home/rxtsel/.local/share/nvim/site/pack/packer/start/colorbuddy.nvim",
@@ -113,11 +108,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/rxtsel/.local/share/nvim/site/pack/packer/start/copilot.vim",
     url = "https://github.com/github/copilot.vim"
-  },
-  ["friendly-snippets"] = {
-    loaded = true,
-    path = "/home/rxtsel/.local/share/nvim/site/pack/packer/start/friendly-snippets",
-    url = "https://github.com/rafamadriz/friendly-snippets"
   },
   ["git.nvim"] = {
     loaded = true,
@@ -240,11 +230,6 @@ _G.packer_plugins = {
     path = "/home/rxtsel/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["popup.nvim"] = {
-    loaded = true,
-    path = "/home/rxtsel/.local/share/nvim/site/pack/packer/start/popup.nvim",
-    url = "https://github.com/nvim-lua/popup.nvim"
-  },
   ["prettier.nvim"] = {
     loaded = true,
     path = "/home/rxtsel/.local/share/nvim/site/pack/packer/start/prettier.nvim",
@@ -255,20 +240,10 @@ _G.packer_plugins = {
     path = "/home/rxtsel/.local/share/nvim/site/pack/packer/start/schemastore.nvim",
     url = "https://github.com/b0o/schemastore.nvim"
   },
-  ["telescope-media-files.nvim"] = {
-    loaded = true,
-    path = "/home/rxtsel/.local/share/nvim/site/pack/packer/start/telescope-media-files.nvim",
-    url = "https://github.com/nvim-telescope/telescope-media-files.nvim"
-  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/rxtsel/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
-  },
-  ["vim-surround"] = {
-    loaded = true,
-    path = "/home/rxtsel/.local/share/nvim/site/pack/packer/start/vim-surround",
-    url = "https://github.com/tpope/vim-surround"
   }
 }
 
