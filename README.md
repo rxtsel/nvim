@@ -1,6 +1,6 @@
-![1](https://user-images.githubusercontent.com/85462420/212437877-7e180493-8a4f-4f1d-9619-b84032b6a19a.png)
+![1](https://user-images.githubusercontent.com/85462420/212438367-8bac7eee-a26f-4de6-a17f-b8c14275be43.png)
 
-![2](https://user-images.githubusercontent.com/85462420/212437889-8604b142-dbef-41f1-be4c-3926b959eee7.png)
+![2](https://user-images.githubusercontent.com/85462420/212438372-d6f5b67d-864d-465c-9919-33b0ce309018.png)
 
 # Neovim setup
 
