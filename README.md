@@ -1,4 +1,8 @@
-# NEOVIM
+![1](https://user-images.githubusercontent.com/85462420/212437877-7e180493-8a4f-4f1d-9619-b84032b6a19a.png)
+
+![2](https://user-images.githubusercontent.com/85462420/212437889-8604b142-dbef-41f1-be4c-3926b959eee7.png)
+
+# Neovim setup
 
 Requires [Neovim](https://neovim.io/) (>= 0.7)
 
