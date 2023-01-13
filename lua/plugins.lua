@@ -18,8 +18,6 @@ packer.startup(function(use)
   use 'onsails/lspkind-nvim' -- vscode-like pictograms
   use 'folke/lsp-colors.nvim' -- LSP diagnostics colors
   use 'L3MON4D3/LuaSnip' --Snippet
-  use 'saadparwaiz1/cmp_luasnip'
-  use "rafamadriz/friendly-snippets"
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
   use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovim's built-in LSP
@@ -33,7 +31,7 @@ packer.startup(function(use)
   }
   use 'jose-elias-alvarez/null-ls.nvim' -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
   use 'MunifTanjim/prettier.nvim' -- Prettier plugin for Neovim's built-in LSP client
-  use { "kyazdani42/nvim-tree.lua", requires = { "kyazdani42/nvim-web-devicons", tag = "nightly" } }
+  use 'kyazdani42/nvim-tree.lua'
 
   use { 'numToStr/Comment.nvim',
     requires = {
@@ -45,8 +43,6 @@ packer.startup(function(use)
   use 'windwp/nvim-ts-autotag'
 
   use 'nvim-lua/plenary.nvim' -- Common utilities
-  use 'nvim-lua/popup.nvim'
-  use 'nvim-telescope/telescope-media-files.nvim'
   use 'nvim-telescope/telescope.nvim'
 
   use 'akinsho/nvim-bufferline.lua'
@@ -69,7 +65,6 @@ packer.startup(function(use)
   }
   use 'dinhhuy258/git.nvim' -- For git blame & browse
 
-  -- use 'andweeb/presence.nvim'
   use 'phaazon/hop.nvim'
 
   use 'github/copilot.vim'
