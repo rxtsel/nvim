@@ -26,6 +26,7 @@ keymap.set("n", "<Space>e", ":NvimTreeToggle<CR>")
 
 -- open term
 keymap.set({ 'n', 't' }, '<Space>ñ', ToggleTerminal)
+keymap.set('t', '<Esc>', '<C-\\><C-n>', { silent = true })
 
 -- Increment/decrement
 keymap.set('n', '+', '<C-a>')
