@@ -168,4 +168,3 @@ choco install ripgrep tree-sitter
 - \* : search current word
 - :%s/aaa/bbb/g : buscar aaa en todo el documento y remplazarlo por bbb
 
-_Credits to [Takuya](https://www.craftz.dog/) (Devaslife - craftzdog)_
