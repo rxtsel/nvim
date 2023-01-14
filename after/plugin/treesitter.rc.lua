@@ -11,6 +11,7 @@ ts.setup {
     disable = {},
   },
   ensure_installed = {
+    "markdown",
     "tsx",
     "typescript",
     "javascript",
