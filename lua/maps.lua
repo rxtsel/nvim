@@ -4,6 +4,7 @@ keymap.set('n', 'x', '"_x')
 
 -- Save and exit
 keymap.set('n', '<Space>q', ':q<CR>')
+keymap.set('n', '<Space>Q', ':q!<CR>')
 keymap.set('n', '<Space>w', ':w<CR>')
 keymap.set('n', '<A-q>', ':bd!<CR>')
 
