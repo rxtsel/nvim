@@ -40,6 +40,7 @@ cmp.setup({
     { name = 'path' },
     { name = 'nvim_lsp' },
     { name = 'buffer' },
+    { name = 'luasnip' }
   }),
   formatting = {
     format = lspkind.cmp_format({
