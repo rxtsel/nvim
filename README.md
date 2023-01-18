@@ -166,4 +166,4 @@ choco install ripgrep tree-sitter
 - N : previous ocurrence
 - \# : search current word
 - \* : search current word
-- :%s/aaa/bbb/g : buscar aaa en todo el documento y remplazarlo por bbb
+- :%s/aaa/bbb/g : search for aaa in the whole document and replace it with bbb
