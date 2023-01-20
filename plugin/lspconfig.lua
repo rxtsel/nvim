@@ -122,13 +122,11 @@ nvim_lsp.astro.setup {
 }
 
 nvim_lsp.emmet_ls.setup({
-  -- on_attach = on_attach,
   capabilities = capabilities,
-  filetypes = { 'html', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'astro' },
+  filetypes = { 'html', 'typescriptreact', 'javascriptreact' },
   init_options = {
     html = {
       options = {
-        -- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
         ["bem.enabled"] = true,
       },
     },
@@ -139,7 +137,6 @@ nvim_lsp.emmet_ls.setup({
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 local schemas = require 'schemastore'.json.schemas()
 nvim_lsp.jsonls.setup {
-  -- on_attach = on_attach,
   capabilities = capabilities,
   settings = {
     json = {
