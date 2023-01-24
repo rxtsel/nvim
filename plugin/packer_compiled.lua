@@ -244,6 +244,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/rxtsel/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["vim-multiple-cursors"] = {
+    loaded = true,
+    path = "/home/rxtsel/.local/share/nvim/site/pack/packer/start/vim-multiple-cursors",
+    url = "https://github.com/terryma/vim-multiple-cursors"
   }
 }
 

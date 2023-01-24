@@ -69,4 +69,6 @@ packer.startup(function(use)
 
   use 'github/copilot.vim'
 
+  use 'terryma/vim-multiple-cursors'
+
 end)
