@@ -1,3 +1,5 @@
+require 'term'
+
 local keymap = vim.keymap
 
 keymap.set('n', 'x', '"_x')
@@ -24,6 +26,7 @@ keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv")
 keymap.set("n", "<Space>e", ":NvimTreeToggle<CR>")
 
 -- Open term
+keymap.set({ 'n', 't' }, '<Space>ñ', ToggleTerminal)
 keymap.set('t', '<Esc>', '<C-\\><C-n>', { silent = true })
 
 -- Increment/decrement
