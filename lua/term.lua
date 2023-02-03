@@ -9,11 +9,11 @@ local getid = fun.win_getid
 
 local function openTerminal()
   if fun.bufexists(te_buf) ~= 1 then
-    cmd("sp | winc J | res 8 | te")
+    cmd("sp | winc J | res 9 | te")
     te_win_id = getid()
     te_buf = fun.bufnr('%')
   elseif gotoid(te_win_id) ~= 1 then
-    cmd("sb " .. te_buf .. "| winc J | res 8 ")
+    cmd("sb " .. te_buf .. "| winc J | res 9 ")
     te_win_id = getid()
   end
   cmd("startinsert")
