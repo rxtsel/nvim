@@ -1,4 +1,4 @@
-require 'term'
+require 'rxtsel.term'
 
 local keymap = vim.keymap
 
