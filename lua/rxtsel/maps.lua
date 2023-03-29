@@ -1,9 +1,12 @@
+require 'rxtsel.term'
+
 local keymap = vim.keymap
 
 keymap.set('n', 'x', '"_x')
 
 -- Save and exit
 keymap.set('n', '<Space>q', ':q<CR>')
+keymap.set('n', '<Space>Q', ':q!<CR>')
 keymap.set('n', '<Space>w', ':w<CR>')
 keymap.set('n', '<A-q>', ':bd!<CR>')
 
@@ -23,6 +26,7 @@ keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv")
 keymap.set("n", "<Space>e", ":NvimTreeToggle<CR>")
 
 -- Open term
+keymap.set({ 'n', 't' }, '<Space>ñ', ToggleTerminal)
 keymap.set('t', '<Esc>', '<C-\\><C-n>', { silent = true })
 
 -- Increment/decrement
@@ -37,9 +41,11 @@ keymap.set('n', '<C-a>', 'gg<S-v>G')
 
 -- New tab
 keymap.set('n', 'te', ':tabedit<Return>', { silent = true })
+
 -- Split window
 keymap.set('n', 'ss', ':split<Return><C-w>w', { silent = true })
 keymap.set('n', 'sv', ':vsplit<Return><C-w>w', { silent = true })
+
 -- Move window
 keymap.set('n', '<Space>', '<C-w>w')
 keymap.set('', 'sh', '<C-w>h')
