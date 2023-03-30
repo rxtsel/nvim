@@ -3,7 +3,6 @@ if (not status) then return end
 
 saga.setup({
   ui = {
-    kind = require("catppuccin.groups.integrations.lsp_saga").custom_kind(),
     winblend = 10,
     border = 'rounded',
     colors = {
@@ -12,7 +11,7 @@ saga.setup({
   }
 })
 
-local diagnostic = require("lspsaga.diagnostic")
+require("lspsaga.diagnostic")
 local opts = { noremap = true, silent = true }
 vim.keymap.set('n', '<C-j>', '<Cmd>Lspsaga diagnostic_jump_next<CR>', opts)
 vim.keymap.set('n', 'gl', '<Cmd>Lspsaga show_diagnostic<CR>', opts)
