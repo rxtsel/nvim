@@ -79,7 +79,7 @@ sudo pacman -S lua-language-server
 (Linux):
 
 ```shell
-sudo npm i -g ripgrep gcc xsel tree-sitter tree-sitter-cli typescript typescript-language-server @fsouza/prettierd @tailwindcss/language-server eslint_d
+sudo npm i -g ripgrep gcc xsel tree-sitter tree-sitter-cli typescript typescript-language-server @fsouza/prettierd @tailwindcss/language-server eslint_d @astrojs/language-server
 ```
 
 (windows):

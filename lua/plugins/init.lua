@@ -67,8 +67,6 @@ return {
 
   'phaazon/hop.nvim',
 
-  'github/copilot.vim',
-
   'terryma/vim-multiple-cursors',
 
   'andweeb/presence.nvim',
