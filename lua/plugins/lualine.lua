@@ -6,7 +6,7 @@ return {
   },
   config = {
     options = {
-      theme = 'tokyonight',
+      theme = 'catppuccin',
       icons_enabled = true,
       section_separators = { left = '', right = '' },
       component_separators = { left = '', right = '' },

@@ -1,7 +1,8 @@
 local status, bufferline = pcall(require, "bufferline")
 if (not status) then return end
 
-bufferline.setup({
+local mocha = require("catppuccin.palettes").get_palette "mocha"
+bufferline.setup {
   options = {
     mode = "tabs",
     separator_style = 'slant',
@@ -10,27 +11,21 @@ bufferline.setup({
     show_close_icon = false,
     color_icons = true
   },
-  highlights = {
-    separator = {
-      fg = '#073642',
-      bg = '#002b36',
+  highlights = require("catppuccin.groups.integrations.bufferline").get {
+    styles = { "italic", "bold" },
+    custom = {
+      all = {
+        fill = { bg = "#000000" },
+      },
+      mocha = {
+        background = { fg = mocha.text },
+      },
+      latte = {
+        background = { fg = "#000000" },
+      },
     },
-    separator_selected = {
-      fg = '#073642',
-    },
-    background = {
-      fg = '#657b83',
-      bg = '#002b36'
-    },
-    buffer_selected = {
-      fg = '#fdf6e3',
-      bold = true,
-    },
-    fill = {
-      bg = '#073642'
-    }
   },
-})
+}
 
 vim.api.nvim_set_keymap('n', '<Tab>', '<cmd>BufferLineCycleNext<cr>', {})
 vim.api.nvim_set_keymap('n', '<S-Tab>', '<cmd>BufferLineCyclePrev<cr>', {})

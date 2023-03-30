@@ -3,6 +3,7 @@ if (not status) then return end
 
 saga.setup({
   ui = {
+    kind = require("catppuccin.groups.integrations.lsp_saga").custom_kind(),
     winblend = 10,
     border = 'rounded',
     colors = {
