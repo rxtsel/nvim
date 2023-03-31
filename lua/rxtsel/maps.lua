@@ -1,5 +1,3 @@
-require 'rxtsel.term'
-
 local keymap = vim.keymap
 
 keymap.set('n', 'x', '"_x')
@@ -37,7 +35,7 @@ keymap.set('n', '-', '<C-x>')
 keymap.set('n', 'dw', 'vb"_d')
 
 -- Select all
-keymap.set('n', '<C-a>', 'gg<S-v>G')
+keymap.set('n', '<Space>aa', 'gg<S-v>G$')
 
 -- New tab
 keymap.set('n', 'te', ':tabedit<Return>', { silent = true })
