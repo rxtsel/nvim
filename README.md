@@ -53,40 +53,10 @@ Requires [Neovim](https://neovim.io/) (>= 0.7)
 scoop install neovim gcc
 ```
 
-3. Install Packer:
-
-- Install Packer (windows):
-
-```powershell
-git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"
-```
-
-- Install Packer (Linux):
+## Requiriments:
 
 ```shell
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-```
-
-4. Install lua-language-server:
-
-```shell
-sudo pacman -S lua-language-server
-```
-
-### Requiriments:
-
-(Linux):
-
-```shell
-sudo npm i -g ripgrep gcc xsel tree-sitter tree-sitter-cli typescript typescript-language-server @fsouza/prettierd @tailwindcss/language-server eslint_d @astrojs/language-server
-```
-
-(windows):
-
-```shell
-sudo npm i -g gcc typescript typescript-language-server @fsouza/prettierd @tailwindcss/language-server eslint_d
-choco install ripgrep tree-sitter
+gcc zip unzip gzip ripgrep xsel node tree-sitter tree-sitter-cli
 ```
 
 . Clone **this** repository in **"C:User\your_user\AppData\local"** (windows).
@@ -95,9 +65,7 @@ choco install ripgrep tree-sitter
 
 #### Open nvim and execute the command:
 
-```vim
-:PackerInstall
-```
+- `:MasonInstall prettierd eslint_d`
 
 # Basic commands
 
