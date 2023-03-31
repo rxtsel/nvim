@@ -58,7 +58,6 @@ return {
       require('gitsigns').setup()
     end
   },
-  'dinhhuy258/git.nvim', -- For git blame & browse
 
   'phaazon/hop.nvim',
 
