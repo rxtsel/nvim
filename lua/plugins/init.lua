@@ -67,7 +67,5 @@ return {
 
   'phaazon/hop.nvim',
 
-  'terryma/vim-multiple-cursors',
-
-  'andweeb/presence.nvim',
+  'terryma/vim-multiple-cursors'
 }
