@@ -28,7 +28,6 @@ return {
     build = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   },
   'jose-elias-alvarez/null-ls.nvim', -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
-  'MunifTanjim/prettier.nvim',       -- Prettier plugin for Neovim',s built-in LSP client
   'kyazdani42/nvim-tree.lua',
 
   {
