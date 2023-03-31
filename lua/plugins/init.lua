@@ -22,11 +22,7 @@ return {
       'williamboman/mason-lspconfig.nvim'
     }
   },
-  'b0o/schemastore.nvim', -- json schemas to use with lspconfig
-  {
-    'nvim-treesitter/nvim-treesitter',
-    build = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
-  },
+  'b0o/schemastore.nvim',            -- json schemas to use with lspconfig
   'jose-elias-alvarez/null-ls.nvim', -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
   'kyazdani42/nvim-tree.lua',
 
