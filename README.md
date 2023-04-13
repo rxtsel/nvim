@@ -4,7 +4,7 @@
 
 # Neovim setup
 
-Requires [Neovim](https://neovim.io/) (>= 0.7)
+Requires [Neovim](https://neovim.io/) (>= v0.8.3)
 
 - [wbthomason/packer.nvim](https://github.com/wbthomason/packer.nvim) - A plugin manager for Neovim
 - [svrana/neosolarized.nvim](https://github.com/svrana/neosolarized.nvim) - A truecolor, solarized dark colorscheme
