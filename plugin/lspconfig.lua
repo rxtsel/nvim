@@ -107,14 +107,12 @@ nvim_lsp.cssls.setup {
 
 nvim_lsp.astro.setup {
   on_attach = on_attach,
-  capabilities = capabilities,
-  cmd = { "astro-ls", "--stdio" },
-  filetypes = { "astro" },
+  capabilities = capabilities
 }
 
 nvim_lsp.emmet_ls.setup({
   capabilities = capabilities,
-  filetypes = { 'html', 'typescriptreact', 'javascriptreact', 'astro' },
+  filetypes = { 'html', 'typescriptreact', 'javascriptreact' },
   init_options = {
     html = {
       options = {

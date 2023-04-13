@@ -6,6 +6,9 @@ local compare = require "cmp.config.compare"
 
 cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done { map_char = { tex = "" } })
 
+require("luasnip.loaders.from_snipmate").load({ paths = "~/.config/nvim/snippets" })
+-- require("luasnip.loaders.from_snipmate").load({ paths = "~/.config/nvim/snippets/javascript" })
+
 cmp.setup {
   mapping = {
     ["<C-d>"] = cmp.mapping.scroll_docs(-4),
