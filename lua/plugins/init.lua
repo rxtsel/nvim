@@ -3,13 +3,6 @@ return {
   'kyazdani42/nvim-tree.lua',
 
   {
-    'numToStr/Comment.nvim',
-    dependencies = {
-      'JoosepAlviste/nvim-ts-context-commentstring'
-    }
-  },
-
-  {
     'nvim-telescope/telescope.nvim',
     dependencies = {
       'nvim-lua/plenary.nvim'
