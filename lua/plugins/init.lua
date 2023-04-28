@@ -21,7 +21,5 @@ return {
     end
   },
 
-  'phaazon/hop.nvim',
-
   'terryma/vim-multiple-cursors'
 }
