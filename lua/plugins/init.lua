@@ -16,8 +16,6 @@ return {
     }
   },
 
-  'akinsho/nvim-bufferline.lua',
-
   'norcalli/nvim-colorizer.lua',
 
   {
