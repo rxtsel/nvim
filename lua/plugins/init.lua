@@ -1,7 +1,5 @@
 return {
   'jose-elias-alvarez/null-ls.nvim',
-  'kyazdani42/nvim-tree.lua',
-
   {
     'nvim-telescope/telescope.nvim',
     dependencies = {
