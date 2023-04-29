@@ -6,7 +6,7 @@
 
 Requires [Neovim](https://neovim.io/) (>= v0.8.3)
 
-- [wbthomason/packer.nvim](https://github.com/wbthomason/packer.nvim) - A plugin manager for Neovim
+- [folke/lazy.nvim](https://github.com/folke/lazy.nvim) - A plugin manager for Neovim
 - [svrana/neosolarized.nvim](https://github.com/svrana/neosolarized.nvim) - A truecolor, solarized dark colorscheme
 - [kyazdani42/nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons) - Lua `fork` of vim-web-devicons for neovim
 - [nvim-lualine/lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) - A blazing fast and easy to configure Neovim statusline written in Lua
@@ -38,6 +38,7 @@ Requires [Neovim](https://neovim.io/) (>= v0.8.3)
 - [dinhhuy258/git.nvim](https://github.com/dinhhuy258/git.nvim) - A simple clone of the plugin vim-fugitive
 - [phaazon/hop.nvim](https://github.com/phaazon/hop.nvim) - Alternative to ease motion
 - [github/copilot.vim](https://github.com/github/copilot.vim) - Neovim plugin for GitHub Copilot
+- [terryma/vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors) - Multiple selections
 
 ## Neovim Setup:
 
