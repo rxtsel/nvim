@@ -1,3 +1,6 @@
+vim.api.nvim_set_keymap('n', '<Tab>', '<cmd>BufferLineCycleNext<cr>', {})
+vim.api.nvim_set_keymap('n', '<S-Tab>', '<cmd>BufferLineCyclePrev<cr>', {})
+
 return {
   'akinsho/nvim-bufferline.lua',
   config = {
