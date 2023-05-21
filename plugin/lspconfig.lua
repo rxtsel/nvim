@@ -110,18 +110,6 @@ nvim_lsp.astro.setup {
   capabilities = capabilities
 }
 
-nvim_lsp.emmet_ls.setup({
-  capabilities = capabilities,
-  filetypes = { 'html', 'typescriptreact', 'javascriptreact' },
-  init_options = {
-    html = {
-      options = {
-        ["bem.enabled"] = true,
-      },
-    },
-  }
-})
-
 -- LSP
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 local schemas = require 'schemastore'.json.schemas()

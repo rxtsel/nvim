@@ -11,7 +11,6 @@ lspconfig.setup {
     'lua_ls',
     'astro',
     'tsserver',
-    'emmet_ls',
     'jsonls',
     'cssls',
   },
