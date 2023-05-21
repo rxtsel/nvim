@@ -58,7 +58,6 @@ cmp.setup {
     { name = "nvim_lsp" },
     {
       name = "buffer",
-      keyword_length = 4,
       option = {
         get_bufnrs = function()
           local bufs = {}
@@ -95,7 +94,6 @@ cmp.setup {
   },
 
   sorting = {
-    priority_weight = 2,
     comparators = {
       compare.kind,
       compare.sort_text,
