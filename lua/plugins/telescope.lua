@@ -1,22 +1,10 @@
-return {
+local M = {
   'nvim-telescope/telescope.nvim',
+  cmd = 'Telescope',
+  version = '*',
   dependencies = {
     'nvim-lua/plenary.nvim',
   },
-  config = function()
-    local telescope = require("telescope")
-    local actions = require("telescope.actions")
-
-    telescope.setup({
-      defaults = {
-        mappings = {
-          n = {
-            ["q"] = actions.close
-          },
-        },
-      }
-    })
-  end,
   keys = {
     {
       ",f",
@@ -37,4 +25,23 @@ return {
       desc = "live grep with Telescope",
     }
   },
+  opts = {
+    defaults = {
+      -- Default from Kickstart.nvim
+      file_ignore_patterns = { '.git/', 'docs/' },
+      -- mappings = {
+      -- },
+    },
+    pickers = {
+      live_grep = {
+        find_command = { 'rg', '!**/.git/*' },
+      },
+    },
+  },
+  config = function(_, opts)
+    local telescope = require('telescope')
+    telescope.setup(opts)
+  end,
 }
+
+return M

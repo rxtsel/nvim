@@ -1,10 +1,17 @@
-vim.api.nvim_set_keymap('n', '<Tab>', '<cmd>BufferLineCycleNext<cr>', {})
-vim.api.nvim_set_keymap('n', '<S-Tab>', '<cmd>BufferLineCyclePrev<cr>', {})
-
-return {
-  'akinsho/nvim-bufferline.lua',
-  config = {
+local M = {
+  'akinsho/bufferline.nvim',
+  event = 'VeryLazy',
+  keys = {
+    -- { '<Space>bp', '<Cmd>BufferLineTogglePin<CR>', desc = 'Toggle pin' },
+    -- { '<Space>bP', '<Cmd>BufferLineGroupClose ungrouped<CR>', desc = 'Delete non-pinned buffers' },
+    { '<S-Tab>', '<Cmd>BufferLineCyclePrev<CR>', desc = 'Move to previous buffer' },
+    { '<Tab>', '<Cmd>BufferLineCycleNext<CR>', desc = 'Move to next buffer' },
+    -- { '<Space>bj', '<Cmd>BufferLinePick<CR>', desc = 'Jump to buffer' },
+  },
+  opts = {
     options = {
+      diagnostics = 'nvim_lsp',
+      always_show_bufferline = false,
       mode = "tabs",
       separator_style = 'slant',
       always_show_bufferline = false,
@@ -32,5 +39,7 @@ return {
         bg = '#073642'
       }
     }
-  }
+  },
 }
+
+return M
