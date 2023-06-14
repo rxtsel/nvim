@@ -12,8 +12,12 @@ local M = {
   },
   opts = {
     servers = {
-      jsonls = {},
+      astro = {},
+      tailwindcss = {},
+      cssls = {},
       tsserver = {},
+      jsonls = {},
+      yamlls = {},
       lua_ls = {
         Lua = {
           workspace = { checkThirdParty = false },
