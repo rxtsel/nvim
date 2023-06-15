@@ -1,6 +1,6 @@
 return {
   'dinhhuy258/git.nvim',
-  config = {
+  opts = {
     keymaps = {
       blame = "<Space>gb",
       diff = "<Space>gd",

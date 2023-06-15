@@ -1,6 +1,6 @@
 return {
   'kyazdani42/nvim-web-devicons',
-  config = {
+  opts = {
     default = true,
     override = {
       astro = {

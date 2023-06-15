@@ -4,7 +4,7 @@ return {
     'kyazdani42/nvim-web-devicons',
     lazy = true,
   },
-  config = {
+  opts = {
     options = {
       theme = 'solarized_dark',
       icons_enabled = true,

@@ -1,6 +1,6 @@
 return {
   'phaazon/hop.nvim',
-  config = {
+  opts = {
     keys = "arstneiodhpfwqluy;cxzm"
   }
 }

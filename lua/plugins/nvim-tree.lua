@@ -1,6 +1,6 @@
 return {
   'kyazdani42/nvim-tree.lua',
-  config = {
+  opts = {
     auto_reload_on_write = true,
     disable_netrw = false,
     hijack_cursor = false,

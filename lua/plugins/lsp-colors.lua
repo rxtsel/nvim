@@ -1,6 +1,6 @@
 return {
   'folke/lsp-colors.nvim',
-  config = {
+  opts = {
     Error = "#db4b4b",
     Warning = "#e0af68",
     Information = "#0db9d7",

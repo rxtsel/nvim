@@ -17,10 +17,12 @@ function M.set_keybinds(buf)
   nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
   nmap('gI', vim.lsp.buf.implementation, '[G]oto [I]mplementation')
   nmap('gD', vim.lsp.buf.type_definition, '[G]oto Type [D]efinition')
+  nmap('<C-j>', vim.diagnostic.goto_next, 'Next diagnostics')
+  nmap('<C-k>', vim.diagnostic.goto_prev, 'Prev diagnostics')
+  nmap('<Space>i', vim.diagnostic.open_float, 'Open float diagnostics')
 
   -- See `:help K` for why this keymap
   nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
-  nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
 end
 
 function M.set_diagnostics()
