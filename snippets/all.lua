@@ -40,6 +40,31 @@ return {
       rules:
         quotes: [error, single]
         semi: [2, never]
+  ]]),
+
+  -- css reset
+  ls.parser.parse_snippet({
+      trig = "cssreset"
+    },
+    [[
+    html {
+      box-sizing: border-box;
+      font-size: 62.5%;
+      scroll-behavior: smooth;
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-size: 1.6rem;
+    }
   ]])
 
 }
