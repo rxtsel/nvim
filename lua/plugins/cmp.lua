@@ -15,6 +15,12 @@ local M = {
     local cmp = require('cmp')
     local luasnip = require('luasnip')
 
+    local has_words_before = function()
+      unpack = unpack or table.unpack
+      local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+      return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
+    end
+
     return {
       snippet = {
         expand = function(args)
@@ -34,6 +40,8 @@ local M = {
             cmp.select_next_item()
           elseif luasnip.expand_or_jumpable() then
             luasnip.expand_or_jump()
+          elseif has_words_before() then
+            cmp.complete()
           else
             fallback()
           end
@@ -70,22 +78,8 @@ local M = {
   end,
   config = function(_, opts)
     local cmp = require('cmp')
-    local luasnip = require('luasnip')
-    --    local autopairs = require('nvim-autopairs')
-    --    local autopairs_completion = require("nvim-autopairs.completion.cmp")
 
-    luasnip.config.setup({})
     cmp.setup(opts)
-
-    -- Configure autopairs
-    --    autopairs.setup ({
-    --      check_ts = true,
-    --    })
-    --    autopairs_completion.setup({
-    --      map_cr = true,   --  map <CR> on insert mode
-    --      map_complete = true, -- it will auto insert `(` after select function or method item
-    --      auto_select = true -- automatically select the first item
-    --    })
   end,
 }
 
