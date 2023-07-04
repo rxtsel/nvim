@@ -14,4 +14,19 @@ return {
     }
     ]]
   ),
+
+  -- arrow function component
+  ls.parser.parse_snippet({
+      trig = "rafce"
+    },
+    [[
+    export const ${1:nameFunction} = () => {
+      return (
+        ${2: ...}
+      )
+    }
+
+    export default ${1:nameFunction};
+    ]]
+  ),
 }
