@@ -6,9 +6,6 @@ local M = {
     -- Automatically install LSPs to stdpath for neovim
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
-
-    -- Additional lua configuration, makes nvim stuff amazing!
-    'folke/neodev.nvim',
   },
   opts = {
     servers = {
@@ -32,9 +29,6 @@ local M = {
 
     -- Setup diagnostics (including icons)
     config.set_diagnostics()
-
-    -- Setup neovim lua configuration
-    require('neodev').setup()
 
     -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
     local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
