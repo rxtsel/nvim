@@ -1,6 +1,7 @@
 local M = {
   'jose-elias-alvarez/null-ls.nvim',
   event = { 'BufReadPre', 'BufNewFile' },
+  lazy = true,
   dependencies = {
     'williamboman/mason.nvim',
   },
@@ -11,7 +12,6 @@ local M = {
       root_dir = require('null-ls.utils').root_pattern('stylua.toml', '.git'),
       sources = {
         formatting.prettierd,
-        formatting.eslint_d,
         null_ls.builtins.diagnostics.eslint_d.with({
           diagnostics_format = '[eslint] #{m}\n(#{c})'
         })
