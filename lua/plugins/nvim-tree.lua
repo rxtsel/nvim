@@ -16,12 +16,6 @@ return {
       number = true,
       relativenumber = true,
       signcolumn = "yes",
-      mappings = {
-        custom_only = false,
-        list = {
-          -- user mappings go here
-        },
-      },
     },
     renderer = {
       indent_markers = {
