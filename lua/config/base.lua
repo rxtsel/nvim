@@ -1,42 +1,52 @@
 vim.cmd('autocmd!')
 
+local opt = vim.opt
+
 vim.scriptencoding = 'utf-8'
-vim.opt.encoding = 'utf-8'
-vim.opt.fileencoding = 'utf-8'
+opt.encoding = 'utf-8'
+opt.fileencoding = 'utf-8'
 
 vim.wo.number = true
 
-vim.opt.title = true
-vim.opt.autoindent = true
-vim.opt.smartindent = true
-vim.opt.hlsearch = true
-vim.opt.backup = false
-vim.opt.showcmd = true
-vim.opt.cmdheight = 1
-vim.opt.laststatus = 2
-vim.opt.expandtab = true
-vim.opt.scrolloff = 10
-vim.opt.shell = 'zsh'
-vim.opt.inccommand = 'split'
-vim.opt.ignorecase = true -- Case insensitive searching UNLESS /C or capital in search
-vim.opt.smarttab = true
-vim.opt.breakindent = true
-vim.opt.shiftwidth = 2
-vim.opt.tabstop = 2
-vim.opt.wrap = false -- No Wrap lines
-vim.opt.backspace = { 'start', 'eol', 'indent' }
-vim.opt.expandtab = true
-vim.opt.path:append { '**' } -- Finding files - Search down into subfolders
-vim.opt.wildignore:append { '*/node_modules/*' }
-vim.opt.mouse = "nvc"
+opt.title = true
+opt.autoindent = true
+opt.smartindent = true
+opt.hlsearch = true
+opt.backup = false
+opt.showcmd = true
+opt.showmode = false -- don't show mode. Show it in statusline
+opt.cmdheight = 1
+opt.laststatus = 2
+opt.expandtab = true
+opt.scrolloff = 10
+opt.inccommand = 'split'
+opt.ignorecase = true -- Case insensitive searching UNLESS /C or capital in search
+opt.smarttab = true
+opt.breakindent = true
+opt.shiftwidth = 2
+opt.tabstop = 2
+opt.wrap = false -- No Wrap lines
+opt.backspace = { 'start', 'eol', 'indent' }
+opt.expandtab = true
+opt.path:append { '**' } -- Finding files - Search down into subfolders
+opt.wildignore:append { '*/node_modules/*' }
+opt.mouse = "nvc"
+opt.shell = 'zsh'
+opt.clipboard = 'unnamedplus'
+opt.completeopt = { 'menu', 'menuone', 'noselect' }
+opt.formatoptions = 'jcroqlnt'
+opt.grepformat = '%f:%l:%c:%m'
+opt.grepprg = 'rg --vimgrep'
+opt.relativenumber = true
+opt.shiftround = true
 
 -- Highlight on yank
-vim.opt.cursorline = true
-vim.opt.termguicolors = true
-vim.opt.winblend = 0
-vim.opt.wildoptions = 'pum'
-vim.opt.pumblend = 5
-vim.opt.background = 'dark'
+opt.cursorline = true
+opt.termguicolors = true
+opt.winblend = 0
+opt.wildoptions = 'pum'
+opt.pumblend = 5
+opt.background = 'dark'
 
 -- Undercurl
 vim.cmd([[let &t_Cs = "\e[4:3m"]])
@@ -49,7 +59,10 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 })
 
 -- Add asterisks in block comments
-vim.opt.formatoptions:append { 'r' }
+opt.formatoptions:append { 'r' }
 
 -- Disable autocomments
 vim.cmd [[autocmd BufWinEnter * :set formatoptions-=c formatoptions-=r formatoptions-=o]]
+
+-- Fix markdown indentation settings
+vim.g.markdown_recommended_style = 0
