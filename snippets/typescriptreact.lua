@@ -17,8 +17,6 @@ return {
         ${3:<></>}
       )
     }
-
-    export default ${1: nameFunction}
     ]]
   )
 }
