@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 vim.cmd('autocmd!')
 
 local opt = vim.opt
@@ -18,7 +19,7 @@ opt.showmode = false -- don't show mode. Show it in statusline
 opt.cmdheight = 1
 opt.laststatus = 2
 opt.expandtab = true
-opt.scrolloff = 10
+opt.scrolloff = 2
 opt.inccommand = 'split'
 opt.ignorecase = true -- Case insensitive searching UNLESS /C or capital in search
 opt.smarttab = true
