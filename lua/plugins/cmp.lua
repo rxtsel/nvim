@@ -79,6 +79,7 @@ local M = {
       },
       formatting = {
         format = lspkind.cmp_format({
+          mode = 'symbol_text',
           maxwidth = 50,
           before = function(entry, vim_item)
             vim_item = formatForTailwindCSS(entry, vim_item)
