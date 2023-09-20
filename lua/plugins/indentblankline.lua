@@ -1,6 +1,6 @@
 return {
   "lukas-reineke/indent-blankline.nvim",
-  config = {
+  opts = {
     show_end_of_line = false,
     show_current_context = true,
     buftype_exclude = { "terminal" },
