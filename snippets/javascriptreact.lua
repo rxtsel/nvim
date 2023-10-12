@@ -25,8 +25,6 @@ return {
         ${2: ...}
       )
     }
-
-    export default ${1:nameFunction};
     ]]
   ),
 }
