@@ -8,6 +8,9 @@ keymap.set('n', '<Space>Q', ':q!<CR>')
 keymap.set('n', '<Space>w', ':w<CR>')
 keymap.set('n', '<A-q>', ':bd!<CR>')
 
+-- force format
+keymap.set('n', '<C-s>', ':lua vim.lsp.buf.format()<CR> :w<CR>')
+
 -- Comma to end
 keymap.set("n", "<Space>;", "$a;<Esc>")
 keymap.set("n", "<Space>,", "$a,<Esc>")
