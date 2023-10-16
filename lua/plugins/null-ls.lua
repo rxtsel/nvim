@@ -14,7 +14,6 @@ local M = {
 			sources = {
 				formatting.prettierd,
 				formatting.stylua,
-				formatting.eslint_d,
 				diagnostics.eslint_d.with({
 					diagnostics_format = "[eslint] #{m}\n(#{c})",
 				}),
