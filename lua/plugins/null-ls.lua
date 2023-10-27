@@ -8,15 +8,39 @@ local M = {
 		local null_ls = require("null-ls")
 		local formatting = null_ls.builtins.formatting
 		local diagnostics = null_ls.builtins.diagnostics
+		local codeactions = null_ls.builtins.code_actions
 
 		return {
 			root_dir = require("null-ls.utils").root_pattern("stylua.toml", ".git"),
 			sources = {
-				formatting.prettierd,
-				formatting.stylua,
+				formatting.prettierd.with({
+					filetypes = {
+						"astro",
+						"css",
+						"html",
+						"json",
+						"yaml",
+						"markdown",
+						"lua",
+					},
+				}),
+				formatting.stylua.with({
+					filetypes = {
+						"lua",
+					},
+				}),
+				formatting.eslint_d.with({
+					filetypes = {
+						"javascript",
+						"javascriptreact",
+						"typescript",
+						"typescriptreact",
+					},
+				}),
 				diagnostics.eslint_d.with({
 					diagnostics_format = "[eslint] #{m}\n(#{c})",
 				}),
+				codeactions.eslint_d,
 			},
 			on_attach = function(client, bufnr)
 				-- Enable formatting on sync
