@@ -3,28 +3,41 @@ local s = ls.snippet
 local t = ls.text_node
 
 return {
-  s("copyright", t("&#169;")),
+	s("copyright", t("&#169;")),
 
-  s("rxtsel_website", t("https://rxtsel.dev")),
+	s("rxtsel_website", t("https://rxtsel.dev")),
 
-  ls.parser.parse_snippet({
-      trig = "prettierrc"
-    },
-    [[
-      arrowParens: 'avoid'
-      singleQuote: true
-      bracketSpacing: true
-      endOfLine: 'lf'
-      semi: false
-      tabWidth: 2
-      trailingComma: 'none'
+	ls.parser.parse_snippet(
+		{
+			trig = "prettierrc",
+		},
+		[[
+      {
+        "useTabs": false,
+        "tabWidth": 2,
+        "singleQuote": true,
+        "trailingComma": "none",
+        "semi": false,
+        "plugins": ["prettier-plugin-astro"],
+        "pluginSearchDirs": false
+      }
     ]]
-  ),
+	),
 
-  ls.parser.parse_snippet({
-      trig = "eslintrcyml"
-    },
-    [[
+	ls.parser.parse_snippet(
+		{
+			trig = "prettierignore",
+		},
+		[[
+      node_modules/**
+    ]]
+	),
+
+	ls.parser.parse_snippet(
+		{
+			trig = "eslintrcyml",
+		},
+		[[
       root: true
       parser: '@typescript-eslint/parser'
       extends:
@@ -40,13 +53,15 @@ return {
       rules:
         quotes: [error, single]
         semi: [2, never]
-  ]]),
+  ]]
+	),
 
-  -- css reset
-  ls.parser.parse_snippet({
-      trig = "cssreset"
-    },
-    [[
+	-- css reset
+	ls.parser.parse_snippet(
+		{
+			trig = "cssreset",
+		},
+		[[
     html {
       box-sizing: border-box;
       font-size: 62.5%;
@@ -65,6 +80,6 @@ return {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       font-size: 1.6rem;
     }
-  ]])
-
+  ]]
+	),
 }
