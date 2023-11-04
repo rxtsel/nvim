@@ -3,20 +3,21 @@ ls.filetype_extend("typescriptreact", { "javascript" })
 ls.filetype_extend("typescriptreact", { "javascriptreact" })
 
 return {
-  -- arrow function component
-  ls.parser.parse_snippet({
-      trig = "rafce"
-    },
-    [[
+	-- arrow function component
+	ls.parser.parse_snippet(
+		{
+			trig = "rafce",
+		},
+		[[
     import { FC } from 'react'
 
-    export interface ${1: nameFunction}Props {${2}}
+    export interface ${1: NameFunction}Props { ${2} }
 
-    export const ${1: nameFunction}:FC<${1: nameFunction}Props> = () => {
+    export const ${1: NameFunction}:FC<${1: NameFunction}Props> = () => {
       return (
-        ${3:<></>}
+        <p>${1: ...}</p>
       )
     }
     ]]
-  )
+	),
 }
