@@ -1,10 +1,12 @@
+-- Disable autocomment
+vim.cmd([[autocmd BufWinEnter * :set formatoptions-=c formatoptions-=r formatoptions-=o]])
+
 -- Stolen from LazyVim/LazyVim by Folke
 local function augroup(name)
 	return vim.api.nvim_create_augroup("local_" .. name, { clear = true })
 end
 
--- [[ Highlight on yank ]]
--- See `:help vim.highlight.on_yank()`
+-- Highlight on yank
 vim.api.nvim_create_autocmd("TextYankPost", {
 	group = augroup("highlight_yank"),
 	callback = function()
@@ -12,21 +14,13 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 })
 
--- close some filetypes with <q>
+-- Close some filetypes with <q>
 vim.api.nvim_create_autocmd("FileType", {
 	group = augroup("close_with_q"),
 	pattern = {
-		"PlenaryTestPopup",
 		"help",
 		"lspinfo",
-		"man",
-		"notify",
-		"qf",
-		"spectre_panel",
-		"startuptime",
-		"tsplayground",
 		"checkhealth",
-		"fugitive",
 	},
 	callback = function(event)
 		vim.bo[event.buf].buflisted = false
@@ -35,3 +29,19 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.cmd([[colorscheme solarized-osaka]])
+
+-- Filetypes
+vim.filetype.add({
+    pattern = {
+        ["%.env%.[%w_.-]+"] = "dotenv",
+        [".gitconfig.*"] = "gitconfig",
+    },
+    extension = {
+        env = "dotenv",
+        luacheckrc = "lua",
+        mdx = "markdown",
+    },
+    filename = {
+        [".env"] = "dotenv"
+    },
+})

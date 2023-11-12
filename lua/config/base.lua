@@ -1,69 +1,89 @@
----@diagnostic disable: undefined-global
 vim.cmd("autocmd!")
 
-local opt = vim.opt
+-- Disable native file tree
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
-vim.scriptencoding = "utf-8"
-opt.encoding = "utf-8"
-opt.fileencoding = "utf-8"
+-- Set leader
+vim.g.mapleader = " "
 
-vim.wo.number = true
+-- Sync nvim clipboard with sys clipboard
+vim.opt.clipboard = "unnamedplus"
 
-opt.title = true
-opt.autoindent = true
-opt.smartindent = true
-opt.hlsearch = true
-opt.backup = false
-opt.showcmd = true
-opt.showmode = false -- don't show mode. Show it in statusline
-opt.cmdheight = 1
-opt.laststatus = 2
-opt.expandtab = true
-opt.scrolloff = 2
-opt.inccommand = "split"
-opt.ignorecase = true -- Case insensitive searching UNLESS /C or capital in search
-opt.smarttab = true
-opt.breakindent = true
-opt.shiftwidth = 2
-opt.tabstop = 2
-opt.wrap = false -- No Wrap lines
-opt.backspace = { "start", "eol", "indent" }
-opt.expandtab = true
-opt.path:append({ "**" }) -- Finding files - Search down into subfolders
-opt.wildignore:append({ "*/node_modules/*" })
-opt.mouse = "nvc"
-opt.shell = "zsh"
-opt.clipboard = "unnamedplus"
-opt.completeopt = { "menu", "menuone", "noselect" }
-opt.formatoptions = "jcroqlnt"
-opt.grepformat = "%f:%l:%c:%m"
-opt.grepprg = "rg --vimgrep"
-opt.relativenumber = false
-opt.shiftround = true
+-- Highlight line you are on
+vim.opt.cursorline = true
 
--- Highlight on yank
-opt.cursorline = true
-opt.termguicolors = true
-opt.winblend = 0
-opt.wildoptions = "pum"
-opt.pumblend = 5
-opt.background = "dark"
+-- Enables search results as you type
+vim.opt.incsearch = true
 
--- Undercurl
-vim.cmd([[let &t_Cs = "\e[4:3m"]])
-vim.cmd([[let &t_Ce = "\e[4:0m"]])
+-- Enables smart indenting
+vim.opt.smartindent = true
 
--- Turn off paste mode when leaving insert
-vim.api.nvim_create_autocmd("InsertLeave", {
-	pattern = "*",
-	command = "set nopaste",
-})
+-- Time after the buffer is saved
+vim.opt.updatetime = 300
 
--- Add asterisks in block comments
-opt.formatoptions:append({ "r" })
+-- Enables mouse
+vim.opt.mouse = "nvc"
 
--- Disable autocomments
-vim.cmd([[autocmd BufWinEnter * :set formatoptions-=c formatoptions-=r formatoptions-=o]])
+-- Disables swap files
+vim.opt.swapfile = false
 
--- Fix markdown indentation settings
-vim.g.markdown_recommended_style = 0
+-- Enables undo files
+vim.opt.undofile = true
+
+-- Convert tab to 4 spaces
+vim.opt.tabstop = 2
+
+-- Correctly indent lines inside blocks
+vim.opt.shiftwidth = 2
+
+-- Enables tab to space conversion
+vim.opt.expandtab = true
+
+-- Prefer opening new buffers to the right
+vim.opt.splitright = true
+
+-- Prefer opening new buffers below
+vim.opt.splitbelow = true
+
+-- Enable nvim set colors
+vim.opt.termguicolors = true
+
+-- Enable changing buffers without saving
+vim.opt.hidden = true
+
+-- Ignore case when searching
+vim.opt.ignorecase = true
+
+-- Ignore case when searching
+vim.opt.wildignorecase = true
+
+-- Search with cases sensitive only if search query isn't the same case
+vim.opt.smartcase = true
+
+-- Show relative line numbers in the sidebar
+vim.opt.relativenumber = false
+
+-- Show sidebar
+vim.opt.signcolumn = "yes"
+
+-- Show current line number
+vim.opt.number = true
+
+-- Disables line wrapping
+vim.opt.wrap = false
+
+-- Use only one global statusline
+vim.opt.laststatus = 3
+
+-- Don't redraw screen when using macros (performance increase)
+-- vim.opt.lazyredraw = true
+
+-- Scroll offset
+vim.opt.scrolloff = 15
+
+-- Scroll amount
+vim.opt.scroll = 15
+
+-- Scroll amount
+vim.opt.showmode = false
