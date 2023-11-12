@@ -32,16 +32,16 @@ vim.cmd([[colorscheme solarized-osaka]])
 
 -- Filetypes
 vim.filetype.add({
-    pattern = {
-        ["%.env%.[%w_.-]+"] = "dotenv",
-        [".gitconfig.*"] = "gitconfig",
-    },
-    extension = {
-        env = "dotenv",
-        luacheckrc = "lua",
-        mdx = "markdown",
-    },
-    filename = {
-        [".env"] = "dotenv"
-    },
+	pattern = {
+		["%.env%.[%w_.-]+"] = "dotenv",
+		[".gitconfig.*"] = "gitconfig",
+	},
+	extension = {
+		env = "dotenv",
+		luacheckrc = "lua",
+		mdx = "markdown",
+	},
+	filename = {
+		[".env"] = "dotenv",
+	},
 })

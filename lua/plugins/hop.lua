@@ -1,6 +1,6 @@
 return {
-  'phaazon/hop.nvim',
-  opts = {
-    keys = "arstneiodhpfwqluy;cxzm"
-  }
+	"phaazon/hop.nvim",
+	opts = {
+		keys = "arstneiodhpfwqluy;cxzm",
+	},
 }
