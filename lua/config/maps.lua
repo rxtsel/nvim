@@ -3,17 +3,17 @@ local keymap = vim.keymap
 keymap.set("n", "x", '"_x')
 
 -- Save and exit
-keymap.set("n", "<Space>q", ":q<CR>")
-keymap.set("n", "<Space>Q", ":q!<CR>")
-keymap.set("n", "<Space>w", ":w<CR>")
+keymap.set("n", "<LEADER>q", ":q<CR>")
+keymap.set("n", "<LEADER>Q", ":q!<CR>")
+keymap.set("n", "<LEADER>w", ":w<CR>")
 keymap.set("n", "<A-q>", ":bd!<CR>")
 
 -- force format
 keymap.set("n", "<C-s>", ":lua vim.lsp.buf.format()<CR> :w<CR>")
 
 -- Comma to end
-keymap.set("n", "<Space>;", "$a;<Esc>")
-keymap.set("n", "<Space>,", "$a,<Esc>")
+keymap.set("n", "<LEADER>;", "$a;<Esc>")
+keymap.set("n", "<LEADER>,", "$a,<Esc>")
 
 -- Move lines
 keymap.set("n", "<A-j>", ":m .+1<CR>==")
@@ -24,7 +24,7 @@ keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv")
 keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv")
 
 -- Neo-tree
-keymap.set("n", "<Space>e", ":Neotree toggle<CR>")
+keymap.set("n", "<LEADER>e", ":Neotree toggle<CR>")
 
 -- Increment/decrement
 keymap.set("n", "+", "<C-a>")
@@ -34,7 +34,7 @@ keymap.set("n", "-", "<C-x>")
 keymap.set("n", "dw", 'vb"_d')
 
 -- Select all
-keymap.set("n", "<Space>aa", "gg<S-v>G$")
+keymap.set("n", "<LEADER>aa", "gg<S-v>G$")
 
 -- New tab
 keymap.set("n", "te", ":tabedit<Return>", { silent = true })
@@ -44,7 +44,7 @@ keymap.set("n", "ss", ":split<Return><C-w>w", { silent = true })
 keymap.set("n", "sv", ":vsplit<Return><C-w>w", { silent = true })
 
 -- Move window
-keymap.set("n", "<Space>", "<C-w>w")
+keymap.set("n", "<LEADER>", "<C-w>w")
 keymap.set("", "sh", "<C-w>h")
 keymap.set("", "sk", "<C-w>k")
 keymap.set("", "sj", "<C-w>j")
@@ -57,10 +57,10 @@ keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
 
 -- Hop
-keymap.set("n", "<Space>s", ":HopChar2<CR>")
+keymap.set("n", "<LEADER>s", ":HopChar2<CR>")
 
 -- Greatest remap ever
-keymap.set("x", "<Space>p", '"_dP')
+keymap.set("x", "<LEADER>p", '"_dP')
 
 -- Indentations
 keymap.set("v", ">", ">gv", { silent = true })

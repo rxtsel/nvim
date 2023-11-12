@@ -40,6 +40,6 @@ return {
 		vim.keymap.set("n", "gt", "<Cmd>Lspsaga goto_type_definition<CR>", opts)
 		vim.keymap.set("n", "gp", "<Cmd>Lspsaga peek_definition<CR>", opts)
 		vim.keymap.set("n", "gr", "<Cmd>Lspsaga rename<CR>", opts)
-		vim.keymap.set("n", "<Space>ca", "<cmd>Lspsaga code_action<CR>", opts)
+		vim.keymap.set("n", "<LEADER>ca", "<cmd>Lspsaga code_action<CR>", opts)
 	end,
 }
