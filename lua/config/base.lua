@@ -28,6 +28,12 @@ vim.opt.mouse = "nvc"
 -- Disables swap files
 vim.opt.swapfile = false
 
+-- Disables backup files
+vim.opt.backup = false
+
+-- If a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
+vim.opt.writebackup = false
+
 -- Enables undo files
 vim.opt.undofile = true
 
@@ -87,3 +93,6 @@ vim.opt.scroll = 15
 
 -- Scroll amount
 vim.opt.showmode = false
+
+-- mostly just for cmp
+vim.opt.completeopt = { "menuone", "noselect" }
