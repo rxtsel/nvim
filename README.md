@@ -1,0 +1,4 @@
+Requiriments
+```shell
+ripgrep fd
+```
