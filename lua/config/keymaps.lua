@@ -7,6 +7,10 @@ discipline.cowboy()
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
+-- Save and exit
+keymap.set("n", "<Space>q", ":q<CR>")
+keymap.set("n", "<Space>w", ":w<CR>")
+
 -- Increment/decrement
 keymap.set("n", "+", "<C-a>")
 keymap.set("n", "-", "<C-x")
