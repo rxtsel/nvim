@@ -1,4 +1,0 @@
-Requiriments
-```shell
-ripgrep fd
-```
