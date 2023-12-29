@@ -72,15 +72,17 @@ return {
     opts = {
       window = {
         position = "right",
+      },
+      filesystem = {
         filtered_items = {
-          visible = false,
           hide_dotfiles = false,
-          hide_gitignored = true,
           hide_by_name = {
             "node_modules",
             ".git",
           },
           always_show = {
+            ".env.example",
+            ".env.local",
             ".env",
           },
         },
