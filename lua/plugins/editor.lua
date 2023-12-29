@@ -54,6 +54,7 @@ return {
       },
     },
     keys = {
+      { "<leader>,", false },
       {
         ";f",
         function()
