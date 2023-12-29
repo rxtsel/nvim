@@ -54,7 +54,7 @@ return {
   },
 
   {
-    "kyazdani42/nvim-web-devicons",
+    "nvim-tree/nvim-web-devicons",
     opts = {
       default = true,
       override = {
@@ -62,6 +62,27 @@ return {
           icon = "",
           color = "#FF5D01",
           name = "Astro",
+        },
+      },
+    },
+  },
+
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    opts = {
+      window = {
+        position = "right",
+        filtered_items = {
+          visible = false,
+          hide_dotfiles = false,
+          hide_gitignored = true,
+          hide_by_name = {
+            "node_modules",
+            ".git",
+          },
+          always_show = {
+            ".env",
+          },
         },
       },
     },
