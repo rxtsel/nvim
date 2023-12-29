@@ -1,6 +1,6 @@
 return {
   {
-    enabled = true,
+    enabled = false,
     "folke/flash.nvim",
     ---@type Flash.Config
     opts = {
@@ -14,27 +14,6 @@ return {
   },
 
   {
-    "nvim-neo-tree/neo-tree.nvim",
-    opts = {
-      window = {
-        position = "right",
-        filtered_items = {
-          visible = false,
-          hide_dotfiles = false,
-          hide_gitignored = true,
-          hide_by_name = {
-            "node_modules",
-            ".git",
-          },
-          always_show = {
-            ".env",
-          },
-        },
-      },
-    },
-  },
-
-  {
     "echasnovski/mini.hipatterns",
     event = "BufReadPre",
     opts = {
@@ -42,7 +21,7 @@ return {
         hsl_color = {
           pattern = "hsl%(%d+,? %d+,? %d+%)",
           group = function(_, match)
-            local utils = require("rxtsel.utils")
+            local utils = require("solarized-osaka.hsl")
             local h, s, l = match:match("hsl%((%d+),? (%d+),? (%d+)%)")
             h, s, l = tonumber(h), tonumber(s), tonumber(l)
             local hex_color = utils.hslToHex(h, s, l)
@@ -75,6 +54,15 @@ return {
       },
     },
     keys = {
+      {
+        "<leader>fP",
+        function()
+          require("telescope.builtin").find_files({
+            cwd = require("lazy.core.config").options.root,
+          })
+        end,
+        desc = "Find Plugin File",
+      },
       {
         ";f",
         function()
@@ -126,9 +114,18 @@ return {
         end,
         desc = "Lists Diagnostics for all open buffers or a specific buffer",
       },
+      {
+        ";s",
+        function()
+          local builtin = require("telescope.builtin")
+          builtin.treesitter()
+        end,
+        desc = "Lists Function names, variables, from Treesitter",
+      },
     },
     config = function(_, opts)
       local telescope = require("telescope")
+      local actions = require("telescope.actions")
 
       opts.defaults = vim.tbl_deep_extend("force", opts.defaults, {
         wrap_results = true,
@@ -149,7 +146,34 @@ return {
           },
         },
       }
-      opts.extensions = {}
+      opts.extensions = {
+        file_browser = {
+          theme = "dropdown",
+          -- disables netrw and use telescope-file-browser in its place
+          hijack_netrw = true,
+          mappings = {
+            -- your custom insert mode mappings
+            ["n"] = {
+              -- your custom normal mode mappings
+              ["/"] = function()
+                vim.cmd("startinsert")
+              end,
+              ["<C-u>"] = function(prompt_bufnr)
+                for i = 1, 10 do
+                  actions.move_selection_previous(prompt_bufnr)
+                end
+              end,
+              ["<C-d>"] = function(prompt_bufnr)
+                for i = 1, 10 do
+                  actions.move_selection_next(prompt_bufnr)
+                end
+              end,
+              ["<PageUp>"] = actions.preview_scrolling_up,
+              ["<PageDown>"] = actions.preview_scrolling_down,
+            },
+          },
+        },
+      }
       telescope.setup(opts)
       require("telescope").load_extension("fzf")
     end,
