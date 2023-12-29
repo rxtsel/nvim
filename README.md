@@ -9,7 +9,7 @@ requiriments:
 npm i -g tree-sitter-cli typescript tree-sitter fd fd-find
 
 # System packages
-ripgrep xsel unzip curl gcc zip unzip gzip g++
+ripgrep xsel unzip curl gcc zip unzip gzip g++ lazygit
 ```
 
 ## Basic commands
