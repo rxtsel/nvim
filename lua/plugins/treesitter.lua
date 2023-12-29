@@ -6,19 +6,16 @@ return {
     opts = {
       ensure_installed = {
         "astro",
-        "cmake",
-        "cpp",
         "css",
-        "fish",
         "gitignore",
-        "go",
-        "graphql",
         "http",
-        "java",
-        "rust",
         "scss",
-        "sql",
         "svelte",
+        "javascript",
+        "typescript",
+        "lua",
+        "tsx",
+        "yaml",
       },
 
       -- matchup = {

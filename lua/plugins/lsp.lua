@@ -12,6 +12,12 @@ return {
         "tailwindcss-language-server",
         "typescript-language-server",
         "css-lsp",
+        "astro-language-server",
+        "json-lsp",
+        "yaml-language-server",
+        "eslint-lsp",
+        "html-lsp",
+        "lua-language-server",
       })
     end,
   },
