@@ -6,10 +6,10 @@ requiriments:
 
 ```bash
 # Npm packages
-npm i -g tree-sitter-cli typescript tree-sitter
+npm i -g tree-sitter-cli typescript tree-sitter fd fd-find
 
 # System packages
-ripgrep xsel fd fd-find unzip curl gcc zip unzip gzip g++
+ripgrep xsel unzip curl gcc zip unzip gzip g++
 ```
 
 ## Basic commands
