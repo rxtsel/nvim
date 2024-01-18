@@ -49,6 +49,9 @@ keymap.set("n", "<C-j>", function()
   vim.diagnostic.goto_next()
 end, opts)
 
+-- Remove ^M from files
+keymap.set("n", "<leader>m", ":e ++ff=dos<CR>", opts)
+
 keymap.set("n", "<leader>r", function()
   require("rxtsel.utils").replaceHexWithHSL()
 end)
