@@ -50,7 +50,7 @@ keymap.set("n", "<C-j>", function()
 end, opts)
 
 keymap.set("n", "<leader>r", function()
-  require("rxtsel.utils").replaceHexWithHSL()
+  require("rxtsel.hsl").replaceHexWithHSL()
 end)
 
 keymap.set("n", "<leader>i", function()
