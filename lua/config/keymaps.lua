@@ -52,3 +52,7 @@ end, opts)
 keymap.set("n", "<leader>r", function()
   require("rxtsel.utils").replaceHexWithHSL()
 end)
+
+keymap.set("n", "<leader>i", function()
+  require("rxtsel.lsp").toggleInlayHints()
+end)
