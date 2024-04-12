@@ -68,29 +68,6 @@ return {
   },
 
   {
-    "nvim-neo-tree/neo-tree.nvim",
-    opts = {
-      window = {
-        position = "right",
-      },
-      filesystem = {
-        filtered_items = {
-          hide_dotfiles = false,
-          hide_by_name = {
-            "node_modules",
-            ".git",
-          },
-          always_show = {
-            ".env.example",
-            ".env.local",
-            ".env",
-          },
-        },
-      },
-    },
-  },
-
-  {
     "rcarriga/nvim-notify",
     opts = {
       timeout = 5000,
