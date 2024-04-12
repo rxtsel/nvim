@@ -182,6 +182,7 @@ return {
               end,
               ["<PageUp>"] = actions.preview_scrolling_up,
               ["<PageDown>"] = actions.preview_scrolling_down,
+              ["<leader>e"] = actions.close,
             },
           },
         },
