@@ -155,6 +155,9 @@ return {
             preview_cutoff = 9999,
           },
         },
+        find_files = {
+          find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
+        },
       }
       opts.extensions = {
         file_browser = {
