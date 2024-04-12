@@ -85,4 +85,36 @@ return {
       table.insert(opts.sources, { name = "emoji" })
     end,
   },
+
+  {
+    "krivahtoo/silicon.nvim",
+    lazy = true,
+    build = "./install.sh",
+    cmd = "Silicon",
+    config = function()
+      local themepath = "extras/sublime/solarized-osaka_storm.tmTheme"
+      local solarized = vim.fn.stdpath("data") .. "/lazy/solarized-osaka.nvim/" .. themepath
+
+      require("silicon").setup({
+        font = "MonaspiceNe Nerd Font",
+        background = "#1d1d1d",
+        line_number = true,
+        theme = solarized,
+        gobble = true,
+        output = {
+          clipboard = false,
+          path = "/mnt/c/Users/rxtsel/Pictures/Screenshots",
+          format = "nvim_[year][month][day]_[hour][minute][second].png",
+          file = "<path>/<format>",
+        },
+        watermark = {
+          text = "@rxtsel",
+          color = "#f5f5f5",
+        },
+        window_title = function()
+          return vim.fn.fnamemodify(vim.fn.bufname(vim.fn.bufnr()), ":~:.")
+        end,
+      })
+    end,
+  },
 }

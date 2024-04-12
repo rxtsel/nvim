@@ -44,3 +44,7 @@ keymap.set("n", "<Space>,", "$a,<Esc>")
 keymap.set("n", "<leader>r", function()
   require("rxtsel.hsl").replaceHexWithHSL()
 end)
+
+-- Silicon
+keymap.set("n", "<leader>SS", "<cmd>Silicon<CR>", { desc = "[S]creenshot [E]ntire buffer" })
+keymap.set("v", "<leader>S", ":Silicon<CR>", { desc = "[S]creenshot selection" })
