@@ -79,17 +79,8 @@ return {
   },
 
   {
-    "nvim-cmp",
-    dependencies = { "hrsh7th/cmp-emoji" },
-    opts = function(_, opts)
-      table.insert(opts.sources, { name = "emoji" })
-    end,
-  },
-
-  {
     "krivahtoo/silicon.nvim",
     lazy = true,
-    build = "./install.sh",
     cmd = "Silicon",
     config = function()
       local themepath = "extras/sublime/solarized-osaka_storm.tmTheme"

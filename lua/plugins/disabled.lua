@@ -1,10 +1,8 @@
 return {
-  {
-    "stevearc/aerial.nvim",
-    enabled = false,
-  },
-  {
-    "nvim-neo-tree/neo-tree.nvim",
-    enabled = false,
-  },
+  { "ste earc/aerial.nvim", enabled = false },
+  { "catppuccin", enabled = false },
+  { "nonaqa/dial.nvim", enabled = false },
+  { "folke/tokyonight.nvim", enabled = false },
+  { "refactoring.nvim", enabled = false },
+  { "folke/persistence.nvim", enabled = false },
 }

@@ -17,13 +17,13 @@ keymap.set("n", "<C-a>", "gg<S-v>G")
 keymap.set("n", "<C-m>", "<C-i>", opts)
 
 -- New tab
-keymap.set("n", "te", ":tabedit<Return>", opts)
-keymap.set("n", "<tab>", ":tabnext<Return>", opts)
-keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
+keymap.set("n", "te", "<cmd>tabedit<Return>", opts)
+keymap.set("n", "<tab>", "<cmd>tabnext<Return>", opts)
+keymap.set("n", "<s-tab>", "<cmd>tabprev<Return>", opts)
 
 -- Split window
-keymap.set("n", "ss", ":split<Return>", opts)
-keymap.set("n", "sv", ":vsplit<Return>", opts)
+keymap.set("n", "ss", "<cmd>split<Return>", opts)
+keymap.set("n", "sv", "<cmd>vsplit<Return>", opts)
 
 -- Move window
 keymap.set("n", "sh", "<C-w>h")
@@ -38,13 +38,9 @@ keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
 
 -- Comma to end
-keymap.set("n", "<Space>;", "$a;<Esc>")
-keymap.set("n", "<Space>,", "$a,<Esc>")
-
-keymap.set("n", "<leader>r", function()
-  require("rxtsel.hsl").replaceHexWithHSL()
-end)
+keymap.set("n", "<leader>;;", "$a;<Esc>", { desc = "Insert ; to end line" })
+keymap.set("n", "<leader>,,", "$a,<Esc>", { desc = "Insert , to end line" })
 
 -- Silicon
 keymap.set("n", "<leader>SS", "<cmd>Silicon<CR>", { desc = "[S]creenshot [E]ntire buffer" })
-keymap.set("v", "<leader>S", ":Silicon<CR>", { desc = "[S]creenshot selection" })
+keymap.set("v", "<leader>S", "<cmd>Silicon<CR>", { desc = "[S]creenshot selection" })
