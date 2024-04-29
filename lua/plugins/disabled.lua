@@ -5,4 +5,5 @@ return {
   { "folke/tokyonight.nvim", enabled = false },
   { "refactoring.nvim", enabled = false },
   { "folke/persistence.nvim", enabled = false },
+  { "folke/flash.nvim", enabled = false },
 }
