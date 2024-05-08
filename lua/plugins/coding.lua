@@ -82,19 +82,16 @@ return {
     "krivahtoo/silicon.nvim",
     lazy = true,
     cmd = "Silicon",
+    build = "./install.sh build",
     config = function()
-      local themepath = "extras/sublime/solarized-osaka_storm.tmTheme"
-      local solarized = vim.fn.stdpath("data") .. "/lazy/solarized-osaka.nvim/" .. themepath
-
       require("silicon").setup({
-        font = "MonaspiceNe Nerd Font",
+        font = "CaskaydiaCove Nerd Font",
         background = "#1d1d1d",
         line_number = true,
-        theme = solarized,
         gobble = true,
         output = {
           clipboard = false,
-          path = "/mnt/c/Users/rxtsel/Pictures/Screenshots",
+          path = "/home/rxtsel/Pictures/screenshots",
           format = "nvim_[year][month][day]_[hour][minute][second].png",
           file = "<path>/<format>",
         },

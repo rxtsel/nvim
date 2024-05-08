@@ -193,4 +193,9 @@ return {
     "andweeb/presence.nvim",
     event = "BufReadPre",
   },
+
+  {
+    "norcalli/nvim-colorizer.lua",
+    event = "BufReadPre",
+  },
 }
