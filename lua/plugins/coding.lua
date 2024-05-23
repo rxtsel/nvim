@@ -43,6 +43,7 @@ return {
   {
     "echasnovski/mini.bracketed",
     event = "BufReadPost",
+
     config = function()
       local bracketed = require("mini.bracketed")
       bracketed.setup({
@@ -95,14 +96,20 @@ return {
           format = "nvim_[year][month][day]_[hour][minute][second].png",
           file = "<path>/<format>",
         },
-        watermark = {
-          text = "@rxtsel",
-          color = "#f5f5f5",
-        },
         window_title = function()
           return vim.fn.fnamemodify(vim.fn.bufname(vim.fn.bufnr()), ":~:.")
         end,
       })
+    end,
+  },
+  {
+    "rxtsel/template-string.nvim",
+    event = "BufReadPost",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    config = function()
+      require("template-string").setup()
     end,
   },
 }
