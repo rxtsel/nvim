@@ -43,7 +43,6 @@ return {
   {
     "echasnovski/mini.bracketed",
     event = "BufReadPost",
-
     config = function()
       local bracketed = require("mini.bracketed")
       bracketed.setup({
@@ -110,6 +109,13 @@ return {
     },
     config = function()
       require("template-string").setup()
+    end,
+  },
+  {
+    "dmmulroy/ts-error-translator.nvim",
+    event = "BufReadPost",
+    config = function()
+      require("ts-error-translator").setup()
     end,
   },
 }
