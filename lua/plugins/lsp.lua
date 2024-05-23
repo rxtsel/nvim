@@ -13,11 +13,6 @@ return {
         "typescript-language-server",
         "css-lsp",
         "astro-language-server",
-        "json-lsp",
-        "yaml-language-server",
-        "eslint-lsp",
-        "html-lsp",
-        "lua-language-server",
       })
     end,
   },
@@ -38,9 +33,10 @@ return {
       }
     end,
     opts = {
-      inlay_hints = { enabled = true },
+      inlay_hints = { enabled = false },
       ---@type lspconfig.options
       servers = {
+        astro = {},
         cssls = {},
         tailwindcss = {
           root_dir = function(...)
