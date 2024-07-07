@@ -106,10 +106,8 @@ return {
     event = "BufReadPost",
     dependencies = {
       "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
     },
-    config = function()
-      require("template-string").setup()
-    end,
   },
   {
     "dmmulroy/ts-error-translator.nvim",

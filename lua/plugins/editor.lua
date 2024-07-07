@@ -196,7 +196,8 @@ return {
 
   {
     "norcalli/nvim-colorizer.lua",
-    event = "BufReadPre",
+    event = "BufEnter",
+    opts = { "*" },
   },
   {
     "vhyrro/luarocks.nvim",

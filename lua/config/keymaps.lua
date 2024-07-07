@@ -45,5 +45,5 @@ keymap.set("n", "<leader>;;", "$a;<Esc>", { desc = "Insert ; to end line" })
 keymap.set("n", "<leader>,,", "$a,<Esc>", { desc = "Insert , to end line" })
 
 -- Silicon
-keymap.set("n", "<leader>SS", "<cmd>Silicon<CR>", { desc = "[S]creenshot [E]ntire buffer" })
-keymap.set("v", "<leader>S", "<cmd>Silicon<CR>", { desc = "[S]creenshot selection" })
+keymap.set("n", "<leader>SS", ":Silicon<Return>", { desc = "[S]creenshot [E]ntire buffer" })
+keymap.set("v", "<leader>S", ":Silicon<Return>", { desc = "[S]creenshot selection" })

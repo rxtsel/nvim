@@ -6,19 +6,12 @@ return {
         "astro",
         "css",
         "gitignore",
-        "http",
-        "scss",
-        "svelte",
         "javascript",
         "typescript",
         "lua",
         "tsx",
         "yaml",
       },
-
-      -- matchup = {
-      -- 	enable = true,
-      -- },
 
       -- https://github.com/nvim-treesitter/playground#query-linter
       query_linter = {
