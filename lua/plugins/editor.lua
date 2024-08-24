@@ -70,12 +70,6 @@ return {
 
   {
     "telescope.nvim",
-    dependencies = {
-      {
-        "nvim-telescope/telescope-fzf-native.nvim",
-        build = "make",
-      },
-    },
     keys = {
       { "<leader>,", false },
       {
@@ -157,7 +151,6 @@ return {
       }
 
       telescope.setup(opts)
-      require("telescope").load_extension("fzf")
     end,
   },
 
