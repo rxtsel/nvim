@@ -14,31 +14,6 @@ return {
     opts = { snippet_engine = "luasnip" },
   },
 
-  -- Incremental rename
-  {
-    "smjonas/inc-rename.nvim",
-    cmd = "IncRename",
-    config = true,
-  },
-
-  -- Refactoring tool
-  {
-    "ThePrimeagen/refactoring.nvim",
-    keys = {
-      {
-        "<leader>r",
-        function()
-          require("refactoring").select_refactor()
-        end,
-        mode = "v",
-        noremap = true,
-        silent = true,
-        expr = false,
-      },
-    },
-    opts = {},
-  },
-
   -- Go forward/backward with square brackets
   {
     "echasnovski/mini.bracketed",
@@ -104,16 +79,10 @@ return {
   {
     "rxtsel/template-string.nvim",
     event = "BufReadPost",
+    enabled = false,
     dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-treesitter/nvim-treesitter",
     },
-  },
-  {
-    "dmmulroy/ts-error-translator.nvim",
-    event = "BufReadPost",
-    config = function()
-      require("ts-error-translator").setup()
-    end,
   },
 }

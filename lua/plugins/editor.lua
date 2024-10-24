@@ -129,6 +129,13 @@ return {
         end,
         desc = "Lists Function names, variables, from Treesitter",
       },
+      {
+        ";p",
+        function()
+          require("telescope").extensions.package_info.package_info()
+        end,
+        desc = "Lists package info",
+      },
     },
     config = function(_, opts)
       local telescope = require("telescope")
@@ -156,8 +163,11 @@ return {
         },
       }
 
+      -- Load extensions
+      telescope.load_extension("fzf")
+      telescope.load_extension("package_info")
+
       telescope.setup(opts)
-      require("telescope").load_extension("fzf")
     end,
   },
 
