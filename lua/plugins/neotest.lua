@@ -6,10 +6,15 @@ return {
       "marilari88/neotest-vitest",
       "thenbe/neotest-playwright",
     },
-    opts = function(_, opts)
-      table.insert(opts.adapters, require("neotest-jest"))
-      table.insert(opts.adapters, require("neotest-vitest"))
-      table.insert(opts.adapters, require("neotest-playwright"))
-    end,
+    opts = {
+      adapters = {
+        ["neotest-vitest"] = {},
+        ["neotest-jest"] = {},
+        ["neotest-playwright"] = {
+          persist_project_selection = true,
+          enable_dynamic_test_discovery = true,
+        },
+      },
+    },
   },
 }
