@@ -9,6 +9,7 @@ return {
         "luacheck",
         "shellcheck",
         "vtsls",
+        "emmet-ls",
       })
     end,
   },
