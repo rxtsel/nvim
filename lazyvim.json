@@ -4,9 +4,8 @@
     "lazyvim.plugins.extras.vscode"
   ],
   "news": {
-    "NEWS.md": "6520",
+    "NEWS.md": "7429",
     "doc/news.txt": "13995"
   },
-  "version": 6
+  "version": 7
 }
-
