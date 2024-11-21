@@ -232,4 +232,10 @@ return {
       require("window-picker").setup()
     end,
   },
+  {
+    "folke/flash.nvim",
+    keys = {
+      { ";", false },
+    },
+  },
 }
