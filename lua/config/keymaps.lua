@@ -11,7 +11,7 @@ keymap.set("n", "-", "<C-x")
 keymap.set("n", "dw", "vb_d")
 
 -- Select all
-keymap.set("n", "<C-a>", "gg<S-v>G")
+keymap.set("n", "<leader><C-a>", "gg<S-v>G")
 
 -- Jumplist
 keymap.set("n", "<C-m>", "<C-i>", opts)
@@ -41,6 +41,13 @@ keymap.set("n", "<C-w><down>", "<C-w>-")
 keymap.set("n", "<leader>;;", "$a;<Esc>", { desc = "Insert ; to end line" })
 keymap.set("n", "<leader>,,", "$a,<Esc>", { desc = "Insert , to end line" })
 
--- Silicon
-keymap.set("n", "<leader>SS", ":Silicon<Return>", { desc = "[S]creenshot [E]ntire buffer" })
-keymap.set("v", "<leader>S", ":Silicon<Return>", { desc = "[S]creenshot selection" })
+-- Fzf
+keymap.set("n", ";f", require("fzf-lua").files, { desc = "Fzf files" })
+keymap.set("n", ";r", require("fzf-lua").live_grep, { desc = "Fzf Grep" })
+keymap.set("n", ";m", require("fzf-lua").marks, { desc = "Fzf marks" })
+keymap.set(
+  "n",
+  ";s",
+  ":lua require'fzf-lua'.spell_suggest({ winopts = { relative='cursor', row=1.01, col=0, height=0.2, width=0.2 } })<cr>",
+  { desc = "Fzf Spelling Sugestion" }
+)
