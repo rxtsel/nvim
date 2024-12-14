@@ -52,30 +52,6 @@ return {
       })
     end,
   },
-
-  {
-    "krivahtoo/silicon.nvim",
-    lazy = true,
-    cmd = "Silicon",
-    build = "./install.sh build",
-    config = function()
-      require("silicon").setup({
-        font = "CaskaydiaCove Nerd Font",
-        background = "#1d1d1d",
-        line_number = true,
-        gobble = true,
-        output = {
-          clipboard = false,
-          path = "/home/rxtsel/Pictures/screenshots",
-          format = "nvim_[year][month][day]_[hour][minute][second].png",
-          file = "<path>/<format>",
-        },
-        window_title = function()
-          return vim.fn.fnamemodify(vim.fn.bufname(vim.fn.bufnr()), ":~:.")
-        end,
-      })
-    end,
-  },
   {
     "rxtsel/template-string.nvim",
     event = "BufReadPost",
