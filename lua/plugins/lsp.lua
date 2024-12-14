@@ -22,9 +22,6 @@ return {
       -- options for vim.diagnostic.config()
       inlay_hints = { enabled = false },
       ---@type vim.diagnostic.Opts
-      diagnostics = {
-        virtual_text = false,
-      },
       -- @type lspconfig.options
       servers = {
         vtsls = {
