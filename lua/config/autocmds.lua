@@ -8,6 +8,11 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 vim.api.nvim_set_hl(0, "SnacksIndent", { fg = "#002B36", bg = "NONE", nocombine = true })
 vim.api.nvim_set_hl(0, "SnacksIndentScope", { fg = "#494FB6", bg = "NONE", nocombine = true })
 
+-- Fzf colors
+vim.api.nvim_set_hl(0, "FzfLuaBorder", { fg = "#002B36", bg = "NONE", nocombine = true })
+vim.api.nvim_set_hl(0, "FzfLuaTitle", { fg = "#ADB8B8", bg = "NONE", nocombine = true })
+vim.api.nvim_set_hl(0, "FzfLuaFzfPointer", { fg = "#49AEF5", bg = "NONE", nocombine = true })
+
 -- Disable the concealing in some file formats
 -- The default conceallevel is 3 in LazyVim
 vim.api.nvim_create_autocmd("FileType", {
