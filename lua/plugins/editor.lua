@@ -132,7 +132,7 @@ return {
   {
     "folke/flash.nvim",
     keys = {
-      { ";", false },
+      { "s", mode = { "x", "o", "v" }, false },
     },
   },
 }
