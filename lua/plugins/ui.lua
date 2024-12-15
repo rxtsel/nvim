@@ -126,6 +126,9 @@ return {
           readonly_icon = " 󰌾 ",
         }),
       }
+
+      -- remove navic from lualine
+      table.remove(opts.sections.lualine_c)
     end,
   },
   {
