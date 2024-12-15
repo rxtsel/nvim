@@ -69,4 +69,26 @@ return {
       table.insert(opts.sources, { name = "emoji" })
     end,
   },
+
+  -- Silicon
+  {
+    "michaelrommel/nvim-silicon",
+    lazy = true,
+    cmd = "Silicon",
+    main = "nvim-silicon",
+    opts = {
+      to_clipboard = true,
+      font = "DankMono Nerd Font Mono",
+      theme = "Solarized (dark)",
+      background = "#001419",
+      shadow_color = "#001E2A",
+      tab_width = 2,
+      output = function()
+        return "~/Pictures/screenshots/" .. os.date("!%Y-%m-%dT%H-%M-%S") .. "_nvim.png"
+      end,
+      window_title = function()
+        return vim.fn.fnamemodify(vim.api.nvim_buf_get_name(vim.api.nvim_get_current_buf()), ":t")
+      end,
+    },
+  },
 }

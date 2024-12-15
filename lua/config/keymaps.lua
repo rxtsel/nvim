@@ -1,3 +1,5 @@
+local wk = require("which-key")
+
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
@@ -51,3 +53,30 @@ keymap.set(
   ":lua require'fzf-lua'.spell_suggest({ winopts = { relative='cursor', row=1.01, col=0, height=0.2, width=0.2 } })<cr>",
   { desc = "Fzf Spelling Sugestion" }
 )
+
+-- Silicon
+wk.add({
+  mode = { "v" },
+  { "<leader>s", group = "Silicon" },
+  {
+    "<leader>sc",
+    function()
+      require("nvim-silicon").clip()
+    end,
+    desc = "Copy code screenshot to clipboard",
+  },
+  {
+    "<leader>sf",
+    function()
+      require("nvim-silicon").file()
+    end,
+    desc = "Save code screenshot as file",
+  },
+  {
+    "<leader>ss",
+    function()
+      require("nvim-silicon").shoot()
+    end,
+    desc = "Create code screenshot",
+  },
+})
