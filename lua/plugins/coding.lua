@@ -53,15 +53,6 @@ return {
     end,
   },
   {
-    "rxtsel/template-string.nvim",
-    event = "BufReadPost",
-    enabled = false,
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-treesitter/nvim-treesitter",
-    },
-  },
-  {
     "hrsh7th/nvim-cmp",
     dependencies = { "hrsh7th/cmp-emoji" },
     ---@param opts cmp.ConfigSchema
