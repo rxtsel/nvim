@@ -3,9 +3,10 @@
     "lazyvim.plugins.extras.coding.yanky",
     "lazyvim.plugins.extras.vscode"
   ],
+  "install_version": 7,
   "news": {
     "NEWS.md": "10960",
     "doc/news.txt": "13995"
   },
-  "version": 7
+  "version": 8
 }

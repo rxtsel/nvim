@@ -11,6 +11,7 @@ return {
         "lua",
         "tsx",
         "yaml",
+        "http",
       },
 
       -- https://github.com/nvim-treesitter/playground#query-linter
@@ -48,7 +49,16 @@ return {
           mdx = "mdx",
         },
       })
+
+      -- HTTP
+      vim.filetype.add({
+        extension = {
+          ["http"] = "http",
+        },
+      })
+
       vim.treesitter.language.register("markdown", "mdx")
+      vim.treesitter.language.register("http", "http")
     end,
   },
 }
