@@ -69,13 +69,16 @@ return {
     main = "nvim-silicon",
     opts = {
       to_clipboard = true,
-      font = "DankMono Nerd Font Mono",
       theme = "Solarized (dark)",
       background = "#001419",
       shadow_color = "#001E2A",
       tab_width = 2,
       output = function()
-        return "~/Pictures/screenshots/" .. os.date("!%Y-%m-%dT%H-%M-%S") .. "_nvim.png"
+        local dir = vim.fn.expand("~/Pictures/nvim-screenshots/")
+        if vim.fn.isdirectory(dir) == 0 then
+          vim.fn.mkdir(dir, "p") -- Create directory if it doesn't exist
+        end
+        return dir .. os.date("!%Y-%m-%dT%H-%M-%S") .. "_nvim.png"
       end,
       window_title = function()
         return vim.fn.fnamemodify(vim.api.nvim_buf_get_name(vim.api.nvim_get_current_buf()), ":t")
