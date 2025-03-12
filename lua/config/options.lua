@@ -33,6 +33,9 @@ vim.opt.splitkeep = "cursor"
 vim.opt.mouse = "nvc"
 vim.opt.conceallevel = 0 -- So that I can see `` in markdown files
 
+-- Enable this option to avoid conflicts with Prettier.
+vim.g.lazyvim_prettier_needs_config = true
+
 -- fold
 vim.o.foldcolumn = "1" -- '0' is not bad
 vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
