@@ -89,3 +89,18 @@ wk.add({
     desc = "Create code screenshot",
   },
 })
+
+-- Beauty commens
+wk.add({
+  mode = { "n" },
+  {
+    "gcb",
+    "<Cmd>CBllbox<CR>",
+    desc = "Add block comment box",
+  },
+  {
+    "gcl",
+    "<Cmd>CBllline<CR>",
+    desc = "Beaty box comment",
+  },
+})

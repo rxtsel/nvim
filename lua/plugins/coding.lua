@@ -100,4 +100,15 @@ return {
       global_keymaps = true,
     },
   },
+
+  -- PX to REM
+  {
+    "jsongerber/nvim-px-to-rem",
+    config = true,
+  },
+
+  -- Beauty comments
+  {
+    "rxtsel/comment-box.nvim",
+  },
 }
