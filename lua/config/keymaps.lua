@@ -94,14 +94,24 @@ wk.add({
 wk.add({
   mode = { "n", "v" },
   {
-    "gcb",
+    "gcbl",
     "<Cmd>CBllbox<CR>",
-    desc = "Add beauty box comment",
+    desc = "Beauty box comment. Text align left",
   },
   {
-    "gcl",
+    "gcbc",
+    "<Cmd>CBccbox<CR>",
+    desc = "Beauty box comment. Text align center",
+  },
+  {
+    "gcll",
     "<Cmd>CBllline<CR>",
-    desc = "Add beauty line comment",
+    desc = "Beauty line comment. Text align left",
+  },
+  {
+    "gclc",
+    "<Cmd>CBccline<CR>",
+    desc = "Beauty line comment. Text align center",
   },
   {
     "gcd",
