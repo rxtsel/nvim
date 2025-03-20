@@ -90,17 +90,22 @@ wk.add({
   },
 })
 
--- Beauty commens
+-- Beauty comments
 wk.add({
-  mode = { "n" },
+  mode = { "n", "v" },
   {
     "gcb",
     "<Cmd>CBllbox<CR>",
-    desc = "Add block comment box",
+    desc = "Add beauty box comment",
   },
   {
     "gcl",
     "<Cmd>CBllline<CR>",
-    desc = "Beaty box comment",
+    desc = "Add beauty line comment",
+  },
+  {
+    "gcd",
+    "<Cmd>CBd<CR>",
+    desc = "Delete beauty comment",
   },
 })
