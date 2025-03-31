@@ -119,3 +119,11 @@ wk.add({
     desc = "Delete beauty comment",
   },
 })
+
+-- Avante
+wk.add({
+  mode = { "n", "v" },
+  { "<leader>a", group = "+ai", icon = { icon = "ﮧ", hl = "false" } },
+  { "<leader>aa", "<cmd>AvanteAsk<cr>", desc = "ask", icon = { icon = "", hl = "false" } },
+  { "<leader>ar", "<cmd>AvanteRefresh<cr>", desc = "refresh", icon = { icon = "", hl = "false" } },
+})
