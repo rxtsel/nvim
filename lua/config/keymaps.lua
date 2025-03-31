@@ -18,8 +18,8 @@ keymap.set("v", "<Leader>d", '"_d')
 keymap.set("v", "<Leader>D", '"_D')
 
 -- Increment/decrement
-keymap.set("n", "+", "<C-a>")
-keymap.set("n", "-", "<C-x>")
+keymap.set("n", "+", "<C-A>")
+keymap.set("n", "-", "<C-X>")
 
 -- Delete a word backwardsk
 keymap.set("n", "dw", "vb_d")
