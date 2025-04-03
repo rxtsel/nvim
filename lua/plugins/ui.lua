@@ -1,66 +1,4 @@
 return {
-  -- messages, cmdline and the popupmenu
-  {
-    "folke/noice.nvim",
-    opts = function(_, opts)
-      table.insert(opts.routes, {
-        filter = {
-          event = "notify",
-          find = "No information available",
-        },
-        opts = { skip = true },
-      })
-      local focused = true
-      vim.api.nvim_create_autocmd("FocusGained", {
-        callback = function()
-          focused = true
-        end,
-      })
-      vim.api.nvim_create_autocmd("FocusLost", {
-        callback = function()
-          focused = false
-        end,
-      })
-      table.insert(opts.routes, 1, {
-        filter = {
-          cond = function()
-            return not focused
-          end,
-        },
-        view = "notify_send",
-        opts = { stop = false },
-      })
-
-      opts.commands = {
-        all = {
-          -- options for the message history that you get with `:Noice`
-          view = "split",
-          opts = { enter = true, format = "details" },
-          filter = {},
-        },
-      }
-
-      vim.api.nvim_create_autocmd("FileType", {
-        pattern = "markdown",
-        callback = function(event)
-          vim.schedule(function()
-            require("noice.text.markdown").keys(event.buf)
-          end)
-        end,
-      })
-
-      opts.presets.lsp_doc_border = true
-    end,
-  },
-
-  {
-    "rcarriga/nvim-notify",
-    opts = {
-      timeout = 5000,
-      top_down = false,
-    },
-  },
-
   -- buffer line
   {
     "akinsho/bufferline.nvim",
@@ -134,7 +72,37 @@ return {
   {
     "folke/snacks.nvim",
     opts = {
+      status_column = { enable = true },
+      bigfile = { enable = true },
+      quickfile = { enable = true },
+      words = { enable = true },
+      notifier = {
+        enable = true,
+        tob_down = false,
+        timeout = 3000,
+      },
+      image = {
+        doc = {
+          enable = true,
+          inline = false,
+          float = true,
+          max_width = 60,
+          max_height = 30,
+          image_plugin_enabled = true,
+        },
+      },
+      picker = {
+        sources = {
+          explorer = {
+            replace_netrw = true,
+            enable = true,
+            layout = { layout = { position = "right" } },
+            auto_close = true,
+          },
+        },
+      },
       dashboard = {
+        enable = true,
         preset = {
           header = [[
 ██████╗ ██╗  ██╗████████╗███████╗███████╗██╗     
