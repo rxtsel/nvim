@@ -12,6 +12,8 @@ return {
         "tsx",
         "yaml",
         "http",
+        "svelte",
+        "gitcommit",
       },
 
       -- https://github.com/nvim-treesitter/playground#query-linter
