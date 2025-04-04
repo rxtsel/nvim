@@ -88,7 +88,7 @@ return {
         doc = {
           enable = true,
           inline = false,
-          float = true,
+          float = false,
           max_width = 60,
           max_height = 30,
           image_plugin_enabled = true,
@@ -185,6 +185,14 @@ return {
           Snacks.explorer()
         end,
         desc = "File Explorer",
+      },
+      -- Image hover
+      {
+        "<leader>i",
+        function()
+          Snacks.image.hover()
+        end,
+        desc = "Hover image",
       },
     },
   },

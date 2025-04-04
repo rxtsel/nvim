@@ -9,7 +9,6 @@ return {
         "luacheck",
         "vtsls",
         "biome",
-        "prettierd",
       })
     end,
   },
@@ -19,7 +18,14 @@ return {
     "neovim/nvim-lspconfig",
     ---@class PluginLspOpts
     opts = {
-      -- options for vim.diagnostic.config()
+      diagnostics = { virtual_text = { prefix = "icons" } },
+      capabilities = {
+        workspace = {
+          didChangeWatchedFiles = {
+            dynamicRegistration = false,
+          },
+        },
+      },
       inlay_hints = { enabled = false },
     },
   },
