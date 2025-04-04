@@ -76,6 +76,9 @@ return {
       bigfile = { enable = true },
       quickfile = { enable = true },
       words = { enable = true },
+      indent = { enabled = true },
+      scope = { enabled = true },
+      scroll = { enabled = true },
       notifier = {
         enable = true,
         tob_down = false,
@@ -92,6 +95,7 @@ return {
         },
       },
       picker = {
+        enable = true,
         sources = {
           explorer = {
             replace_netrw = true,
@@ -113,6 +117,74 @@ return {
 ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚══════╝╚══════╝
       ]],
         },
+      },
+    },
+    keys = {
+      -- Top Pickers & Explorer
+      {
+        "<leader><space>",
+        enable = false,
+      },
+      {
+        "<leader>n",
+        enable = false,
+      },
+      {
+        "<leader>,",
+        enable = false,
+      },
+      {
+        "<leader>/",
+        enable = false,
+      },
+      {
+        ";F",
+        function()
+          Snacks.picker.smart()
+        end,
+        desc = "Smart Find Files",
+      },
+      {
+        ";f",
+        function()
+          Snacks.picker.files()
+        end,
+        desc = "Find Files",
+      },
+      {
+        ";b",
+        function()
+          Snacks.picker.buffers()
+        end,
+        desc = "Buffers",
+      },
+      {
+        ";r",
+        function()
+          Snacks.picker.grep()
+        end,
+        desc = "Grep",
+      },
+      {
+        ";:",
+        function()
+          Snacks.picker.command_history()
+        end,
+        desc = "Command History",
+      },
+      {
+        ";n",
+        function()
+          Snacks.picker.notifications()
+        end,
+        desc = "Notification History",
+      },
+      {
+        "<leader>e",
+        function()
+          Snacks.explorer()
+        end,
+        desc = "File Explorer",
       },
     },
   },
