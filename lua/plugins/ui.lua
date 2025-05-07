@@ -94,17 +94,6 @@ return {
           image_plugin_enabled = true,
         },
       },
-      picker = {
-        enable = true,
-        sources = {
-          explorer = {
-            replace_netrw = true,
-            enable = true,
-            layout = { layout = { position = "right" } },
-            auto_close = true,
-          },
-        },
-      },
       dashboard = {
         enable = true,
         preset = {
@@ -178,13 +167,6 @@ return {
           Snacks.picker.notifications()
         end,
         desc = "Notification History",
-      },
-      {
-        "<leader>e",
-        function()
-          Snacks.explorer()
-        end,
-        desc = "File Explorer",
       },
       -- Image hover
       {

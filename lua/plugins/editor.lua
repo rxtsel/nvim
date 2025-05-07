@@ -12,6 +12,41 @@ return {
     },
   },
 
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    opts = {
+      window = {
+        position = "right",
+      },
+      filesystem = {
+        filtered_items = {
+          hide_dotfiles = false,
+          hide_by_name = {
+            "node_modules",
+            ".git",
+          },
+          always_show = {
+            ".env.example",
+            ".env.local",
+            ".env",
+          },
+        },
+      },
+      event_handlers = {
+        {
+          event = "file_opened",
+          handler = function(file_path)
+            -- auto close
+            require("neo-tree.command").execute({ action = "close" })
+          end,
+        },
+      },
+    },
+    keys = {
+      { "<leader>e", "<cmd>Neotree toggle<cr>", desc = "NeoTree" },
+    },
+  },
+
   -- rich presense discord
   {
     "andweeb/presence.nvim",
