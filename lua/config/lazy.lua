@@ -11,6 +11,22 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- Fix copy and paste in WSL (Windows Subsystem for Linux)
+if vim.fn.has("wsl") == 1 then
+  vim.g.clipboard = {
+    name = "win32yank", -- Use win32yank for clipboard operations
+    copy = {
+      ["+"] = "win32yank.exe -i --crlf", -- Command to copy to the system clipboard
+      ["*"] = "win32yank.exe -i --crlf", -- Command to copy to the primary clipboard
+    },
+    paste = {
+      ["+"] = "win32yank.exe -o --lf", -- Command to paste from the system clipboard
+      ["*"] = "win32yank.exe -o --lf", -- Command to paste from the primary clipboard
+    },
+    cache_enabled = false, -- Disable clipboard caching
+  }
+end
+
 require("lazy").setup({
   spec = {
     {
@@ -30,7 +46,6 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.formatting.biome" },
     { import = "lazyvim.plugins.extras.lang.astro" },
     { import = "lazyvim.plugins.extras.lang.json" },
-    { import = "lazyvim.plugins.extras.lang.markdown" },
     { import = "lazyvim.plugins.extras.lang.tailwind" },
     { import = "lazyvim.plugins.extras.lang.typescript" },
     { import = "lazyvim.plugins.extras.lang.yaml" },

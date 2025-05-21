@@ -116,3 +116,12 @@ wk.add({
   { "<leader>aa", "<cmd>AvanteAsk<cr>", desc = "ask", icon = { icon = "", hl = "false" } },
   { "<leader>ar", "<cmd>AvanteRefresh<cr>", desc = "refresh", icon = { icon = "", hl = "false" } },
 })
+
+-- Obsidian
+keymap.set("n", "<leader>ot", "<cmd>Obsidian new_from_template<CR>", { desc = "New from template" })
+keymap.set("n", "<leader>oo", "<cmd>ObsidianOpen<CR>", { desc = "Open in obsidian app" })
+keymap.set("n", "<leader>ob", "<cmd>ObsidianBacklinks<CR>", { desc = "Show obsidian back links" })
+keymap.set("n", "<leader>ol", "<cmd>ObsidianLinks<CR>", { desc = "Show obsidian links" })
+keymap.set("n", "<leader>on", "<cmd>ObsidianNew<CR>", { desc = "Create new note" })
+keymap.set("n", "<leader>os", "<cmd>ObsidianSearch<CR>", { desc = "Search obsidian" })
+keymap.set("n", "<leader>oq", "<cmd>ObsidianQuickSwitch<CR>", { desc = "Quick switch" })

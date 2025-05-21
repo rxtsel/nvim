@@ -31,7 +31,7 @@ vim.opt.splitbelow = true -- Put new windows below current
 vim.opt.splitright = true -- Put new windows right of current
 vim.opt.splitkeep = "cursor"
 vim.opt.mouse = "nvc"
-vim.opt.conceallevel = 0 -- So that I can see `` in markdown files
+vim.opt.conceallevel = 2 -- So that I can see `` in markdown files
 
 -- Enable this option to avoid conflicts with Prettier.
 vim.g.lazyvim_prettier_needs_config = true
@@ -51,7 +51,3 @@ vim.cmd([[let &t_Ce = "\e[4:0m"]])
 vim.opt.formatoptions:append({ "r" })
 
 vim.g.root_spec = { "cwd" }
-
-if vim.fn.has("nvim-0.8") == 1 then
-  vim.opt.cmdheight = 0
-end
