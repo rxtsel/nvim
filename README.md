@@ -6,7 +6,7 @@ This is simple and minimal, but powerful neovim setup.
 
 **Requiriments**:
 
-- Neovim (>= v0.11.1)
+- Neovim >= `v0.11.1`
 
 ```bash
 # Node.js packages
