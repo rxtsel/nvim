@@ -1,15 +1,4 @@
-# My neovim setup
+# 💤 LazyVim
 
-Requires Neovim (>= v0.8.3)
-
-requiriments:
-
-```bash
-# Npm packages
-npm i -g tree-sitter-cli typescript tree-sitter fd fd-find @mermaid-js/mermaid-cli
-
-# System packages
-ripgrep xsel unzip curl gcc zip unzip gzip g++ lazygit xclip wl-clipboard rustup clang jq silicon rust-analyzer ghostscript tectonic
-```
-
-## Read about basic commands on [my blog](https://www.rxtsel.dev/en/blog/basic-commands-for-neovim/)
+A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
+Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
