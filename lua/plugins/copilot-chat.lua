@@ -1,11 +1,12 @@
 local prompts = {
-  BetterNamings = "Please provide better names for the following variables and functions.", -- Prompt to suggest better names
-  TsDocs = "Please provide TSDocs, NOT JSDOC, for the following code.", -- Prompt to generate JsDocs
-  DocumentationForGithub = "Please provide documentation for the following code ready for GitHub using markdown.", -- Prompt to generate GitHub documentation
-  SwaggerApiDocs = "Please provide documentation for the following API using Swagger.", -- Prompt to generate Swagger API docs
-  Summarize = "Please summarize the following text.", -- Prompt to summarize text
-  Spelling = "Please correct any grammar and spelling errors in the following text.", -- Prompt to correct spelling and grammar
-  Concise = "Please rewrite the following text to make it more concise.", -- Prompt to make text concise
+  BetterNamings = "Please provide better names for the following variables and functions.",
+  TsDocs = "Please provide TSDocs, NOT JSDOC, for the following code.",
+  DocumentationForGithub = "Please provide documentation for the following code ready for GitHub using markdown.",
+  SwaggerApiDocs = "Please provide documentation for the following API using Swagger.",
+  Summarize = "Please summarize the following text.",
+  Spelling = "Please correct any grammar and spelling errors in the following text.",
+  Concise = "Please rewrite the following text to make it more concise.",
+  Translate = "Please translate the following text.",
 }
 
 return {
