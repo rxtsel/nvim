@@ -1,17 +1,22 @@
+local vault_path = "/mnt/DiskD/rxtsel's vault/"
 return {
   "obsidian-nvim/obsidian.nvim",
-  version = "*", -- recommended, use latest release instead of latest commit
-  lazy = false,
+  version = "*",
+  lazy = true,
   ft = "markdown",
+  cmd = "Obsidian",
+  event = {
+    "BufReadPre " .. vault_path .. "*.md",
+    "BufNewFile " .. vault_path .. "*.md",
+  },
   dependencies = {
-    -- Required.
     "nvim-lua/plenary.nvim",
   },
   opts = {
     workspaces = {
       {
         name = "rxtsel's vault", -- Name of the workspace
-        path = "/mnt/d/rxtsel's vault", -- Path to the notes directory
+        path = vault_path, -- Path to the notes directory
       },
     },
     completition = {
@@ -44,15 +49,13 @@ return {
         opts = { buffer = true, expr = true },
       },
     },
-
     -- Settings for templates
     templates = {
-      subdir = "/mnt/d/rxtsel's vault/_templates", -- Subdirectory for templates
+      subdir = vault_path .. "_templates", -- Subdirectory for templates
       date_format = "%Y-%m-%d-%a", -- Date format for templates
       gtime_format = "%H:%M", -- Time format for templates
       tags = "", -- Default tags for templates
     },
-
     -- Optional, customize how note IDs are generated given an optional title.
     ---@param title string|?
     ---@return string
@@ -72,5 +75,42 @@ return {
       end
       return tostring(os.time()) .. "-" .. suffix
     end,
+  },
+  keys = {
+    {
+      "<leader>On",
+      "<cmd>ObsidianNew<CR>",
+      desc = "Create new note",
+    },
+    {
+      "<leader>Ot",
+      "<cmd>Obsidian new_from_template<CR>",
+      desc = "Create new note from template",
+    },
+    {
+      "<leader>Oo",
+      "<cmd>ObsidianOpen<CR>",
+      desc = "Open in obsidian app",
+    },
+    {
+      "<leader>Ob",
+      "<cmd>ObsidianBacklinks<CR>",
+      desc = "Show obsidian back links",
+    },
+    {
+      "<leader>Ol",
+      "<cmd>ObsidianLinks<CR>",
+      desc = "Show obsidian links",
+    },
+    {
+      "<leader>Os",
+      "<cmd>ObsidianSearch<CR>",
+      desc = "Search obsidian",
+    },
+    {
+      "<leader>Oq",
+      "<cmd>ObsidianQuickSwitch<CR>",
+      desc = "Quick switch",
+    },
   },
 }
