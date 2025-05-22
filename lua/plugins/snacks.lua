@@ -9,5 +9,35 @@ return {
         },
       },
     },
+    dashboard = {
+      enable = true,
+      preset = {
+        keys = {
+          { icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
+          {
+            icon = " ",
+            key = "p",
+            desc = "Projects",
+            action = ":lua Snacks.dashboard.pick('projects')",
+          },
+          {
+            icon = " ",
+            key = "c",
+            desc = "Config",
+            action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config'))",
+          },
+          { icon = " ", key = "s", desc = "Restore Session", section = "session" },
+          { icon = " ", key = "q", desc = "Quit", action = ":qa" },
+        },
+        header = [[
+██████╗ ██╗  ██╗████████╗███████╗███████╗██╗     
+██╔══██╗╚██╗██╔╝╚══██╔══╝██╔════╝██╔════╝██║     
+██████╔╝ ╚███╔╝    ██║   ███████╗█████╗  ██║     
+██╔══██╗ ██╔██╗    ██║   ╚════██║██╔══╝  ██║     
+██║  ██║██╔╝ ██╗   ██║   ███████║███████╗███████╗
+╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚══════╝╚══════╝
+      ]],
+      },
+    },
   },
 }
