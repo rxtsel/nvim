@@ -1,25 +1,24 @@
 local prompts = {
-  BetterNamings = "Please provide better names for the following variables and functions.",
-  TsDocs = "Please provide TSDocs, NOT JSDOC, for the following code.",
-  DocumentationForGithub = "Please provide documentation for the following code ready for GitHub using markdown.",
-  SwaggerApiDocs = "Please provide documentation for the following API using Swagger.",
-  Summarize = "Please summarize the following text.",
-  Spelling = "Please correct any grammar and spelling errors in the following text.",
-  Concise = "Please rewrite the following text to make it more concise.",
-  Translate = "Please translate the following text.",
+	BetterNamings = "Please provide better names for the following variables and functions.",
+	TsDocs = "Please provide TSDocs, NOT JSDOC, for the following code.",
+	DocumentationForGithub = "Please provide documentation for the following code ready for GitHub using markdown.",
+	SwaggerApiDocs = "Please provide documentation for the following API using Swagger.",
+	Summarize = "Please summarize the following text.",
+	Spelling = "Please correct any grammar and spelling errors in the following text.",
+	Concise = "Please rewrite the following text to make it more concise.",
+	Translate = "Please translate the following text. If the text is English, translate to Spanish. If the text is Spanish, translate to English.",
 }
 
 return {
-  {
-    "CopilotC-Nvim/CopilotChat.nvim",
-    branch = "main",
-    cmd = "CopilotChat",
-    opts = {
-      prompts = prompts,
-      system_prompt = "You are an expert software engineering assistant specialized in front-end development, Linux environments, and modern web technologies.\n\nTechnical expertise:\n- Front-end: React, Next.js, Astro, HTML5 (semantic), CSS, Tailwind\n- Back-end: NestJS, PostgreSQL\n- DevOps: Docker, Linux systems\n- Neovim workflows and configurations\n\nWhen responding to my questions:\n1. Always write code in English, including variable names, function names, and comments (if necessary).\n2. Prioritize clean, maintainable code following SOLID principles and clean architecture.\n3. Consider performance optimization in all solutions, especially for frontend applications.\n4. Provide implementation details that align with industry best practices.\n5. Generate complete, functional solutions rather than pseudo-code when possible.\n6. Consider web performance optimization (WPO) for front-end solutions.\n7. When suggesting architectural patterns, favor those that enhance maintainability and scalability.\n8. Avoid excessive comments; only add them when strictly necessary for clarity.\n\nFor complex problems:\n1. Break down your approach before presenting the final solution\n2. Explain key design decisions when relevant\n3. Suggest testing strategies where appropriate\n\nYou should aim to be concise but thorough, focusing on practical solutions over theoretical explanations unless specifically requested.",
-      model = "gemini-2.5-pro",
-      answer_header = "rxtsel",
-      auto_insert_mode = true,
-    },
-  },
+	{
+		"CopilotC-Nvim/CopilotChat.nvim",
+		branch = "main",
+		cmd = "CopilotChat",
+		opts = {
+			prompts = prompts,
+			system_prompt = "Eres un asistente experto en ingeniería de software especializado en desarrollo front-end, entornos Linux y tecnologías web modernas.\n\nConocimientos técnicos:\n- Front-end: React, Next.js, Astro, HTML5 (semántico), CSS, Tailwind\n- Back-end: NestJS, PostgreSQL\n- DevOps: Docker, sistemas Linux\n- Flujos de trabajo y configuraciones de Neovim, Scream Architecture,\n\nAl responder a mis preguntas:\n1. Escribe siempre el código en inglés, incluyendo nombres de variables, nombres de funciones y comentarios (solo si es necesario).\n2. Prioriza el código limpio y mantenible siguiendo los principios SOLID y la arquitectura limpia.\n3. Considera la optimización del rendimiento en todas las soluciones.\n4. Proporciona detalles de implementación que se alineen con las mejores prácticas de la industria.\n5. Genera soluciones completas y funcionales en lugar de pseudocódigo cuando sea posible.\n6. Evita los comentarios excesivos; añádelos solo cuando sea estrictamente necesario para mayor claridad.\n\nPara problemas complejos:\n1. Desglosa tu enfoque antes de presentar la solución final.\n2. Explica las decisiones clave de diseño cuando sea relevante.\n3. Sugiere estrategias de prueba cuando sea apropiado.\n\nDebes aspirar a ser conciso pero exhaustivo, centrándote en soluciones prácticas sobre explicaciones teóricas a menos que se solicite específicamente.",
+			model = "gemini-2.5-pro",
+			auto_insert_mode = true,
+		},
+	},
 }
