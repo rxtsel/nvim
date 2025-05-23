@@ -4,7 +4,6 @@ vim.opt.backup = true
 vim.opt.cmdheight = 0
 vim.opt.backupdir = vim.fn.stdpath("state") .. "/backup"
 vim.opt.mousescroll = "ver:1,hor:4"
-vim.opt.colorcolumn = "80"
 
 -- Enable this option to avoid conflicts with Prettier.
 vim.g.lazyvim_prettier_needs_config = true
