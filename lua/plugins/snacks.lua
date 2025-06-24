@@ -9,6 +9,14 @@ return {
 					hidden = true,
 					exclude = {
 						"node_modules",
+						".changeset",
+						".snaplet",
+						".vscode",
+						".well-known",
+						".yarn",
+					},
+					include = {
+						".env*",
 					},
 				},
 			},
