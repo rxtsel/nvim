@@ -31,22 +31,23 @@ return {
 						action = ":lua Snacks.dashboard.pick('files', { cwd = vim.fn.stdpath('config') })",
 					},
 					{ icon = " ", key = "s", desc = "Restore Session", section = "session" },
-					{
-						icon = "󰧮 ",
-						key = "o",
-						desc = "New Obsidian note",
-						action = function()
-							vim.cmd("Obsidian new")
-						end,
-					},
-					{
-						icon = "󱔘 ",
-						key = "t",
-						desc = "New Obsidian note with template",
-						action = function()
-							vim.cmd("Obsidian new_from_template")
-						end,
-					},
+					-- Disabled Obsidian options by default, uncomment to enable
+					-- {
+					-- 	icon = "󰧮 ",
+					-- 	key = "o",
+					-- 	desc = "New Obsidian note",
+					-- 	action = function()
+					-- 		vim.cmd("Obsidian new")
+					-- 	end,
+					-- },
+					-- {
+					-- 	icon = "󱔘 ",
+					-- 	key = "t",
+					-- 	desc = "New Obsidian note with template",
+					-- 	action = function()
+					-- 		vim.cmd("Obsidian new_from_template")
+					-- 	end,
+					-- },
 					{ icon = " ", key = "q", desc = "Quit", action = ":qa" },
 				},
 				header = [[
