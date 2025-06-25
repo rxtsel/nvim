@@ -1,11 +1,37 @@
-local vault_path = "/mnt/DiskD/rxtsel's vault/"
+local function is_dir(path)
+	return vim.fn.isdirectory(path) == 1
+end
+
+local function ensure_dir(path)
+	if not is_dir(path) then
+		local ok = vim.fn.mkdir(path, "p")
+		if ok == 0 then
+			vim.notify("[Obsidian] Error creating directory: " .. path, vim.log.levels.ERROR)
+		end
+	end
+end
+
+-- Routes
+local home = vim.fn.expand("~")
+local primary = "/mnt/DiskD/rxtsel's vault/"
+local fallback = home .. "/Documents/obsidian-vault/"
+
+-- Fallback logic
+local vault_path
+if is_dir(primary) then
+	vault_path = primary
+else
+	ensure_dir(home .. "/Documents")
+	ensure_dir(fallback)
+	vault_path = fallback
+end
+
 return {
 	"obsidian-nvim/obsidian.nvim",
 	version = "*",
 	lazy = true,
 	ft = "markdown",
 	cmd = "Obsidian",
-	enable = false, -- Disable by default, enable it manually if you want to use it.
 	event = {
 		"BufReadPre " .. vault_path .. "*.md",
 		"BufNewFile " .. vault_path .. "*.md",
@@ -52,7 +78,7 @@ return {
 		},
 		-- Settings for templates
 		templates = {
-			subdir = vault_path .. "_templates", -- Subdirectory for templates
+			subdir = ensure_dir(vault_path .. "_templates"), -- Subdirectory for templates
 			date_format = "%Y-%m-%d-%a", -- Date format for templates
 			gtime_format = "%H:%M", -- Time format for templates
 			tags = "", -- Default tags for templates
