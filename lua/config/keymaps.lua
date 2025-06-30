@@ -3,5 +3,6 @@
 local wk = require("which-key")
 
 wk.add({
-  { "<leader>O", group = "Obsidian" },
+	{ "<leader>O", group = "Obsidian" },
+	{ "<leader>a", group = "ai" },
 })

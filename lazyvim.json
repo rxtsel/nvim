@@ -1,5 +1,6 @@
 {
   "extras": [
+    "lazyvim.plugins.extras.lang.nix",
     "lazyvim.plugins.extras.lang.typescript"
   ],
   "install_version": 8,
