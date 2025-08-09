@@ -35,7 +35,6 @@ require("lazy").setup({
 		{ import = "lazyvim.plugins.extras.lang.markdown" },
 		{ import = "lazyvim.plugins.extras.lang.typescript" },
 		{ import = "lazyvim.plugins.extras.linting.eslint" },
-		{ import = "lazyvim.plugins.extras.ui.treesitter-context" },
 		-- import/override with your plugins
 		{ import = "plugins" },
 	},
