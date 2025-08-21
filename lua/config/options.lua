@@ -41,6 +41,7 @@ vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decr
 vim.o.foldlevelstart = 99
 vim.o.foldenable = true
 vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
+vim.o.listchars = "trail:·,extends:›,precedes:‹,tab:  "
 
 -- Undercurl
 vim.cmd([[let &t_Cs = "\e[4:3m"]])
@@ -56,3 +57,5 @@ vim.g.root_spec = { "cwd" }
 if vim.fn.has("nvim-0.8") == 1 then
 	vim.opt.cmdheight = 0
 end
+
+vim.g.lazyvim_rust_diagnostics = "rust-analyzer"
