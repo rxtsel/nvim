@@ -47,6 +47,14 @@ return {
 							vim.cmd("Obsidian new_from_template")
 						end,
 					},
+					{
+						icon = "󰍪 ",
+						key = "y",
+						desc = "Obsidian Picker",
+						action = function()
+							vim.cmd("Obsidian quick_switch")
+						end,
+					},
 					{ icon = " ", key = "q", desc = "Quit", action = ":qa" },
 				},
 				header = [[

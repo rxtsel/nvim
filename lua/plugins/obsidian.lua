@@ -13,7 +13,7 @@ end
 
 -- Routes
 local home = vim.fn.expand("~")
-local primary = "/mnt/DiskD/rxtsel's vault/"
+local primary = home .. "/Documents/rxtsel-vault/"
 local fallback = home .. "/Documents/obsidian-vault/"
 
 -- Fallback logic
@@ -42,7 +42,7 @@ return {
 	opts = {
 		workspaces = {
 			{
-				name = "rxtsel's vault", -- Name of the workspace
+				name = "rxtsel-vault", -- Name of the workspace
 				path = vault_path, -- Path to the notes directory
 			},
 		},
@@ -52,29 +52,6 @@ return {
 		picker = {
 			-- Set your preferred picker. Can be one of 'telescope.nvim', 'fzf-lua', 'mini.pick' or 'snacks.pick'.
 			name = "snacks.pick",
-		},
-		mappings = {
-			-- Overrides the 'gf' mapping to work on markdown/wiki links within your vault.
-			["gf"] = {
-				action = function()
-					return require("obsidian").util.gf_passthrough()
-				end,
-				opts = { noremap = false, expr = true, buffer = true },
-			},
-			-- Toggle check-boxes.
-			["<leader>ch"] = {
-				action = function()
-					return require("obsidian").util.toggle_checkbox()
-				end,
-				opts = { buffer = true },
-			},
-			-- Smart action depending on context: follow link, show notes with tag, toggle checkbox, or toggle heading fold
-			["<cr>"] = {
-				action = function()
-					return require("obsidian").util.smart_action()
-				end,
-				opts = { buffer = true, expr = true },
-			},
 		},
 		-- Settings for templates
 		templates = {
@@ -104,6 +81,33 @@ return {
 		end,
 	},
 	keys = {
+		{
+			"gf",
+			function()
+				return require("obsidian").util.gf_passthrough()
+			end,
+			desc = "Obsidian follow link",
+			noremap = false,
+			expr = true,
+			buffer = true,
+		},
+		{
+			"<leader>ch",
+			function()
+				return require("obsidian").util.toggle_checkbox()
+			end,
+			desc = "Toggle checkbox",
+			buffer = true,
+		},
+		{
+			"<CR>",
+			function()
+				return require("obsidian").util.smart_action()
+			end,
+			desc = "Smart action",
+			expr = true,
+			buffer = true,
+		},
 		{
 			"<leader>On",
 			"<cmd>ObsidianNew<CR>",
