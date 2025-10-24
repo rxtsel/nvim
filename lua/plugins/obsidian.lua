@@ -79,10 +79,25 @@ return {
 			end
 			return tostring(os.time()) .. "-" .. suffix
 		end,
+		image = {
+			resolve = function(path, src)
+				if require("obsidian.api").path_is_note(path) then
+					return require("obsidian.api").resolve_image_path(src)
+				end
+			end,
+		},
+
+		attachments = {
+			img_folder = "./uploads",
+			img_name_func = function()
+				return string.format("upload-%s", os.date("%Y%m%d%H%M%S"))
+			end,
+			confirm_img_paste = true,
+		},
 	},
 	keys = {
 		{
-			"gf",
+			"Ogf",
 			function()
 				return require("obsidian").util.gf_passthrough()
 			end,
@@ -92,7 +107,7 @@ return {
 			buffer = true,
 		},
 		{
-			"<leader>ch",
+			"<leader>Och",
 			function()
 				return require("obsidian").util.toggle_checkbox()
 			end,
