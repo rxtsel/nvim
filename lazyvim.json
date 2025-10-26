@@ -1,6 +1,5 @@
 {
   "extras": [
-    "lazyvim.plugins.extras.ai.copilot-native",
     "lazyvim.plugins.extras.formatting.biome",
     "lazyvim.plugins.extras.formatting.prettier",
     "lazyvim.plugins.extras.lang.json",
