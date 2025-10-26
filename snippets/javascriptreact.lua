@@ -29,16 +29,18 @@ return {
 			[[
 {} function {}({}) {{
   return <div>{}</div>
-}}
+}}{}
 ]],
 			{
 				c(1, {
+					t(""),
 					t("export"),
 					t("export default"),
 				}),
 				f(get_component_name),
 				i(2),
 				f(get_component_name),
+				i(0),
 			}
 		)
 	),
@@ -53,19 +55,13 @@ return {
 ]],
 			{
 				c(1, {
-					t("export "),
 					t(""),
+					t("export "),
 				}),
 				f(get_component_name),
 				i(2),
 				f(get_component_name),
-				c(3, {
-					t(""),
-					f(function()
-						local component_name = get_component_name()
-						return "\n\nexport default " .. component_name
-					end),
-				}),
+				i(0),
 			}
 		)
 	),
