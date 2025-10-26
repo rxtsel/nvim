@@ -1,6 +1,7 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 local wk = require("which-key")
+local ls = require("luasnip")
 
 -- Increment/decrement
 keymap.set("n", "+", "<C-a>")
@@ -35,3 +36,15 @@ wk.add({
 	{ "<leader>O", group = "Obsidian" },
 	{ "<leader>a", group = "ai" },
 })
+
+-- Luasnip choice node navigation
+keymap.set({ "i", "s" }, "<C-h>", function()
+	if ls.choice_active() then
+		ls.change_choice(1)
+	end
+end)
+keymap.set({ "i", "s" }, "<C-l>", function()
+	if ls.choice_active() then
+		ls.change_choice(-1)
+	end
+end)
