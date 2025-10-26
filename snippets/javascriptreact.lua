@@ -91,11 +91,11 @@ const {} = ({}) => {{
 				c(3, {
 					f(function(args)
 						local component_name = args[1][1] or "Component"
-						return "export default " .. component_name
+						return "export { " .. component_name .. " }"
 					end, { 1 }),
 					f(function(args)
 						local component_name = args[1][1] or "Component"
-						return "export { " .. component_name .. " }"
+						return "export default " .. component_name
 					end, { 1 }),
 				}),
 				i(0),
