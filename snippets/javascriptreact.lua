@@ -27,15 +27,15 @@ return {
 		{ trig = "rfc", desc = "Creates a React functional component" },
 		fmt(
 			[[
-{} function {}({}) {{
+{}function {}({}) {{
   return <div>{}</div>
 }}{}
 ]],
 			{
 				c(1, {
 					t(""),
-					t("export"),
-					t("export default"),
+					t("export "),
+					t("export default "),
 				}),
 				f(get_component_name),
 				i(2),
