@@ -9,11 +9,11 @@ local t = ls.text_node
 local fmt = require("luasnip.extras.fmt").fmt
 local rep = require("luasnip.extras").rep
 
--- Load utils using absolute path
+-- Load utils
 local utils_path = vim.fn.stdpath("config") .. "/snippets/_utils.lua"
 local utils = dofile(utils_path)
 
--- Helper function to get component name from filename
+-- Get component name from filename
 local function get_component_name()
 	local name = vim.fn.expand("%:t:r")
 	if not name or name == "" then
