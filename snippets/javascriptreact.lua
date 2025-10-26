@@ -5,6 +5,7 @@ local c = ls.choice_node
 local sn = ls.snippet_node
 local d = ls.dynamic_node
 local f = ls.function_node
+local t = ls.text_node
 local fmt = require("luasnip.extras.fmt").fmt
 local rep = require("luasnip.extras").rep
 
@@ -26,31 +27,45 @@ return {
 		{ trig = "rfc", desc = "Creates a React functional component" },
 		fmt(
 			[[
-export {} function {}({}) {{
-  return <h1>{}</h1>
+{} function {}({}) {{
+  return <div>{}</div>
 }}
 ]],
 			{
-				i(1, "default"),
+				c(1, {
+					t("export"),
+					t("export default"),
+				}),
 				f(get_component_name),
-				i(3, "props"),
+				i(2),
 				f(get_component_name),
 			}
 		)
 	),
 
 	s(
-		{ trig = "rafc", desc = "Creates a React arrow function component with named export" },
+		{ trig = "rafc", desc = "Creates a React arrow function component" },
 		fmt(
 			[[
-export const {} = ({}) => {{
-  return <h1>{}</h1>
-}}
+{}const {} = ({}) => {{
+  return <div>{}</div>
+}}{}
 ]],
 			{
+				c(1, {
+					t("export "),
+					t(""),
+				}),
 				f(get_component_name),
-				i(2, "props"),
+				i(2),
 				f(get_component_name),
+				c(3, {
+					t(""),
+					f(function()
+						local component_name = get_component_name()
+						return "\n\nexport default " .. component_name
+					end),
+				}),
 			}
 		)
 	),
@@ -60,7 +75,7 @@ export const {} = ({}) => {{
 		fmt(
 			[[
 const {} = ({}) => {{
-  return <h1>{}</h1>
+  return <div>{}</div>
 }}
 
 {}{}
@@ -71,7 +86,7 @@ const {} = ({}) => {{
 						i(1, get_component_name()),
 					})
 				end),
-				i(2, "props"),
+				i(2),
 				rep(1),
 				c(3, {
 					f(function(args)
