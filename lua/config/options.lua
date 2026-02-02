@@ -1,5 +1,10 @@
 vim.g.mapleader = " "
 
+-- Disable unused providers
+vim.g.loaded_python3_provider = 0
+vim.g.loaded_ruby_provider = 0
+vim.g.loaded_perl_provider = 0
+
 vim.o.number = true
 vim.o.relativenumber = true
 vim.o.signcolumn = "yes"
@@ -20,9 +25,19 @@ vim.o.sidescrolloff = 8
 vim.o.hlsearch = true
 vim.o.showcmd = false
 vim.o.ignorecase = true
+vim.o.smartcase = true
 vim.o.mouse = "nvc"
 vim.o.colorcolumn = "120"
--- vim.o.winborder = 'rounded'
+-- vim.o.winborder = "rounded"
+vim.o.smoothscroll = true
+vim.o.splitkeep = "screen"
+vim.o.jumpoptions = "view"
+vim.o.inccommand = "split"
+vim.o.updatetime = 250
+vim.o.timeoutlen = 300
+vim.o.confirm = true
+vim.o.virtualedit = "block"
+vim.o.exrc = true
 
 -- fold
 vim.o.foldcolumn = "0"
