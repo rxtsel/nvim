@@ -1,3 +1,5 @@
-require("lua.plugins.oil")
-require("lua.plugins.mini")
-require("lua.plugins.blink")
+require("plugins.oil")
+require("plugins.mini")
+require("plugins.blink")
+require("plugins.treesitter")
+require("plugins.conform")

@@ -22,12 +22,13 @@ vim.o.showcmd = false
 vim.o.ignorecase = true
 vim.o.mouse = "nvc"
 vim.o.colorcolumn = "120"
-
+-- vim.o.winborder = 'rounded'
 
 -- fold
--- vim.o.foldcolumn = "1" -- '0' is not bad
--- vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
--- vim.o.foldlevelstart = 99
--- vim.o.foldenable = true
--- vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
--- vim.o.listchars = "trail:·,extends:›,precedes:‹,tab:  "
+vim.o.foldcolumn = "0"
+vim.o.foldlevel = 99
+vim.o.foldlevelstart = 99
+vim.o.foldenable = false
+vim.o.fillchars = [[eob: ,fold: ,foldopen: ,foldsep: ,foldclose:]]
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"

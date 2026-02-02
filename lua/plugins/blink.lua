@@ -1,6 +1,5 @@
 require("blink.cmp").setup({
-	-- fuzzy = { implementation = "prefer_rust" },
-	fuzzy = { implementation = "lua" },
+	fuzzy = { implementation = "prefer_rust" },
 	signature = { enable = true },
 	keymap = {
 		preset = "default",
@@ -31,6 +30,14 @@ require("blink.cmp").setup({
 				["<CR>"] = { "accept_and_enter", "fallback" }
 			}
 		},
-		sources = { default = { "lsp" } }
+		sources = {
+			default = {
+				"lsp",
+				"path",
+				"snippets",
+				"buffer",
+			},
+		}
 	}
 })
+
