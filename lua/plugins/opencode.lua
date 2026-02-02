@@ -10,11 +10,11 @@ vim.o.autoread = true
 
 local opencode = require("opencode")
 
-vim.keymap.set({ "n", "x" }, "<C-a>", function()
+vim.keymap.set({ "n", "x" }, "<leader>a.", function()
 	opencode.ask("@this: ", { submit = true })
 end, { desc = "Ask opencode…" })
 
-vim.keymap.set({ "n", "x" }, "<C-x>", function()
+vim.keymap.set({ "n", "x" }, "<leader>ap", function()
 	opencode.select()
 end, { desc = "Execute opencode action…" })
 
@@ -22,13 +22,13 @@ vim.keymap.set({ "n", "t" }, "<leader>aa", function()
 	opencode.toggle()
 end, { desc = "Toggle opencode" })
 
-vim.keymap.set({ "n", "x" }, "go", function()
-	return opencode.operator("@this ")
-end, { desc = "Add range to opencode", expr = true })
-
-vim.keymap.set("n", "goo", function()
+vim.keymap.set("n", "<leader>ad", function()
 	return opencode.operator("@this ") .. "_"
 end, { desc = "Add line to opencode", expr = true })
+
+vim.keymap.set({ "n", "x" }, "<leader>add", function()
+	return opencode.operator("@this ")
+end, { desc = "Add range to opencode", expr = true })
 
 vim.keymap.set("n", "<S-C-u>", function()
 	opencode.command("session.half.page.up")

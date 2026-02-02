@@ -22,8 +22,8 @@ vim.keymap.set("n", "ss", "<cmd>split<Return>", { noremap = true, silent = true,
 vim.keymap.set("n", "sv", "<cmd>vsplit<Return>", { noremap = true, silent = true, desc = "Split vertical" })
 
 -- Move window
-vim.keymap.set("n", "sl", "<C-w>l", { desc = "Move to left" })
-vim.keymap.set("n", "sh", "<C-w>h", { desc = "Move to right" })
+vim.keymap.set("n", "sl", "<C-w>l", { desc = "Move to right" })
+vim.keymap.set("n", "sh", "<C-w>h", { desc = "Move to left" })
 vim.keymap.set("n", "sk", "<C-w>k", { desc = "Move to top" })
 vim.keymap.set("n", "sj", "<C-w>j", { desc = "Move to bottom" })
 
@@ -39,3 +39,20 @@ vim.keymap.set("n", "<Esc>", "<CMD>nohlsearch<CR><Esc>")
 -- Increment/Decrement
 vim.keymap.set("n", "+", "<C-a>", { desc = "Increment under cursor", noremap = true })
 vim.keymap.set("n", "-", "<C-x>", { desc = "Decrement under cursor", noremap = true })
+
+-- Move lines in visual mode
+vim.keymap.set("v", "J", ":m '>+2<CR>gv=gv", { desc = "Move line down" })
+vim.keymap.set("v", "K", ":m '<-1<CR>gv=gv", { desc = "Move line up" })
+
+-- Keep cursor centered when navigating
+vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Scroll down centered" })
+vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Scroll up centered" })
+vim.keymap.set("n", "n", "nzzzv", { desc = "Next search centered" })
+vim.keymap.set("n", "N", "Nzzzv", { desc = "Prev search centered" })
+
+-- Better indentation in visual mode (keeps selection)
+vim.keymap.set("v", "<", "<gv", { desc = "Indent left" })
+vim.keymap.set("v", ">", ">gv", { desc = "Indent right" })
+
+-- Select all
+vim.keymap.set("n", "<C-a>", "gg<S-v>G", { desc = "Select all" })
