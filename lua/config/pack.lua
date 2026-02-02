@@ -7,4 +7,5 @@ vim.pack.add({
 	{ src = "https://github.com/lewis6991/gitsigns.nvim" },
 	{ src = "https://github.com/stevearc/conform.nvim" },
 	{ src = "https://github.com/nickjvandyke/opencode.nvim" },
+	{ src = "https://github.com/kdheepak/lazygit.nvim" },
 })
