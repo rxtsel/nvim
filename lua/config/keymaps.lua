@@ -35,3 +35,7 @@ vim.keymap.set("n", "<C-w><down>", "<C-w>-", { desc = "Resize to bottom" })
 
 -- Clear highlighting
 vim.keymap.set("n", "<Esc>", "<CMD>nohlsearch<CR><Esc>")
+
+-- Increment/Decrement
+vim.keymap.set("n", "+", "<C-a>", { desc = "Increment under cursor", noremap = true })
+vim.keymap.set("n", "-", "<C-x>", { desc = "Decrement under cursor", noremap = true })

@@ -1,5 +1,5 @@
 require("plugins.oil")
 require("plugins.mini")
 require("plugins.blink")
-require("plugins.treesitter")
 require("plugins.conform")
+require("plugins.opencode")
