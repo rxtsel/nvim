@@ -1,0 +1,6 @@
+require("lua.config.options")
+require("lua.config.keymaps")
+require("lua.config.autocmd")
+require("lua.config.pack")
+require("lua.config.lsp")
+require("lua.config.colorscheme")
