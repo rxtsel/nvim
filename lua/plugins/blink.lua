@@ -22,22 +22,22 @@ require("blink.cmp").setup({
 	completion = {
 		documentation = {
 			auto_show = true,
-			auto_show_delay_ms = 200
+			auto_show_delay_ms = 200,
 		},
 		cmdline = {
 			keymap = {
 				preset = "inherit",
-				["<CR>"] = { "accept_and_enter", "fallback" }
-			}
-		},
-		sources = {
-			default = {
-				"lsp",
-				"path",
-				"snippets",
-				"buffer",
+				["<CR>"] = { "accept_and_enter", "fallback" },
 			},
-		}
-	}
+		},
+	},
+	snippets = { preset = "mini_snippets" },
+	sources = {
+		default = {
+			"snippets",
+			"lsp",
+			"path",
+			"buffer",
+		},
+	},
 })
-
