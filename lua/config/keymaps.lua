@@ -5,7 +5,7 @@ vim.keymap.set("n", "<leader>q", "<CMD>q<CR>", { noremap = true, silent = true, 
 -- File explorer
 vim.keymap.set("n", "<leader>e", "<CMD>Oil<CR>", { noremap = true, silent = true, desc = "Toggle file explorer" })
 vim.keymap.set("n", ";f", "<CMD>Pick files<CR>", { noremap = true, silent = true, desc = "Find files" })
-vim.keymap.set("n", ";g", "<CMD>Pick grep<CR>", { noremap = true, silent = true, desc = "Find by grep" })
+vim.keymap.set("n", ";r", "<CMD>Pick grep<CR>", { noremap = true, silent = true, desc = "Find by grep" })
 vim.keymap.set("n", ";b", "<CMD>Pick buffers<CR>", { noremap = true, silent = true, desc = "Find buffers" })
 vim.keymap.set("n", ";h", "<CMD>Pick help<CR>", { noremap = true, silent = true, desc = "Find help" })
 
