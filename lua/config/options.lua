@@ -27,8 +27,7 @@ vim.o.showcmd = false
 vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.mouse = "nvc"
-vim.o.colorcolumn = "120"
--- vim.o.winborder = "rounded"
+vim.o.colorcolumn = "100"
 vim.o.smoothscroll = true
 vim.o.splitkeep = "screen"
 vim.o.jumpoptions = "view"
@@ -38,6 +37,7 @@ vim.o.timeoutlen = 300
 vim.o.confirm = true
 vim.o.virtualedit = "block"
 vim.o.exrc = true
+vim.o.cmdheight = 0
 
 -- fold
 vim.o.foldcolumn = "0"
