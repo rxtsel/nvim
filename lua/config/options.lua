@@ -37,7 +37,6 @@ vim.o.timeoutlen = 300
 vim.o.confirm = true
 vim.o.virtualedit = "block"
 vim.o.exrc = true
-vim.o.cmdheight = 0
 
 -- fold
 vim.o.foldcolumn = "0"
