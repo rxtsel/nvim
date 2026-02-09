@@ -1,11 +1,16 @@
 require("mini.pick").setup()
 require("mini.pairs").setup()
-require("mini.surround").setup()
+require("mini.surround").setup({
+  mappings = {
+    add = 'gsa',
+    delete = 'gsd',
+    find = 'gsf',
+    find_left = 'gsF',
+    highlight = 'gsh',
+    replace = 'gsr',
+    suffix_last = 'l',
+    suffix_next = 'n',
+  },
+})
 require("mini.statusline").setup()
 require("mini.icons").setup()
-require("mini.snippets").setup({
-	snippets = {
-		require("mini.snippets").gen_loader.from_file("~/.config/nvim/snippets/global.lua"),
-		require("mini.snippets").gen_loader.from_lang(),
-	},
-})

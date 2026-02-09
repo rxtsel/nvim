@@ -3,14 +3,14 @@ require("conform").setup({
 		lua = { "stylua" },
 		rust = { "rustfmt" },
 		javascript = { "biome" },
+		javascriptreact = { "biome" },
 		typescript = { "biome" },
 		typescriptreact = { "biome" },
-		javascriptreact = { "biome" },
-		astro = { "prettierd" },
-		svelte = { "prettierd" },
 		json = { "biome" },
 		html = { "biome" },
 		css = { "biome" },
+		astro = { "prettierd" },
+		svelte = { "prettierd" },
 	},
 
 	format_on_save = {

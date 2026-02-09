@@ -1,11 +1,16 @@
+local gh = function(x)
+	return "https://github.com/" .. x
+end
+
 vim.pack.add({
-	{ src = "https://github.com/craftzdog/solarized-osaka.nvim" },
-	{ src = "https://github.com/stevearc/oil.nvim" },
-	{ src = "https://github.com/nvim-mini/mini.nvim" },
-	{ src = "https://github.com/neovim/nvim-lspconfig" },
-	{ src = "https://github.com/saghen/blink.cmp" },
-	{ src = "https://github.com/lewis6991/gitsigns.nvim" },
-	{ src = "https://github.com/stevearc/conform.nvim" },
-	{ src = "https://github.com/nickjvandyke/opencode.nvim" },
-	{ src = "https://github.com/kdheepak/lazygit.nvim" },
+	{ src = gh("craftzdog/solarized-osaka.nvim") },
+	{ src = gh("stevearc/oil.nvim") },
+	{ src = gh("nvim-mini/mini.nvim") },
+	{ src = gh("saghen/blink.cmp") },
+	{ src = gh("fang2hou/blink-copilot") },
+	{ src = gh("neovim/nvim-lspconfig") },
+	{ src = gh("nvim-treesitter/nvim-treesitter") },
+	{ src = gh("stevearc/conform.nvim") },
+	{ src = gh("lewis6991/gitsigns.nvim") },
+	{ src = gh("kdheepak/lazygit.nvim") },
 })
