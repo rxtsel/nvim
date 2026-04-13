@@ -1,21 +1,21 @@
 require("blink.cmp").setup({
 	fuzzy = { implementation = "prefer_rust" },
-	signature = { enable = true },
+	signature = { enabled = true },
 	appearance = {
 		use_nvim_cmp_as_default = true,
-		nerd_font_variant = "normal"
+		nerd_font_variant = "normal",
 	},
 	completion = {
 		documentation = {
 			auto_show = true,
-			auto_show_delay_ms = 200
+			auto_show_delay_ms = 200,
 		},
-		cmdline = {
-			keymap = {
-				preset = "inherit",
-				["<CR>"] = { "accept_and_enter", "fallback" }
-			}
-		}
+	},
+	cmdline = {
+		keymap = {
+			preset = "inherit",
+			["<CR>"] = { "accept_and_enter", "fallback" },
+		},
 	},
 	keymap = {
 		preset = "default",
@@ -32,19 +32,6 @@ require("blink.cmp").setup({
 		["<C-e>"] = { "hide" },
 	},
 	sources = {
-		default = { "copilot", "path", "lsp", "buffer" },
-		providers = {
-			copilot = {
-				name = "copilot",
-				module = "blink-copilot",
-				score_offset = 100,
-				async = true
-			}
-		}
-	}
-})
-
-require("blink-copilot").setup({
-	max_completions = 2,
-	max_attempts = 2,
+		default = { "lsp", "path", "snippets", "buffer" },
+	},
 })
