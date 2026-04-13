@@ -23,4 +23,4 @@ vim.lsp.config("lua_ls", {
 	},
 })
 
-vim.lsp.document_color.enable(true, { style = "virtual" })
+vim.lsp.document_color.enable(true, nil, { style = "virtual" })
