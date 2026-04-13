@@ -49,3 +49,17 @@ vim.keymap.set("n", "<leader>pa", function()
 	vim.fn.setreg("+", path)
 	print("file:", path)
 end, { desc = "Copy full file path" })
+
+vim.keymap.set(
+	"n",
+	"<leader>cp",
+	vim.lsp.document_color.color_presentation,
+	{ desc = "Change color presentation", silent = true }
+)
+
+vim.keymap.set("n", "<leader>ct", function()
+	vim.lsp.document_color.enable(not vim.lsp.document_color.is_enabled())
+end, {
+	desc = "Toggle color highlight",
+	silent = true,
+})
