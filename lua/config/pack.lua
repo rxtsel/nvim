@@ -7,7 +7,6 @@ vim.pack.add({
 	{ src = gh("stevearc/oil.nvim") },
 	{ src = gh("nvim-mini/mini.nvim") },
 	{ src = gh("saghen/blink.cmp") },
-	{ src = gh("fang2hou/blink-copilot") },
 	{ src = gh("neovim/nvim-lspconfig") },
 	{ src = gh("nvim-treesitter/nvim-treesitter") },
 	{ src = gh("stevearc/conform.nvim") },
