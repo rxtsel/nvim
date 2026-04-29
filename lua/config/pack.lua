@@ -13,4 +13,5 @@ vim.pack.add({
 	{ src = gh("lewis6991/gitsigns.nvim") },
 	{ src = gh("kdheepak/lazygit.nvim") },
 	{ src = gh("mistweaverco/kulala.nvim") },
+	{ src = gh("vyfor/cord.nvim") },
 })
