@@ -44,6 +44,11 @@
       "rev": "fa26e865200ceb0841284c9f2e86ffbd2d353233",
       "src": "https://github.com/nickjvandyke/opencode.nvim"
     },
+    "rustaceanvim": {
+      "rev": "bc391bbb8db0dbf3e3e9fe8f9f03112ecbab7463",
+      "src": "https://github.com/mrcjkb/rustaceanvim",
+      "version": "9.0.0 - 10.0.0"
+    },
     "solarized-osaka.nvim": {
       "rev": "f0c2f0ba0bd56108d53c9bfae4bb28ff6c67bbdb",
       "src": "https://github.com/craftzdog/solarized-osaka.nvim"

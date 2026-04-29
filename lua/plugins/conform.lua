@@ -11,6 +11,7 @@ require("conform").setup({
 		css = { "biome" },
 		astro = { "prettierd" },
 		svelte = { "prettierd" },
+		nix = { "alejandra" },
 	},
 
 	format_on_save = {

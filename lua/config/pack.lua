@@ -14,4 +14,8 @@ vim.pack.add({
 	{ src = gh("kdheepak/lazygit.nvim") },
 	{ src = gh("mistweaverco/kulala.nvim") },
 	{ src = gh("vyfor/cord.nvim") },
+	{
+		src = gh("mrcjkb/rustaceanvim"),
+		version = vim.version.range("^9"),
+	},
 })
