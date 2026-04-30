@@ -7,6 +7,7 @@ vim.lsp.enable({
 	"copilot",
 	"tailwindcss",
 	"cssls",
+	"oxlint",
 })
 
 -- Enable inline diagnostics
