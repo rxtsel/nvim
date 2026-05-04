@@ -8,6 +8,7 @@ vim.lsp.enable({
 	"tailwindcss",
 	"cssls",
 	"oxlint",
+	"oxfmt",
 })
 
 -- Enable inline diagnostics
