@@ -40,10 +40,6 @@
       "rev": "f55b25e493a7df76371cfadd0ded5004cb9cd48a",
       "src": "https://github.com/stevearc/oil.nvim"
     },
-    "opencode.nvim": {
-      "rev": "fa26e865200ceb0841284c9f2e86ffbd2d353233",
-      "src": "https://github.com/nickjvandyke/opencode.nvim"
-    },
     "rustaceanvim": {
       "rev": "bc391bbb8db0dbf3e3e9fe8f9f03112ecbab7463",
       "src": "https://github.com/mrcjkb/rustaceanvim",
