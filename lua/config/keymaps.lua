@@ -63,3 +63,23 @@ end, {
 	desc = "Toggle color highlight",
 	silent = true,
 })
+
+-- Search and replace with grug-far
+vim.keymap.set({ "n", "x" }, "<leader>sr", function()
+	local grug = require("grug-far")
+
+	local ext = nil
+
+	if vim.bo.buftype == "" then
+		ext = vim.fn.expand("%:e")
+	end
+
+	grug.open({
+		transient = true,
+		prefills = {
+			filesFilter = ext and ext ~= "" and "*." .. ext or nil,
+		},
+	})
+end, {
+	desc = "Search and Replace",
+})

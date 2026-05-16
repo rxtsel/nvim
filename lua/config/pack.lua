@@ -19,4 +19,6 @@ vim.pack.add({
 		src = gh("mrcjkb/rustaceanvim"),
 		version = vim.version.range("^9"),
 	},
+	{ src = gh("OXY2DEV/markview.nvim") },
+	{ src = gh("MagicDuck/grug-far.nvim") },
 })
