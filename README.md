@@ -2,6 +2,8 @@
 
 This is simple and minimal, but powerful neovim setup.
 
+<img width="2212" height="1361" alt="thumb" src="https://github.com/user-attachments/assets/ec7a8809-853f-4410-b67f-93de4d07adfb" />
+
 **Requiriments**:
 
 - Neovim >= `v0.12`
