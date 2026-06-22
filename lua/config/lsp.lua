@@ -9,6 +9,7 @@ vim.lsp.enable({
 	"cssls",
 	"oxlint",
 	"oxfmt",
+	"marksman",
 })
 
 -- Enable inline diagnostics
