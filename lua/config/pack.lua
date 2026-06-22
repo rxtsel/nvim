@@ -21,4 +21,6 @@ vim.pack.add({
 	},
 	{ src = gh("OXY2DEV/markview.nvim") },
 	{ src = gh("MagicDuck/grug-far.nvim") },
+	{ src = gh("3rd/image.nvim") },
+	{ src = gh("HakonHarnes/img-clip.nvim") },
 })

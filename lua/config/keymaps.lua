@@ -83,3 +83,6 @@ vim.keymap.set({ "n", "x" }, "<leader>sr", function()
 end, {
 	desc = "Search and Replace",
 })
+
+-- Paste image from clipboard
+vim.keymap.set("n", "<leader>pi", "<cmd>PasteImage<cr>", { desc = "Paste image from system clipboard" })

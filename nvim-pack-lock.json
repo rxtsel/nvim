@@ -24,6 +24,14 @@
       "rev": "c995bbacf8229dc096ec1c3d60f8531059c86c1b",
       "src": "https://github.com/MagicDuck/grug-far.nvim"
     },
+    "image.nvim": {
+      "rev": "88351f1f7d9dbae286e671ce3690a49660dd8a5c",
+      "src": "https://github.com/3rd/image.nvim"
+    },
+    "img-clip.nvim": {
+      "rev": "b6ddfb97b5600d99afe3452d707444afda658aca",
+      "src": "https://github.com/HakonHarnes/img-clip.nvim"
+    },
     "kulala.nvim": {
       "rev": "69250f64e60f75c010feac413576acbd9ffa4ec8",
       "src": "https://github.com/mistweaverco/kulala.nvim"
