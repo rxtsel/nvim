@@ -50,6 +50,8 @@ vim.opt.autochdir = false
 vim.opt.exrc = true
 vim.opt.modifiable = true
 vim.opt.encoding = "utf-8"
+vim.opt.spell = true
+vim.opt.spelllang = { "en", "es" }
 
 -- Splits
 vim.opt.splitbelow = true
@@ -78,7 +80,7 @@ vim.opt.foldenable = false
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 
--- Fillchars
+-- Fill chars
 vim.opt.fillchars = {
 	eob = " ",
 	fold = " ",
@@ -107,6 +109,6 @@ vim.opt.clipboard = { "unnamedplus" }
 vim.opt.diffopt:append("linematch:60")
 vim.opt.diffopt:append("algorithm:histogram")
 
--- Wildmenu
+-- Wild menu
 vim.opt.wildmenu = true
 vim.opt.wildmode = "longest:full,full"
