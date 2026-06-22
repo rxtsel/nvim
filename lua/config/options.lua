@@ -50,7 +50,6 @@ vim.opt.autochdir = false
 vim.opt.exrc = true
 vim.opt.modifiable = true
 vim.opt.encoding = "utf-8"
-vim.opt.spell = true
 vim.opt.spelllang = { "en", "es" }
 
 -- Splits
