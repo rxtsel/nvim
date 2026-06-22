@@ -16,7 +16,7 @@ npm install -g tree-sitter-cli tree-sitter
 ripgrep gcc clang jq fd wl-clipboard unzip tar curl lsof imagemagick
 
 # LSP servers
-astro-language-server lua-language-server nixd svelte-language-server vtsls copilot-language-server tailwindcss-language-server vscode-css-languageserver oxlint
+astro-language-server lua-language-server nixd svelte-language-server vtsls copilot-language-server tailwindcss-language-server vscode-css-languageserver oxlint marksman
 
 # Formatters
 alejandra stylua rustfmt biome prettierd oxfmt
