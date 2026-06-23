@@ -89,9 +89,41 @@ vim.opt.backspace = { 'indent', 'eol', 'start' }
 
 vim.opt.iskeyword:append '-'
 vim.opt.path:append '**'
-vim.opt.clipboard = { 'unnamedplus' }
 vim.opt.diffopt:append 'linematch:60'
 vim.opt.diffopt:append 'algorithm:histogram'
 
 vim.opt.wildmenu = true
 vim.opt.wildmode = 'longest:full,full'
+
+vim.opt.clipboard = 'unnamedplus'
+
+-- Configure clipboard support for WSL using win32yank.
+if vim.fn.has 'wsl' == 1 and vim.fn.executable 'win32yank.exe' == 1 then
+    vim.g.clipboard = {
+        name = 'win32yank',
+        copy = {
+            ['+'] = 'win32yank.exe -i --crlf',
+            ['*'] = 'win32yank.exe -i --crlf',
+        },
+        paste = {
+            ['+'] = 'win32yank.exe -o --lf',
+            ['*'] = 'win32yank.exe -o --lf',
+        },
+        cache_enabled = false,
+    }
+
+-- Silence `wl-paste` stderr when the Wayland clipboard is empty.
+elseif vim.fn.has 'linux' == 1 and vim.env.WAYLAND_DISPLAY then
+    vim.g.clipboard = {
+        name = 'wl-clipboard',
+        copy = {
+            ['+'] = 'wl-copy --type text/plain',
+            ['*'] = 'wl-copy --primary --type text/plain',
+        },
+        paste = {
+            ['+'] = { 'sh', '-c', 'wl-paste --no-newline 2>/dev/null || true' },
+            ['*'] = { 'sh', '-c', 'wl-paste --primary --no-newline 2>/dev/null || true' },
+        },
+        cache_enabled = true,
+    }
+end
