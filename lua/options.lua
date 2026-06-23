@@ -127,3 +127,9 @@ elseif vim.fn.has 'linux' == 1 and vim.env.WAYLAND_DISPLAY then
         cache_enabled = true,
     }
 end
+
+-- Disable health checks for these providers.
+vim.g.loaded_python3_provider = 0
+vim.g.loaded_ruby_provider = 0
+vim.g.loaded_perl_provider = 0
+vim.g.loaded_node_provider = 0
