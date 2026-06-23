@@ -347,6 +347,7 @@ add_on_event('UIEnter', {
                     { mode = 'n', keys = '<leader>b', desc = '+buffers' },
                     { mode = 'n', keys = '<leader>x', desc = '+loclist/quickfix' },
                     { mode = 'n', keys = '<leader>o', desc = '+obsidian' },
+                    { mode = 'n', keys = '<leader>g', desc = '+git' },
                     { mode = 'n', keys = '[', desc = '+prev' },
                     { mode = 'n', keys = ']', desc = '+next' },
 
