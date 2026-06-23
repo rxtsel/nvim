@@ -30,6 +30,66 @@ add {
             },
         },
     },
+
+    {
+        src = 'nvim-mini/mini.starter',
+        opts = {
+            evaluate_single = true,
+            header = [[
+▄▄▄▄  ▄▄ ▄▄ ▄▄▄▄▄▄ ▄▄▄▄ ▄▄▄▄▄ ▄▄
+██▄█▄ ▀█▄█▀   ██  ███▄▄ ██▄▄  ██
+██ ██ ██ ██   ██  ▄▄██▀ ██▄▄▄ ██▄▄▄
+            ]],
+            footer = '',
+            items = {
+                {
+                    name = 'Explorer',
+                    action = 'lua MiniFiles.open()',
+                    section = 'Pick',
+                },
+                {
+                    name = 'Find files',
+                    action = 'lua MiniPick.builtin.files()',
+                    section = 'Pick',
+                },
+                {
+                    name = 'Live grep',
+                    action = 'lua MiniPick.builtin.grep_live()',
+                    section = 'Pick',
+                },
+                {
+                    name = 'New note',
+                    action = 'Obsidian new',
+                    section = 'Obsidian',
+                },
+                {
+                    name = 'Create from template',
+                    action = 'Obsidian new_from_template',
+                    section = 'Obsidian',
+                },
+                {
+                    name = 'Daily note',
+                    action = 'Obsidian today',
+                    section = 'Obsidian',
+                },
+                {
+                    name = 'Quick switch',
+                    action = 'Obsidian quick_switch',
+                    section = 'Obsidian',
+                },
+                {
+                    name = 'Search vault',
+                    action = 'Obsidian search',
+                    section = 'Obsidian',
+                },
+                {
+                    name = 'Tags list',
+                    action = 'Obsidian tags',
+                    section = 'Obsidian',
+                },
+            },
+        },
+    },
 }
 
 -- File explorer.
@@ -186,65 +246,6 @@ add_on_event('VimEnter', {
 
     {
         src = 'nvim-mini/mini.input',
-    },
-})
-
--- Starter.
-add_on_event('VimEnter', {
-    {
-        src = 'nvim-mini/mini.starter',
-
-        opts = {
-            evaluate_single = true,
-            footer = '',
-            items = {
-                {
-                    name = 'Explorer',
-                    action = 'lua MiniFiles.open()',
-                    section = 'Pick',
-                },
-                {
-                    name = 'Find files',
-                    action = 'lua MiniPick.builtin.files()',
-                    section = 'Pick',
-                },
-                {
-                    name = 'Live grep',
-                    action = 'lua MiniPick.builtin.grep_live()',
-                    section = 'Pick',
-                },
-                {
-                    name = 'New note',
-                    action = 'Obsidian new',
-                    section = 'Obsidian',
-                },
-                {
-                    name = 'Create from template',
-                    action = 'Obsidian new_from_template',
-                    section = 'Obsidian',
-                },
-                {
-                    name = 'Daily note',
-                    action = 'Obsidian today',
-                    section = 'Obsidian',
-                },
-                {
-                    name = 'Quick switch',
-                    action = 'Obsidian quick_switch',
-                    section = 'Obsidian',
-                },
-                {
-                    name = 'Search vault',
-                    action = 'Obsidian search',
-                    section = 'Obsidian',
-                },
-                {
-                    name = 'Tags list',
-                    action = 'Obsidian tags',
-                    section = 'Obsidian',
-                },
-            },
-        },
     },
 })
 
