@@ -134,3 +134,25 @@ vim.api.nvim_create_autocmd({ 'BufLeave', 'FocusLost', 'InsertEnter', 'CmdlineEn
         end
     end,
 })
+
+-- Persist folds
+local persist_view_group = vim.api.nvim_create_augroup('persist_view', { clear = true })
+vim.api.nvim_create_autocmd('BufWinLeave', {
+    group = persist_view_group,
+    callback = function(args)
+        if vim.bo[args.buf].buftype == '' then
+            vim.cmd 'silent! mkview'
+        end
+    end,
+})
+
+vim.api.nvim_create_autocmd('BufWinEnter', {
+    group = persist_view_group,
+    callback = function(args)
+        if vim.bo[args.buf].buftype == '' then
+            vim.schedule(function()
+                pcall(vim.cmd, 'silent! loadview')
+            end)
+        end
+    end,
+})
