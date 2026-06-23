@@ -1,11 +1,11 @@
 {
   "plugins": {
     "blink.cmp": {
-      "rev": "b02ac65634bdb8af2dcc4eb6c807c060e1e15ae6",
+      "rev": "bda905a4bf1b3edfa708b0be193b8c63d8620c96",
       "src": "https://github.com/saghen/blink.cmp"
     },
     "blink.lib": {
-      "rev": "b127d48bf8e9ac9cf41f6e0fbead317503f76558",
+      "rev": "5876dd95deeb70aadbe9f1c0b7117a135061cdac",
       "src": "https://github.com/saghen/blink.lib"
     },
     "conform.nvim": {
@@ -13,11 +13,11 @@
       "src": "https://github.com/stevearc/conform.nvim"
     },
     "cord.nvim": {
-      "rev": "2e6b16e0363f5a12483734ba96e6326ce2d6741e",
+      "rev": "e6ee37deea7b240d456a59aa7706eec006e56e79",
       "src": "https://github.com/vyfor/cord.nvim"
     },
     "gitsigns.nvim": {
-      "rev": "25050e4ed39e628282831d4cbecb1850454ce915",
+      "rev": "2038c666bd9d8a0b7349a0b6ee00dc83104b9ecf",
       "src": "https://github.com/lewis6991/gitsigns.nvim"
     },
     "grug-far.nvim": {
@@ -32,38 +32,69 @@
       "rev": "b6ddfb97b5600d99afe3452d707444afda658aca",
       "src": "https://github.com/HakonHarnes/img-clip.nvim"
     },
-    "kulala.nvim": {
-      "rev": "69250f64e60f75c010feac413576acbd9ffa4ec8",
-      "src": "https://github.com/mistweaverco/kulala.nvim"
-    },
-    "lazygit.nvim": {
-      "rev": "a04ad0dbc725134edbee3a5eea29290976695357",
-      "src": "https://github.com/kdheepak/lazygit.nvim"
-    },
     "markview.nvim": {
-      "rev": "3d8f68812262b516d533acf603c2ecaf72f8edb5",
+      "rev": "301e431c7b618235f5447d54465c70934bd33668",
       "src": "https://github.com/OXY2DEV/markview.nvim"
     },
+    "mini.clue": {
+      "rev": "62e9e38c3dc4b7d429f1b6e28d96f96cdff71132",
+      "src": "https://github.com/nvim-mini/mini.clue"
+    },
+    "mini.files": {
+      "rev": "a5689dae6b732955e33eec225b798d6815063179",
+      "src": "https://github.com/nvim-mini/mini.files"
+    },
+    "mini.icons": {
+      "rev": "e56797f90192d81f1fda02e662fc3e8e3d775027",
+      "src": "https://github.com/nvim-mini/mini.icons"
+    },
+    "mini.input": {
+      "rev": "a8ab01372890c4ebf9f59893f42ad7c6bcd02c16",
+      "src": "https://github.com/nvim-mini/mini.input"
+    },
+    "mini.notify": {
+      "rev": "821db7d464f7a9bb8666b4ba3be7d2ed637cfcfc",
+      "src": "https://github.com/nvim-mini/mini.notify"
+    },
     "mini.nvim": {
-      "rev": "ff8b3580935818ef2f21bdd651f057a2ae071eab",
+      "rev": "1345d191bb3da9c7b0e977f4387c5761f9bff68d",
       "src": "https://github.com/nvim-mini/mini.nvim"
     },
-    "nvim-lspconfig": {
-      "rev": "ed19590a3a9792901553c388d1aadafce012f80d",
-      "src": "https://github.com/neovim/nvim-lspconfig"
+    "mini.pairs": {
+      "rev": "4a014143fcb4e9df26198ccb3ecff3b9e77a048c",
+      "src": "https://github.com/nvim-mini/mini.pairs"
+    },
+    "mini.pick": {
+      "rev": "8c1f75f8ddd8c9f75d07ed2ab5718d2c3cb65a66",
+      "src": "https://github.com/nvim-mini/mini.pick"
+    },
+    "mini.starter": {
+      "rev": "0575c96206d63fd98d7f786df78dc225bf847d95",
+      "src": "https://github.com/nvim-mini/mini.starter"
+    },
+    "mini.statusline": {
+      "rev": "b5547f44560dae3ccd81f914256fa6f705837022",
+      "src": "https://github.com/nvim-mini/mini.statusline"
+    },
+    "mini.surround": {
+      "rev": "580e4cb98c5900d9fe743865fb5a5b2178b4ab18",
+      "src": "https://github.com/nvim-mini/mini.surround"
     },
     "nvim-treesitter": {
       "rev": "4916d6592ede8c07973490d9322f187e07dfefac",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
     },
-    "oil.nvim": {
-      "rev": "b73018b75affd13fa38e2fc94ef753b465f770d7",
-      "src": "https://github.com/stevearc/oil.nvim"
+    "nvim-treesitter-context": {
+      "rev": "b311b30818951d01f7b4bf650521b868b3fece16",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter-context"
+    },
+    "obsidian.nvim": {
+      "rev": "adec31aabb244790c12ba8f0d19672f22b075b6a",
+      "src": "https://github.com/obsidian-nvim/obsidian.nvim"
     },
     "rustaceanvim": {
-      "rev": "5a3a4158857ee1f7ec839b6ddd87cc0083a19c5f",
-      "src": "https://github.com/mrcjkb/rustaceanvim",
-      "version": "9.0.0 - 10.0.0"
+      "rev": "cf18d0e272536266b9897b80b28004489ec54c42",
+      "src": "https://github.com/mrcjkb/rustaceanvim"
     },
     "solarized-osaka.nvim": {
       "rev": "f675d9a5c58f3b0d6158d665a623f81a62e7bdaf",
