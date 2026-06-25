@@ -73,3 +73,7 @@ vim.keymap.set(
 vim.keymap.set('n', '<leader>ct', function()
     vim.lsp.document_color.enable(not vim.lsp.document_color.is_enabled())
 end, { desc = 'Toggle color highlight', silent = true })
+
+vim.keymap.set('n', '<leader>nh', '<CMD>lua MiniNotify.show_history()<CR>', {
+    desc = 'Notification history',
+})
