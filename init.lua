@@ -4,6 +4,7 @@ require 'options'
 require 'keymaps'
 require 'commands'
 require 'autocmds'
+require 'marks'
 require 'lsp'
 
 -- Interactive textual undotree:
