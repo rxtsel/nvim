@@ -45,7 +45,7 @@ vim.keymap.set('n', 'N', 'Nzzzv', { desc = 'Previous result' })
 vim.keymap.set('v', '<', '<gv', { desc = 'Indent left and reselect', silent = true })
 vim.keymap.set('v', '>', '>gv', { desc = 'Indent right and reselect', silent = true })
 
--- Buffer
+-- Formatting
 vim.keymap.set('n', '<leader>bQ', 'mzgggqG`z<CMD>delmarks z<CR>zz', { desc = 'Format buffer' })
 
 -- Move lines
