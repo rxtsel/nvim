@@ -4,22 +4,22 @@ local astro = {
   {
     prefix = 'comp',
     body = '---\ninterface Props {\n\t$1\n}\n\nconst { $2 } = Astro.props\n---\n\n<div>\n\t$0\n</div>',
-    desc = 'Astro component',
+    desc = 'Astro component with Props interface',
   },
   {
     prefix = 'amap',
     body = '{$1.map(($2) => (\n\t$0\n))}',
-    desc = 'Astro map',
+    desc = 'Astro map expression',
   },
   {
     prefix = 'aif',
     body = '{$1 && (\n\t$0\n)}',
-    desc = 'Conditional render',
+    desc = 'Conditional render with &&',
   },
   {
     prefix = 'ater',
     body = '{$1 ? (\n\t$2\n) : (\n\t$0\n)}',
-    desc = 'Ternary render',
+    desc = 'Ternary expression',
   },
   {
     prefix = 'slot',
@@ -34,7 +34,7 @@ local astro = {
   {
     prefix = 'glob',
     body = "const $1 = await Astro.glob('$0')",
-    desc = 'Astro.glob',
+    desc = 'Astro.glob import',
   },
   {
     prefix = 'redirect',
