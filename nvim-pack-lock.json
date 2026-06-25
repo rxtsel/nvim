@@ -1,7 +1,7 @@
 {
   "plugins": {
     "SchemaStore.nvim": {
-      "rev": "e034560c0266d5a99d811f595b04ce839ab868ff",
+      "rev": "322751401046ae2dbbe32eeb31992a5d4fcc8d92",
       "src": "https://github.com/b0o/SchemaStore.nvim"
     },
     "blink.cmp": {
@@ -29,7 +29,7 @@
       "src": "https://github.com/lewis6991/gitsigns.nvim"
     },
     "grug-far.nvim": {
-      "rev": "c995bbacf8229dc096ec1c3d60f8531059c86c1b",
+      "rev": "c69859c1d5427ab5fc7ed12380ab521b4e336691",
       "src": "https://github.com/MagicDuck/grug-far.nvim"
     },
     "image.nvim": {
@@ -45,11 +45,11 @@
       "src": "https://github.com/OXY2DEV/markview.nvim"
     },
     "mini.clue": {
-      "rev": "62e9e38c3dc4b7d429f1b6e28d96f96cdff71132",
+      "rev": "10c1f25158551befb5218e60a0128e4b4ac0fb06",
       "src": "https://github.com/nvim-mini/mini.clue"
     },
     "mini.files": {
-      "rev": "a5689dae6b732955e33eec225b798d6815063179",
+      "rev": "8bfdad2e32dc2fe9451acca9caafcf8564658669",
       "src": "https://github.com/nvim-mini/mini.files"
     },
     "mini.icons": {
@@ -65,7 +65,7 @@
       "src": "https://github.com/nvim-mini/mini.notify"
     },
     "mini.nvim": {
-      "rev": "1345d191bb3da9c7b0e977f4387c5761f9bff68d",
+      "rev": "c594be5b095204e99473825ec2dee872e7409a4d",
       "src": "https://github.com/nvim-mini/mini.nvim"
     },
     "mini.pairs": {
@@ -101,7 +101,7 @@
       "src": "https://github.com/obsidian-nvim/obsidian.nvim"
     },
     "rustaceanvim": {
-      "rev": "cf18d0e272536266b9897b80b28004489ec54c42",
+      "rev": "1f2f0cef1656a1d20011287137615a9c1ea69baf",
       "src": "https://github.com/mrcjkb/rustaceanvim"
     },
     "solarized-osaka.nvim": {

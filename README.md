@@ -13,7 +13,7 @@ This is simple and minimal, but powerful neovim setup.
 npm install -g tree-sitter-cli tree-sitter
 
 # System packages
-ripgrep gcc clang jq fd wl-clipboard unzip tar curl lsof imagemagick
+ripgrep gcc clang jq fd wl-clipboard unzip tar curl lsof imagemagick ast-grep
 
 # LSP servers
 @astrojs/language-server @github/copilot-language-server vscode-langservers-extracted lua-language-server marksman nixd oxfmt oxlint rust-analyzer svelte-language-server @tailwindcss/language-server @typescript/native-preview yaml-language-server
