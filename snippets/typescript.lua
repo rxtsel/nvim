@@ -1,7 +1,7 @@
 local js = dofile(vim.fn.stdpath 'config' .. '/snippets/javascript.lua')
 local ts = {
-  { prefix = 'interf', body = 'interface $1 {\n\t$0\n}', desc = 'Interface' },
-  { prefix = 'type', body = 'type $1 = $0', desc = 'Type alias' },
+  { prefix = 'expint', body = 'export interface $1 {\n\t$0\n}', desc = 'Export interface' },
+  { prefix = 'exptp', body = 'export type $1 = $0', desc = 'Export type alias' },
   { prefix = 'enum', body = 'enum $1 {\n\t$0\n}', desc = 'Enum' },
   { prefix = 'gfn', body = 'function $1<$2>($3): $4 {\n\t$0\n}', desc = 'Generic function' },
   { prefix = 'rec', body = 'Record<$1, $2>', desc = 'Record type' },

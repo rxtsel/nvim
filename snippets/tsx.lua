@@ -3,8 +3,8 @@ local jsx = dofile(vim.fn.stdpath 'config' .. '/snippets/javascriptreact.lua')
 
 local tsx = {
   {
-    prefix = 'rfct',
-    desc = 'Typed React function component',
+    prefix = 'tsrfc',
+    desc = 'TypeScript React functional component with props interface',
     body = {
       'interface ${1:Component}Props {',
       '\t$2',
@@ -18,40 +18,18 @@ local tsx = {
     },
   },
   {
-    prefix = 'rsfc',
-    desc = 'Next.js async server component',
+    prefix = 'tsrafc',
+    desc = 'TypeScript React arrow function component',
     body = {
-      'interface ${1:Component}Props {',
-      '\t$2',
-      '}',
-      '',
-      'export default async function ${1:Component}({ $3 }: ${1:Component}Props) {',
-      '\t$4',
+      'export const ${1:Component} = (props: React.ComponentProps<"$2">) => {',
       '\treturn (',
       '\t\t<div>$0</div>',
       '\t)',
       '}',
     },
   },
-  {
-    prefix = 'rpfc',
-    desc = 'Next.js page with params + searchParams',
-    body = {
-      'interface ${1:Component}Props {',
-      '\tparams: Promise<{ $2: string }>',
-      '\tsearchParams: Promise<{ [key: string]: string | string[] | undefined }>',
-      '}',
-      '',
-      'export default async function ${1:Component}({ params, searchParams }: ${1:Component}Props) {',
-      '\tconst { $3 } = await params',
-      '\treturn (',
-      '\t\t<div>$0</div>',
-      '\t)',
-      '}',
-    },
-  },
-  { prefix = 'ust', body = 'const [$1, set$2] = useState<$3>($4)', desc = 'Typed useState' },
-  { prefix = 'urt', body = 'const $1 = useRef<$2>($3)', desc = 'Typed useRef' },
+  { prefix = 'useStateSnippetT', body = 'const [$1, set$2] = useState<$3>($4)', desc = 'Typed useState hook' },
+  { prefix = 'useRefSnippetT', body = 'const $1 = useRef<$2>($3)', desc = 'Typed useRef hook' },
 }
 
 -- jsx already contains js internally, ts also contains js
