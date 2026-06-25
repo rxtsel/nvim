@@ -18,7 +18,7 @@ local svelte = {
   {
     prefix = 'seachi',
     body = '{#each $1 as $2, i}\n\t$0\n{/each}',
-    desc = 'Svelte each (index)',
+    desc = 'Svelte each with index',
   },
   {
     prefix = 'sawait',
@@ -43,12 +43,12 @@ local svelte = {
   {
     prefix = 'suse',
     body = 'use:$1={$0}',
-    desc = 'action directive',
+    desc = 'use directive',
   },
   {
     prefix = 'strans',
     body = 'transition:$1',
-    desc = 'transition',
+    desc = 'transition directive',
   },
   {
     prefix = 'sscript',
@@ -58,27 +58,27 @@ local svelte = {
   {
     prefix = 'sscriptts',
     body = '<script lang="ts">\n\t$0\n</script>',
-    desc = 'script tag (TS)',
+    desc = 'script lang="ts"',
   },
   {
     prefix = 'sstate',
     body = 'let $1 = $state($0)',
-    desc = '$state',
+    desc = '$state rune',
   },
   {
     prefix = 'sderived',
     body = 'let $1 = $derived($0)',
-    desc = '$derived',
+    desc = '$derived rune',
   },
   {
     prefix = 'seffect',
     body = '$effect(() => {\n\t$0\n})',
-    desc = '$effect',
+    desc = '$effect rune',
   },
   {
     prefix = 'sprops',
     body = 'let { $1 } = $props()',
-    desc = '$props',
+    desc = '$props rune',
   },
 }
 return vim.list_extend(vim.deepcopy(ts), svelte)
