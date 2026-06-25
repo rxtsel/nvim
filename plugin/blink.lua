@@ -5,7 +5,7 @@ add {
     {
         src = 'saghen/blink.cmp',
         opts = {
-            fuzzy = { implementation = 'prefer_rust_with_warning' },
+            fuzzy = { implementation = 'prefer_rust' },
             signature = { enabled = true },
             snippets = { preset = 'default' },
             cmdline = { enabled = false },
