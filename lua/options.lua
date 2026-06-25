@@ -8,12 +8,20 @@ vim.opt.cursorline = true
 vim.opt.termguicolors = true
 vim.opt.colorcolumn = '110'
 vim.opt.signcolumn = 'yes'
+vim.opt.laststatus = 3
 vim.opt.cmdheight = 1
 vim.opt.showcmd = false
 vim.opt.showmode = false
+
+vim.opt.shortmess:append {
+    w = true,
+    s = true,
+}
 vim.opt.scrolloff = 10
 vim.opt.sidescrolloff = 10
 vim.opt.smoothscroll = true
+
+vim.o.guicursor = 'n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20,t:block-TermCursor'
 
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
@@ -37,6 +45,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 vim.opt.mouse = 'nvc'
+vim.o.mousescroll = 'ver:3,hor:0'
 vim.opt.virtualedit = 'block'
 vim.opt.selection = 'inclusive'
 vim.opt.hidden = true
@@ -51,14 +60,15 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.splitkeep = 'screen'
 
-vim.opt.updatetime = 250
-vim.opt.timeoutlen = 300
-vim.opt.ttimeoutlen = 50
+vim.opt.updatetime = 300
+vim.opt.timeoutlen = 500
+vim.opt.ttimeoutlen = 10
 vim.opt.lazyredraw = true
 vim.opt.redrawtime = 10000
 vim.opt.maxmempattern = 20000
 
 vim.opt.completeopt = { 'menuone', 'noinsert', 'noselect' }
+vim.opt.pumheight = 15
 
 vim.opt.inccommand = 'split'
 
@@ -89,9 +99,9 @@ vim.opt.backspace = { 'indent', 'eol', 'start' }
 
 vim.opt.iskeyword:append '-'
 vim.opt.path:append '**'
-vim.opt.diffopt:append 'linematch:60'
-vim.opt.diffopt:append 'algorithm:histogram'
+vim.opt.diffopt:append 'followwrap,vertical,context:99'
 
+vim.opt.wildignore:append { '.DS_Store' }
 vim.opt.wildmenu = true
 vim.opt.wildmode = 'longest:full,full'
 
