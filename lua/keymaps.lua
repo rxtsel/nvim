@@ -17,8 +17,8 @@ vim.keymap.set('n', 'te', '<CMD>tabnew<CR>', { desc = 'New tab', silent = true }
 vim.keymap.set('n', 'tc', '<CMD>tabclose<CR>', { desc = 'Close tab page' })
 vim.keymap.set('n', 'tn', '<CMD>tab split<CR>', { desc = 'New tab page' })
 vim.keymap.set('n', 'to', '<CMD>tabonly<CR>', { desc = 'Close other tab pages' })
-vim.keymap.set('n', '<S-l>', '<CMD>tabnext<CR>', { desc = 'Next tab', silent = true })
-vim.keymap.set('n', '<S-h>', '<CMD>tabprev<CR>', { desc = 'Previous tab', silent = true })
+vim.keymap.set({ 'n', 't' }, '<S-l>', '<CMD>tabnext<CR>', { desc = 'Next tab', silent = true })
+vim.keymap.set({ 'n', 't' }, '<S-h>', '<CMD>tabprev<CR>', { desc = 'Previous tab', silent = true })
 
 -- Split and move into splits
 vim.keymap.set('n', 'ss', '<CMD>split<CR>', { desc = 'Split horizontal', silent = true })
@@ -31,8 +31,8 @@ vim.keymap.set('n', 'sj', '<C-w>j', { desc = 'Move down', silent = true })
 
 -- Better esc
 vim.keymap.set({ 'i', 's', 'n' }, '<esc>', function()
-    vim.cmd 'noh'
-    return '<esc>'
+  vim.cmd 'noh'
+  return '<esc>'
 end, { desc = 'Escape and clear hlsearch', expr = true })
 
 -- Centered scrolling and search navigation
@@ -58,22 +58,22 @@ vim.keymap.set('v', '<A-j>', "<CMD>m '>+1<CR>gv=gv", { desc = 'Move selection do
 vim.keymap.set({ 'i', 'c' }, '<C-l>', '<C-o>A', { desc = 'Go to the end of the line' })
 
 vim.keymap.set('n', '<leader>bc', function()
-    local path = vim.fn.expand '%:p'
-    vim.fn.setreg('+', path)
-    print('file:', path)
+  local path = vim.fn.expand '%:p'
+  vim.fn.setreg('+', path)
+  print('file:', path)
 end, { desc = 'Copy full file path' })
 
 vim.keymap.set(
-    'n',
-    '<leader>cp',
-    vim.lsp.document_color.color_presentation,
-    { desc = 'Change color presentation', silent = true }
+  'n',
+  '<leader>cp',
+  vim.lsp.document_color.color_presentation,
+  { desc = 'Change color presentation', silent = true }
 )
 
 vim.keymap.set('n', '<leader>ct', function()
-    vim.lsp.document_color.enable(not vim.lsp.document_color.is_enabled())
+  vim.lsp.document_color.enable(not vim.lsp.document_color.is_enabled())
 end, { desc = 'Toggle color highlight', silent = true })
 
 vim.keymap.set('n', '<leader>nh', '<CMD>lua MiniNotify.show_history()<CR>', {
-    desc = 'Notification history',
+  desc = 'Notification history',
 })
