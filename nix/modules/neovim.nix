@@ -13,7 +13,7 @@
       ]);
     };
 
-    # Prerequisites 0.1–0.4 only. Add future dependencies with each spec step.
+    # Add dependencies with each spec step.
     tools = with pkgs; [
       git
       tree-sitter
@@ -26,6 +26,9 @@
       fd
       lazygit
       delta
+    ] ++ lib.optionals pkgs.stdenv.hostPlatform.isLinux [
+      pkgs.wl-clipboard
+      pkgs.xclip
     ];
 
     # Start clean until the first configuration step adds init.lua.
