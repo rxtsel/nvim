@@ -1,5 +1,7 @@
-vim.pack.add({})
+vim.pack.add({
+	{ src = "https://github.com/rachartier/tiny-cmdline.nvim" },
+})
 
--- Require plugin group modules here before their keymaps.
+require("rxtsel.plugins.ui")
 
 require("rxtsel.plugins.keymaps")
