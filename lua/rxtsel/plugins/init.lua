@@ -9,6 +9,7 @@ vim.pack.add({
 	{ src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "main" },
 	{ src = "https://github.com/folke/todo-comments.nvim" },
 	{ src = "https://github.com/stevearc/conform.nvim" },
+	{ src = "https://github.com/lewis6991/gitsigns.nvim" },
 	{ src = "https://github.com/brenoprata10/nvim-highlight-colors" },
 	{ src = "https://github.com/saghen/blink.cmp", version = vim.version.range("^1") },
 	{ src = "https://github.com/neovim/nvim-lspconfig" },
@@ -23,5 +24,6 @@ require("rxtsel.plugins.syntax")
 require("rxtsel.plugins.completion")
 require("rxtsel.plugins.lsp")
 require("rxtsel.plugins.formatting")
+require("rxtsel.plugins.git")
 
 require("rxtsel.plugins.keymaps")

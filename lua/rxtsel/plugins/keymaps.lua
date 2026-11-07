@@ -72,6 +72,20 @@ vim.keymap.set("n", ";h", function()
 	Snacks.picker.git_diff({ group = false })
 end, { desc = "Find Git hunks" })
 
+vim.keymap.set("n", "<leader>gb", function()
+	require("gitsigns").blame_line()
+end, { desc = "Blame line" })
+
+vim.keymap.set("n", "<leader>gB", function()
+	require("gitsigns").blame()
+end, { desc = "Blame buffer" })
+
+vim.keymap.set("n", "<leader>go", Rxtsel.git.open_line_revision, { desc = "Open line's file revision in a new tab" })
+vim.keymap.set("n", "<leader>gs", Rxtsel.git.toggle_stage_buffer, { desc = "Stage or unstage buffer" })
+vim.keymap.set("n", "<leader>gh", function()
+	require("gitsigns").stage_hunk()
+end, { desc = "Stage or unstage hunk" })
+
 local function open_oil_float()
 	require("oil").open_float(nil, { preview = {} })
 end
