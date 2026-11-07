@@ -22,3 +22,11 @@ vim.keymap.set("n", "sl", "<C-w>l", { desc = "Go to right window" })
 vim.keymap.set("n", "<C-m>", "<C-i>", { desc = "Jump forward" })
 vim.keymap.set("n", "<leader>o", "o<Esc>^Da", { desc = "Open line below without comment" })
 vim.keymap.set("n", "<leader>O", "O<Esc>^Da", { desc = "Open line above without comment" })
+
+vim.keymap.set("n", "<leader>bd", function()
+	for _, buffer in ipairs(vim.fn.getbufinfo({ buflisted = 1 })) do
+		if #buffer.windows == 0 and buffer.changed == 0 then
+			vim.api.nvim_buf_delete(buffer.bufnr, {})
+		end
+	end
+end, { desc = "Close unmodified hidden buffers" })
