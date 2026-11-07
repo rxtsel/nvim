@@ -2,7 +2,14 @@
 
 A minimal, keyboard-first setup for coding and reviewing changes.
 
-[Keymap cheatsheet](docs/01-keymaps.md) · [Read my blog](https://rxtsel.dev/blog/basic-commands-for-neovim/?ref=github_nvim_repo)
+<img width="1994" height="1227" alt="2026-11-06 21-46-54-quality80" src="https://github.com/user-attachments/assets/145ba82f-2115-441a-9c70-55483f566f76" />
+
+<img width="1994" height="1227" alt="2026-11-06 21-21-10-quality80" src="https://github.com/user-attachments/assets/f13190ce-8502-41c0-b59d-2e51a86813ff" />
+
+---
+
+- View the [Keymap cheatsheet](docs/01-keymaps.md)
+- Read about basic commands on [my blog](https://rxtsel.dev/blog/basic-commands-for-neovim/?ref=github_nvim_repo)
 
 ### Nix
 
