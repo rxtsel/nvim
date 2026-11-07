@@ -110,6 +110,30 @@ end
 
 vim.keymap.set("n", "<leader>e", open_oil_float, { desc = "Open Oil with preview" })
 
+vim.keymap.set("i", "<C-l>", function()
+	require("copilot.suggestion").accept()
+end, { desc = "Accept Copilot suggestion" })
+
+vim.keymap.set("i", "<M-l>", function()
+	require("copilot.suggestion").accept_word()
+end, { desc = "Accept Copilot word" })
+
+vim.keymap.set("i", "<M-L>", function()
+	require("copilot.suggestion").accept_line()
+end, { desc = "Accept Copilot line" })
+
+vim.keymap.set("i", "<M-]>", function()
+	require("copilot.suggestion").next()
+end, { desc = "Next Copilot suggestion" })
+
+vim.keymap.set("i", "<M-[>", function()
+	require("copilot.suggestion").prev()
+end, { desc = "Previous Copilot suggestion" })
+
+vim.keymap.set("i", "<C-]>", function()
+	require("copilot.suggestion").dismiss()
+end, { desc = "Dismiss Copilot suggestion" })
+
 vim.api.nvim_create_autocmd("FileType", {
 	group = vim.api.nvim_create_augroup("RxtselOilKeymaps", { clear = true }),
 	pattern = "oil",

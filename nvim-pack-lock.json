@@ -21,6 +21,10 @@
       "rev": "619363c30309d29ffa631e67c8183f2a72caa373",
       "src": "https://github.com/stevearc/conform.nvim"
     },
+    "copilot.lua": {
+      "rev": "11cb47582e5d541f55fbdc1ee503efc3753c175c",
+      "src": "https://github.com/zbirenbaum/copilot.lua"
+    },
     "cord.nvim": {
       "rev": "e6ee37deea7b240d456a59aa7706eec006e56e79",
       "src": "https://github.com/vyfor/cord.nvim"
