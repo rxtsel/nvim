@@ -144,6 +144,10 @@
     "tiny-cmdline.nvim": {
       "rev": "ac9c6557c66da6308eb523643df8778f3cbe652f",
       "src": "https://github.com/rachartier/tiny-cmdline.nvim"
+    },
+    "todo-comments.nvim": {
+      "rev": "31e3c38ce9b29781e4422fc0322eb0a21f4e8668",
+      "src": "https://github.com/folke/todo-comments.nvim"
     }
   }
 }
