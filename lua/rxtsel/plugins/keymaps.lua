@@ -72,11 +72,11 @@ vim.keymap.set("n", ";h", function()
 	Snacks.picker.git_diff({ group = false })
 end, { desc = "Find Git hunks" })
 
-vim.keymap.set("n", "sf", function()
+local function open_oil_float()
 	require("oil").open_float(nil, { preview = {} })
-end, { desc = "Open Oil with preview" })
+end
 
-vim.keymap.set("n", "<leader>e", "<Cmd>Oil<CR>", { desc = "Open Oil" })
+vim.keymap.set("n", "<leader>e", open_oil_float, { desc = "Open Oil with preview" })
 
 vim.api.nvim_create_autocmd("FileType", {
 	group = vim.api.nvim_create_augroup("RxtselOilKeymaps", { clear = true }),
