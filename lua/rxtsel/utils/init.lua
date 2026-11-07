@@ -1,4 +1,5 @@
 return {
+	editor = require("rxtsel.utils.editor"),
 	git = require("rxtsel.utils.git"),
 	icons = require("rxtsel.utils.icons"),
 	lsp = require("rxtsel.utils.lsp"),

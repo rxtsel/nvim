@@ -110,6 +110,20 @@ end
 
 vim.keymap.set("n", "<leader>e", open_oil_float, { desc = "Open Oil with preview" })
 
+vim.keymap.set("n", "<leader>j", function()
+	local path = Rxtsel.editor.package_json()
+	if path then
+		Snacks.win({
+			file = path,
+			position = "float",
+			width = 0.8,
+			height = 0.8,
+			border = "rounded",
+			keys = { q = "close", ["<Esc>"] = "close" },
+		})
+	end
+end, { desc = "Open project package.json" })
+
 vim.keymap.set("i", "<C-l>", function()
 	require("copilot.suggestion").accept()
 end, { desc = "Accept Copilot suggestion" })

@@ -32,6 +32,16 @@ vim.keymap.set({ "n", "i", "x" }, "<C-s>", "<Cmd>write<CR>", { desc = "Save buff
 vim.keymap.set("n", "<leader>o", "o<Esc>^Da", { desc = "Open line below without comment" })
 vim.keymap.set("n", "<leader>O", "O<Esc>^Da", { desc = "Open line above without comment" })
 
+vim.keymap.set("n", "<leader>yf", function()
+	Rxtsel.editor.copy_path(false)
+end, { desc = "Copy relative path with line" })
+
+vim.keymap.set("n", "<leader>yp", function()
+	Rxtsel.editor.copy_path(true)
+end, { desc = "Copy absolute path with line" })
+
+vim.keymap.set("x", "<leader>cc", Rxtsel.editor.copy_selection, { desc = "Copy selection as Markdown code block" })
+
 vim.keymap.set("n", "<leader>bd", function()
 	for _, buffer in ipairs(vim.fn.getbufinfo({ buflisted = 1 })) do
 		if #buffer.windows == 0 and buffer.changed == 0 then
