@@ -3,7 +3,7 @@ require("mini.pairs").setup({
 })
 
 require("blink.cmp").setup({
-	keymap = { preset = "enter" },
+	keymap = { preset = "enter", ["<C-k>"] = false },
 	completion = {
 		accept = { auto_brackets = { enabled = true } },
 		documentation = { auto_show = true, auto_show_delay_ms = 200 },
