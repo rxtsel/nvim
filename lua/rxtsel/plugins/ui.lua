@@ -9,6 +9,7 @@ icons.setup({})
 icons.mock_nvim_web_devicons()
 
 require("snacks").setup({
+	picker = { enabled = true },
 	notifier = { enabled = true },
 	indent = { enabled = true },
 	statuscolumn = { enabled = true },
