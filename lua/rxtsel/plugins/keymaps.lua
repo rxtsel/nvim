@@ -72,6 +72,8 @@ vim.keymap.set("n", ";h", function()
 	Snacks.picker.git_diff({ group = false })
 end, { desc = "Find Git hunks" })
 
+vim.keymap.set("n", ";g", Rxtsel.git.open_lazygit, { desc = "Open Lazygit" })
+
 vim.keymap.set("n", "<leader>gb", function()
 	require("gitsigns").blame_line()
 end, { desc = "Blame line" })

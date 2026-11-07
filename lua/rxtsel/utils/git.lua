@@ -1,5 +1,10 @@
 local M = {}
 
+function M.open_lazygit()
+	vim.g.rxtsel_lazygit_win = vim.api.nvim_get_current_win()
+	Snacks.lazygit({ env = { SHELL = vim.fn.exepath("fish") } })
+end
+
 function M.toggle_stage_buffer()
 	local gitsigns = require("gitsigns")
 	local hunks = gitsigns.get_hunks()
