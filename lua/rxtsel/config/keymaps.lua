@@ -20,6 +20,11 @@ vim.keymap.set("n", "sk", "<C-w>k", { desc = "Go to upper window" })
 vim.keymap.set("n", "sl", "<C-w>l", { desc = "Go to right window" })
 
 vim.keymap.set("n", "<C-m>", "<C-i>", { desc = "Jump forward" })
+vim.keymap.set("n", "<C-j>", function()
+	vim.diagnostic.jump({ count = 1, float = true })
+end, { desc = "Next diagnostic" })
+vim.keymap.set("n", "<leader>q", "<Cmd>quit<CR>", { desc = "Quit window" })
+vim.keymap.set({ "n", "i", "x" }, "<C-s>", "<Cmd>write<CR>", { desc = "Save buffer" })
 vim.keymap.set("n", "<leader>o", "o<Esc>^Da", { desc = "Open line below without comment" })
 vim.keymap.set("n", "<leader>O", "O<Esc>^Da", { desc = "Open line above without comment" })
 
