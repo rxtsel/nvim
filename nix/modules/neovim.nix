@@ -62,7 +62,7 @@
             --set CXX ${pkgs.stdenv.cc}/bin/c++ \
             --set NVIM_APPNAME rxtsel-nvim \
             --set RXTSEL_NVIM_NIX 1 \
-            --add-flags '--cmd "set runtimepath^=${config}"' \
+            --add-flags '--cmd "set runtimepath^=${config} runtimepath+=${config}/after"' \
             --add-flags '-u ${initFile}'
         '';
         meta = {
