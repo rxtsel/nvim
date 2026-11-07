@@ -8,6 +8,7 @@ vim.pack.add({
 	{ src = "https://github.com/stevearc/oil.nvim" },
 	{ src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "main" },
 	{ src = "https://github.com/folke/todo-comments.nvim" },
+	{ src = "https://github.com/saghen/blink.cmp", version = vim.version.range("^1") },
 	{ src = "https://github.com/neovim/nvim-lspconfig" },
 	{ src = "https://github.com/mason-org/mason.nvim" },
 	{ src = "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim" },
@@ -17,6 +18,7 @@ vim.pack.add({
 require("rxtsel.plugins.ui")
 require("rxtsel.plugins.navigation")
 require("rxtsel.plugins.syntax")
+require("rxtsel.plugins.completion")
 require("rxtsel.plugins.lsp")
 
 require("rxtsel.plugins.keymaps")

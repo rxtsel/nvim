@@ -70,6 +70,7 @@ require("incline").setup({
 })
 
 require("tiny-cmdline").setup({
+	on_reposition = require("tiny-cmdline").adapters.blink,
 	position = {
 		x = "50%",
 		y = "20%",
