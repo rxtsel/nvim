@@ -11,6 +11,10 @@ require("nvim-highlight-colors").setup({
 	enable_tailwind = false,
 })
 
+if vim.fn.has("win32") == 1 and vim.fn.executable("cl.exe") == 0 then
+	vim.env.CC = "gcc"
+end
+
 local treesitter = require("nvim-treesitter")
 treesitter.setup({})
 treesitter.install({
