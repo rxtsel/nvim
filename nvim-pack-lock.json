@@ -60,6 +60,14 @@
       "rev": "301e431c7b618235f5447d54465c70934bd33668",
       "src": "https://github.com/OXY2DEV/markview.nvim"
     },
+    "mason-tool-installer.nvim": {
+      "rev": "443f1ef8b5e6bf47045cb2217b6f748a223cf7dc",
+      "src": "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim"
+    },
+    "mason.nvim": {
+      "rev": "2a6940af80375532e5e9e7c1f2fc6319a1b7a69d",
+      "src": "https://github.com/mason-org/mason.nvim"
+    },
     "mini.clue": {
       "rev": "62e9e38c3dc4b7d429f1b6e28d96f96cdff71132",
       "src": "https://github.com/nvim-mini/mini.clue"
