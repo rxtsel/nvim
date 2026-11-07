@@ -4,6 +4,10 @@ vim.keymap.set({ "n", "x" }, "<leader>c", '"_c', { desc = "Change without copyin
 vim.keymap.set({ "n", "x" }, "<leader>p", '"0p', { desc = "Paste last yank" })
 vim.keymap.set("n", "dw", '"_db', { desc = "Delete word backwards without copying" })
 
+vim.keymap.set("n", "<Esc>", "<Cmd>nohlsearch<CR>", { desc = "Clear search highlight" })
+vim.keymap.set("v", "<", "<gv", { desc = "Indent left and reselect" })
+vim.keymap.set("v", ">", ">gv", { desc = "Indent right and reselect" })
+
 vim.keymap.set("n", "+", "<C-a>", { desc = "Increment number" })
 vim.keymap.set("n", "-", "<C-x>", { desc = "Decrement number" })
 vim.keymap.set("n", "<C-a>", "ggVG", { desc = "Select all" })
