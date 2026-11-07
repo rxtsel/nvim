@@ -40,6 +40,9 @@
       oxfmt
       stylua
       shfmt
+      fish
+      rustfmt
+      alejandra
     ] ++ lib.optionals pkgs.stdenv.hostPlatform.isLinux [
       pkgs.wl-clipboard
       pkgs.xclip
