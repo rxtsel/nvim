@@ -56,6 +56,8 @@ vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.opt.foldlevel = 99
 
+vim.lsp.document_color.enable(true, nil, { style = "background" })
+
 require("vim._core.ui2").enable({
 	msg = {
 		target = "msg",
