@@ -86,6 +86,18 @@ vim.keymap.set("n", "<leader>gh", function()
 	require("gitsigns").stage_hunk()
 end, { desc = "Stage or unstage hunk" })
 
+vim.keymap.set("n", "<leader>gd", function()
+	MiniDiff.toggle_overlay(0)
+end, { desc = "Toggle diff overlay" })
+
+vim.keymap.set("n", "]c", function()
+	MiniDiff.goto_hunk("next")
+end, { desc = "Next hunk" })
+
+vim.keymap.set("n", "[c", function()
+	MiniDiff.goto_hunk("prev")
+end, { desc = "Previous hunk" })
+
 local function open_oil_float()
 	require("oil").open_float(nil, { preview = {} })
 end

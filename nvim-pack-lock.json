@@ -73,6 +73,10 @@
       "rev": "62e9e38c3dc4b7d429f1b6e28d96f96cdff71132",
       "src": "https://github.com/nvim-mini/mini.clue"
     },
+    "mini.diff": {
+      "rev": "2890bd1edc42b57af769774e53c2bfbbe3f45d4d",
+      "src": "https://github.com/nvim-mini/mini.diff"
+    },
     "mini.files": {
       "rev": "a5689dae6b732955e33eec225b798d6815063179",
       "src": "https://github.com/nvim-mini/mini.files"
