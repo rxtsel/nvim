@@ -3,8 +3,12 @@ local M = {}
 local function tab_label(buf)
 	local name = vim.api.nvim_buf_get_name(buf)
 	local label, icon
+	local is_oil = vim.bo[buf].filetype == "oil"
 
-	if vim.bo[buf].buftype == "terminal" then
+	if is_oil then
+		local dir = require("oil").get_current_dir(buf) or name:gsub("^oil://", "")
+		label = vim.fn.fnamemodify(vim.fs.normalize(dir), ":~")
+	elseif vim.bo[buf].buftype == "terminal" then
 		label = "[Terminal]"
 	elseif name == "" then
 		label = "[No Name]"
@@ -13,8 +17,9 @@ local function tab_label(buf)
 		icon = require("mini.icons").get("file", name)
 	end
 
-	if vim.fn.strchars(label) > 20 then
-		label = vim.fn.strcharpart(label, 0, 17) .. "…"
+	local length = vim.fn.strchars(label)
+	if length > 20 then
+		label = is_oil and "…" .. vim.fn.strcharpart(label, length - 17) or vim.fn.strcharpart(label, 0, 17) .. "…"
 	end
 
 	local modified = vim.bo[buf].modified and "[+] " or ""

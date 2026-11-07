@@ -4,9 +4,11 @@ vim.pack.add({
 	{ src = "https://github.com/nvim-lualine/lualine.nvim" },
 	{ src = "https://github.com/b0o/incline.nvim" },
 	{ src = "https://github.com/folke/snacks.nvim" },
+	{ src = "https://github.com/stevearc/oil.nvim" },
 	{ src = "https://github.com/rachartier/tiny-cmdline.nvim" },
 })
 
 require("rxtsel.plugins.ui")
+require("rxtsel.plugins.navigation")
 
 require("rxtsel.plugins.keymaps")
