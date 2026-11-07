@@ -40,6 +40,10 @@
       "rev": "b6ddfb97b5600d99afe3452d707444afda658aca",
       "src": "https://github.com/HakonHarnes/img-clip.nvim"
     },
+    "incline.nvim": {
+      "rev": "debd628e9395f7a9da57bdc31ce75ca6b40a880b",
+      "src": "https://github.com/b0o/incline.nvim"
+    },
     "kulala.nvim": {
       "rev": "69250f64e60f75c010feac413576acbd9ffa4ec8",
       "src": "https://github.com/mistweaverco/kulala.nvim"

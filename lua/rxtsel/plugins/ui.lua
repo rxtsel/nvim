@@ -45,6 +45,21 @@ require("lualine").setup({
 	},
 })
 
+require("incline").setup({
+	window = {
+		placement = { horizontal = "right", vertical = "top" },
+	},
+	hide = { cursorline = true },
+	render = function(props)
+		local filename = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(props.buf), ":t")
+		if filename == "" then
+			filename = "[No Name]"
+		end
+		local icon = icons.get("file", filename)
+		return { icon .. " ", filename, vim.bo[props.buf].modified and " [+]" or "" }
+	end,
+})
+
 require("tiny-cmdline").setup({
 	position = {
 		x = "50%",
