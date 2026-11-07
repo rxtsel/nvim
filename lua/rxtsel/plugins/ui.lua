@@ -8,6 +8,8 @@ local icons = require("mini.icons")
 icons.setup({})
 icons.mock_nvim_web_devicons()
 
+Rxtsel.tabline.setup()
+
 require("tiny-cmdline").setup({
 	position = {
 		x = "50%",
