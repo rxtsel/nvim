@@ -98,6 +98,10 @@ vim.keymap.set("n", "[c", function()
 	MiniDiff.goto_hunk("prev")
 end, { desc = "Previous hunk" })
 
+vim.keymap.set("n", "<leader>dv", "<Cmd>CodeDiff<CR>", { desc = "Toggle diff view" })
+vim.keymap.set("n", "<leader>dh", "<Cmd>CodeDiff history %<CR>", { desc = "File history" })
+vim.keymap.set("n", "<leader>dH", "<Cmd>CodeDiff history<CR>", { desc = "Repository history" })
+
 local function open_oil_float()
 	require("oil").open_float(nil, { preview = {} })
 end
