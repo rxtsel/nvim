@@ -1,4 +1,5 @@
 require("gitsigns").setup({})
+require("gitlinker").setup({})
 
 require("codediff").setup({
 	explorer = {

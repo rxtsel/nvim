@@ -12,6 +12,7 @@ vim.pack.add({
 	{ src = "https://github.com/lewis6991/gitsigns.nvim" },
 	{ src = "https://github.com/nvim-mini/mini.diff" },
 	{ src = "https://github.com/esmuellert/codediff.nvim" },
+	{ src = "https://github.com/linrongbin16/gitlinker.nvim" },
 	{ src = "https://github.com/brenoprata10/nvim-highlight-colors" },
 	{ src = "https://github.com/saghen/blink.cmp", version = vim.version.range("^1") },
 	{ src = "https://github.com/neovim/nvim-lspconfig" },
