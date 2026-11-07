@@ -13,7 +13,7 @@
       ]);
     };
 
-    # Add dependencies with each spec step.
+    # Runtime tools.
     tools = with pkgs; [
       git
       tree-sitter
@@ -26,12 +26,26 @@
       fd
       lazygit
       delta
+      unzip
+      # Language servers and formatters.
+      lua-language-server
+      vtsls
+      vscode-langservers-extracted # CSS and ESLint language servers
+      oxlint
+      tailwindcss-language-server
+      rust-analyzer
+      copilot-language-server
+      prettier
+      prettierd
+      oxfmt
+      stylua
+      shfmt
     ] ++ lib.optionals pkgs.stdenv.hostPlatform.isLinux [
       pkgs.wl-clipboard
       pkgs.xclip
     ];
 
-    # Start clean until the first configuration step adds init.lua.
+    # Fall back to a clean session when init.lua is absent.
     initFile = if builtins.pathExists ../../init.lua then "${config}/init.lua" else "NONE";
 
     neovim = assert lib.assertMsg
@@ -47,6 +61,7 @@
             --set CC ${pkgs.stdenv.cc}/bin/cc \
             --set CXX ${pkgs.stdenv.cc}/bin/c++ \
             --set NVIM_APPNAME rxtsel-nvim \
+            --set RXTSEL_NVIM_NIX 1 \
             --add-flags '--cmd "set runtimepath^=${config}"' \
             --add-flags '-u ${initFile}'
         '';
@@ -71,6 +86,7 @@
     # Tools are also directly available to a normal, non-wrapped Neovim.
     devShells.default = pkgs.mkShell {
       packages = [neovim] ++ tools;
+      RXTSEL_NVIM_NIX = "1";
     };
 
     formatter = pkgs.alejandra;
