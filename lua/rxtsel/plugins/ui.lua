@@ -8,6 +8,14 @@ local icons = require("mini.icons")
 icons.setup({})
 icons.mock_nvim_web_devicons()
 
+require("snacks").setup({
+	notifier = { enabled = true },
+	indent = { enabled = true },
+	statuscolumn = { enabled = true },
+	words = { enabled = true },
+	scroll = { enabled = false },
+})
+
 Rxtsel.tabline.setup()
 
 require("lualine").setup({
