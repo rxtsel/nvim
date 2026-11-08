@@ -40,7 +40,7 @@ For installation **without Nix**:
 - [Node.js](https://nodejs.org/) **22+**, including npm.
 - [curl](https://curl.se/), [tar](https://www.gnu.org/software/tar/), [gzip](https://www.gnu.org/software/gzip/), and [unzip](https://infozip.sourceforge.net/UnZip.html).
 - [ripgrep](https://github.com/BurntSushi/ripgrep) and [fd](https://github.com/sharkdp/fd).
-- [Lazygit](https://github.com/jesseduffield/lazygit), [delta](https://github.com/dandavison/delta), and [fish](https://fishshell.com/) (also provides `fish_indent`).
+- [Lazygit](https://github.com/jesseduffield/lazygit) and [delta](https://github.com/dandavison/delta).
 - [rustfmt](https://github.com/rust-lang/rustfmt) for Rust and [Alejandra](https://github.com/kamadorueda/alejandra) for Nix formatting.
 - A clipboard provider: [wl-clipboard](https://github.com/bugaevc/wl-clipboard) for Wayland or [xclip](https://github.com/astrand/xclip) for X11. macOS uses its built-in clipboard tools.
 

@@ -2,7 +2,7 @@ local M = {}
 
 function M.open_lazygit()
 	vim.g.rxtsel_lazygit_win = vim.api.nvim_get_current_win()
-	Snacks.lazygit({ env = { SHELL = vim.fn.exepath("fish") } })
+	Snacks.lazygit({ env = { SHELL = vim.fn.exepath("sh") } })
 end
 
 function M.toggle_stage_buffer()

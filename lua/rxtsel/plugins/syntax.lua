@@ -22,7 +22,6 @@ treesitter.install({
 	"bash",
 	"css",
 	"diff",
-	"fish",
 	"gitignore",
 	"go",
 	"html",

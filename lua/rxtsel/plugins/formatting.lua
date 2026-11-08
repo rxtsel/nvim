@@ -39,7 +39,6 @@ require("conform").setup({
 		yaml = web_formatters,
 		lua = { "stylua" },
 		sh = { "shfmt" },
-		fish = { "fish_indent" },
 		rust = { "rustfmt" },
 		nix = { "alejandra" },
 	},
