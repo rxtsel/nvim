@@ -158,6 +158,12 @@ vim.api.nvim_create_autocmd("FileType", {
 			require("oil.actions").parent.callback,
 			{ buffer = event.buf, desc = "Parent directory" }
 		)
+		vim.keymap.set(
+			"n",
+			"l",
+			require("oil.actions").select.callback,
+			{ buffer = event.buf, desc = "Open file or directory" }
+		)
 		vim.keymap.set("n", "q", function()
 			require("oil").close()
 		end, { buffer = event.buf, desc = "Close Oil" })
